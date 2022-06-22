@@ -26,6 +26,9 @@ body {
 .container-fluid {
   --bs-gutter-x: 0rem !important;
   width: 95% !important;
+  &.facturas {
+    background-color: #E5E5E5;
+  }
 }
 a {
   text-decoration: none !important;
@@ -690,5 +693,371 @@ form {
   color: rgba(34, 67, 119, 0.85);
   position: relative;
 } */
+
+
+
+
+/* MIGAS FACTURAS */
+.breadcrumb {
+  background-color: transparent;
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: "\25b6";
+    color: #C4C4C4;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.3rem;
+    font-size: 0.7rem;
+    padding-top: 4px;   
+    }
+  .breadcrumb-item {
+    a {
+    text-decoration: none;
+    color: #C4C4C4;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    }
+    &.active {
+      a {
+        text-decoration: none;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        }
+    }
+  }
+}
+
+/* TABLA FACTURAS EMITIDAS*/
+
+.tabla_facturas_emitidas {
+background-color: #E5E5E5;
+font-size: 12px;
+
+.titulo {
+  margin-top: 3rem;
+  margin-left: 3rem;
+  margin-bottom:2rem;
+  h5 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: 0.165em;
+    color: #414C69;
+  }
+}
+.container {
+  .table {
+    border-color: #E5E5E5;
+    text-align: center;
+    thead {
+      tr {
+        th {
+          background-color: white;
+          border-top: none;
+          border-bottom: solid 3px #E5E5E5;
+          padding: 1rem 0.75rem;
+          &:nth-of-type(1) {
+            border-radius: 1rem 0 0 1rem;      
+          }
+          &:last-of-type {
+            border-radius:  0 1rem 1rem 0;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:nth-of-type(1) {
+          th {
+            border-top: solid 3px #E5E5E5;
+            padding-top: 1rem;
+            background-color: white;
+            &:nth-of-type(1) {
+              border-radius: 1rem 0 0 0;
+            }
+          }
+          td {
+            background-color: white;
+            border-top: solid 3px #E5E5E5;
+            padding-top: 1rem;
+            &:last-of-type {
+            border-radius: 0 1rem 0 0;
+            }
+          }
+        }
+        th {
+          background-color: white;
+          .circle {
+            background-color: #414C69;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            height: 2rem;
+            width: 2rem;
+            margin-left: .8rem;
+          }
+        }
+        td {
+          background-color: white; 
+          &.iconos {
+            .td-iconos {
+             display: flex;
+             justify-content: space-evenly;
+             align-items: center;
+              .fa {
+                font-size: 1.5rem !important;
+                display: flex;
+                
+                &.fa-check-circle {
+                  color: #B4EDDE;
+                  background-color: green;
+                  border-radius: 100%;
+                  height: 19px;
+                  width: 19px;
+                  justify-content:center;
+                  align-items: center;
+                  margin-right: .5rem
+                }
+                &.fa-eye {
+                  height: 19px;
+                }
+                &.fa-times-circle {
+                  color: #F8C0CA;
+                  background-color: red;
+                  border-radius: 100%;
+                  height: 19px;
+                  width: 19px;
+                  justify-content:center;
+                  align-items: center;
+                  margin-right: .5rem
+                }
+              }
+            }
+          }
+        }
+        &:last-of-type {
+          th {
+            border-radius: 0 0 0 1rem;
+          }
+          td:last-of-type {
+            border-radius: 0 0 1rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+}  
+
+.estados_factura {
+display: flex;
+justify-content: end;
+margin-top: 3rem;
+bottom: 0;
+position: absolute;
+right: 0;
+.estados_factura_pagada{
+  display:flex;
+  margin-right: 2.5rem;
+  .fa {
+    font-size: .8rem !important;
+    color: white;
+    background-color: #02CE99;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 22px;
+    width: 22px;
+    margin-right: .5rem;
+  }
+  p {
+    color:#414C69;
+    padding-top: .15rem;
+  }
+}
+.estados_factura_revision {
+  display: flex;
+  margin-right: 2.5rem;
+  .fa {
+    font-size: 1.2rem !important;
+    color: white;
+    background-color: #FFE600;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 22px;
+    width: 22px;
+    margin-right: .5rem;
+  }
+  p {
+    color:#414C69;
+    padding-top: .15rem;
+  }
+}
+.estados_factura_aprobada {
+  display: flex;
+  margin-right: 2.5rem;
+  .fa {
+    font-size: .7rem !important;
+    color: white;
+    background-color: #02CE99;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 22px;
+    width: 22px;
+    margin-right: .5rem;
+  }
+  p {
+    color:#414C69;
+    padding-top: .15rem;
+  }
+}
+.estados_factura_rechazada {
+  display: flex;
+  margin-right: 2.5rem;
+  .fa {
+    font-size: 0.8rem !important;
+    color: white;
+    background-color: #FA3451;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 22px;
+    width: 22px;
+    margin-right: .5rem;
+  }
+  p {
+    color:#414C69;
+    padding-top: .15rem;
+  }
+}
+.estados_factura_cedida {
+  display: flex;
+  margin-right: 2.5rem;
+  .fa {
+    font-size: 0.8rem !important;
+    color: white;
+    background-color: #FA3451;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 22px;
+    width: 22px;
+    margin-right: .5rem;
+  }
+  p {
+    color:#414C69;
+    padding-top: .15rem;
+  }
+}
+.estados_factura_xml {
+  display: flex;
+  margin-right: 2.5rem;
+  position: relative;
+  .fa {
+    font-size: 1.6rem !important;
+    color: #FA3451;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 22px;
+    width: 22px;
+    margin-right: 1rem;
+  }
+  span.xml {
+    background-color: #FA3451;
+    color: white;
+    height: .8rem;
+    font-size: .4rem;
+    padding: .08rem 0.13rem;
+    border-radius: .1rem;
+    position: absolute;
+    right: 1.8rem;
+    top: -.2rem;
+  }
+  p {
+    color:#414C69;
+    padding-top: .15rem;
+  }
+}
+}
+
+
+/* MODAL */
+
+  .modal-dialog {
+    max-width: 40vw;
+    .modal-content {
+      border-radius: .7rem;
+      padding: 1rem 2rem;
+      .modal-header {
+        color: #091980;
+        border-bottom: none;
+      }
+      .modal-body {
+        color: #5D6B73;
+        .container-fluid_m {
+          .titulo-body-m {
+            margin-bottom: .5rem;
+            }
+              .texto-body-m {
+                border: solid 2px #E5E5E5;
+                border-radius: .5rem;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                margin-bottom: 1.5rem;
+                p {
+                  margin: unset;
+                  padding: 0.5rem;
+                }
+                &.pagada {
+                  display: flex;
+                  justify-content: space-between;
+                  background-color: #B4EDDE;
+                  border-color:#EAEEF9;
+                  font-weight: 700;
+                  .fa {
+                    color: #03CC98;
+                    margin-right: 1rem;
+                  }
+                }
+              }
+            
+        }
+      }
+      .modal-footer {
+        border-top: none;
+        button {
+          &.volver {
+            color: #5D6B73;
+            background-color: #D7E0FF;
+            border-color: #EAEEF9;
+          }
+        }
+      }
+    }
+  }
+@media screen and (max-width: 1200px) {
+.modal-dialog {
+    max-width: 99vw;
+}
+}
 
 
