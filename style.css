@@ -1016,6 +1016,10 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   color: #03CC98;
 }
 
+.tabla_facturas_emitidas .container .table tbody tr td.rechazada_rojo {
+  color: #FA3451;
+}
+
 .tabla_facturas_emitidas .container .table tbody tr:last-of-type th {
   border-radius: 0 0 0 1rem;
 }
