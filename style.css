@@ -29,10 +29,6 @@ body {
   width: 95% !important;
 }
 
-.container-fluid.facturas {
-  background-color: #E5E5E5;
-}
-
 a {
   text-decoration: none !important;
 }
@@ -837,17 +833,30 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 
 /* TABLA FACTURAS EMITIDAS*/
 .tabla_facturas_emitidas {
-  background-color: #E5E5E5;
   font-size: 12px;
 }
 
-.tabla_facturas_emitidas .titulo {
+.tabla_facturas_emitidas .container {
+  position: relative;
+  /* PAGER */
+}
+
+.tabla_facturas_emitidas .container input.buscador {
+  color: #C4C4C4;
+  position: absolute;
+  right: 1rem;
+  top: 3rem;
+  border-radius: 6px;
+  border: solid 1px #C4C4C4;
+  padding: .3rem;
+}
+
+.tabla_facturas_emitidas .container .titulo {
   margin-top: 3rem;
-  margin-left: 3rem;
   margin-bottom: 2rem;
 }
 
-.tabla_facturas_emitidas .titulo h5 {
+.tabla_facturas_emitidas .container .titulo h5 {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
@@ -858,14 +867,24 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 
 .tabla_facturas_emitidas .container .table {
-  border-color: #E5E5E5;
+  border-color: #F2F5FA;
   text-align: center;
+}
+
+.tabla_facturas_emitidas .container .table thead {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.035em;
+  color: #5D6B73;
 }
 
 .tabla_facturas_emitidas .container .table thead tr th {
   background-color: white;
   border-top: none;
-  border-bottom: solid 3px #E5E5E5;
+  border-bottom: solid 3px #F2F5FA;
   padding: 1rem 0.75rem;
 }
 
@@ -921,6 +940,12 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 
 .tabla_facturas_emitidas .container .table tbody tr td {
   background-color: white;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  color: #68696E;
 }
 
 .tabla_facturas_emitidas .container .table tbody tr td.iconos .td-iconos {
@@ -959,6 +984,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 
 .tabla_facturas_emitidas .container .table tbody tr td.iconos .td-iconos .fa.fa-eye {
   height: 19px;
+  color: #5D6B73;
 }
 
 .tabla_facturas_emitidas .container .table tbody tr td.iconos .td-iconos .fa.fa-times-circle {
@@ -976,12 +1002,46 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   margin-right: .5rem;
 }
 
+.tabla_facturas_emitidas .container .table tbody tr td:first-of-type {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  color: #414C69;
+}
+
+.tabla_facturas_emitidas .container .table tbody tr td.pagada_verde {
+  color: #03CC98;
+}
+
 .tabla_facturas_emitidas .container .table tbody tr:last-of-type th {
   border-radius: 0 0 0 1rem;
 }
 
 .tabla_facturas_emitidas .container .table tbody tr:last-of-type td:last-of-type {
   border-radius: 0 0 1rem 0;
+}
+
+.tabla_facturas_emitidas .container .pagination li.page-item a.page-link {
+  color: #C4C4C4;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  padding: 3px 9px;
+}
+
+.tabla_facturas_emitidas .container .pagination li.page-item.active a.page-link {
+  color: #3A3A3A;
+  background-color: white;
+  border-color: #C4C4C4;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  padding: 3px 9px;
 }
 
 .estados_factura {

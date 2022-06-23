@@ -26,9 +26,6 @@ body {
 .container-fluid {
   --bs-gutter-x: 0rem !important;
   width: 95% !important;
-  &.facturas {
-    background-color: #E5E5E5;
-  }
 }
 a {
   text-decoration: none !important;
@@ -735,33 +732,48 @@ form {
 /* TABLA FACTURAS EMITIDAS*/
 
 .tabla_facturas_emitidas {
-background-color: #E5E5E5;
-font-size: 12px;
+  font-size: 12px;
 
-.titulo {
-  margin-top: 3rem;
-  margin-left: 3rem;
-  margin-bottom:2rem;
-  h5 {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 25px;
-    letter-spacing: 0.165em;
-    color: #414C69;
-  }
-}
 .container {
+  position: relative;
+  input.buscador {
+    color: #C4C4C4;
+    position: absolute;
+    right: 1rem;
+    top: 3rem;
+    border-radius: 6px;
+    border: solid 1px #C4C4C4;
+    padding: .3rem;
+  }
+  .titulo {
+    margin-top: 3rem;
+    margin-bottom:2rem;
+    h5 {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 25px;
+      letter-spacing: 0.165em;
+      color: #414C69;
+    }
+  }
   .table {
-    border-color: #E5E5E5;
+    border-color: #F2F5FA;
     text-align: center;
     thead {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.035em;
+      color: #5D6B73;
       tr {
         th {
           background-color: white;
           border-top: none;
-          border-bottom: solid 3px #E5E5E5;
+          border-bottom: solid 3px #F2F5FA;
           padding: 1rem 0.75rem;
           &:nth-of-type(1) {
             border-radius: 1rem 0 0 1rem;      
@@ -794,6 +806,7 @@ font-size: 12px;
         }
         th {
           background-color: white;
+          
           .circle {
             background-color: #414C69;
             border-radius: 100%;
@@ -808,6 +821,12 @@ font-size: 12px;
         }
         td {
           background-color: white; 
+          font-family: Inter;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 25px;
+          letter-spacing: 0.05em;
+          color: #68696E;
           &.iconos {
             .td-iconos {
              display: flex;
@@ -829,6 +848,7 @@ font-size: 12px;
                 }
                 &.fa-eye {
                   height: 19px;
+                  color: #5D6B73;
                 }
                 &.fa-times-circle {
                   color: #F8C0CA;
@@ -843,6 +863,18 @@ font-size: 12px;
               }
             }
           }
+          &:first-of-type {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 25px;
+            letter-spacing: 0.05em;
+            color: #414C69;
+          }
+          &.pagada_verde {
+            color: #03CC98;
+          }
         }
         &:last-of-type {
           th {
@@ -855,7 +887,34 @@ font-size: 12px;
       }
     }
   }
-}
+  /* PAGER */
+    .pagination {
+      li.page-item {
+        a.page-link {
+          color: #C4C4C4;
+          
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 25px;
+          padding: 3px 9px;
+        }
+        &.active {
+          a.page-link {
+            color: #3A3A3A;
+            background-color: white;
+            border-color: #C4C4C4;
+            
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 25px;
+            padding: 3px 9px;
+          }
+        }
+      }
+    }
+  }
 }  
 
 .estados_factura {
