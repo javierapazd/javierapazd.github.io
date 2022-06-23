@@ -1329,9 +1329,239 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   border-color: #EAEEF9;
 }
 
-@media screen and (max-width: 1200px) {
+/* NOVEDADES */
+.container_novedades {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1.8rem;
+  padding: 2rem 4.5rem 10rem 4.5rem;
+}
+
+.container_novedades .card_novedades {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  width: 100%;
+  border-radius: 1.1rem;
+  background-color: white;
+}
+
+.container_novedades .card_novedades .card_novedades_imagen {
+  height: 200px;
+  border-radius: 1.1rem;
+  overflow: hidden;
+}
+
+.container_novedades .card_novedades .card_novedades_imagen img {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container_novedades .card_novedades .card_novedades_texto {
+  padding: 2.5rem 1.5rem;
+}
+
+.container_novedades .card_novedades .card_novedades_texto .card_novedades_texto__titulo {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 25px;
+  letter-spacing: 0.075em;
+  color: #414C69;
+  margin-bottom: 1rem;
+}
+
+.container_novedades .card_novedades .card_novedades_texto .card_novedades_texto__texto {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 25px;
+  text-align: justify;
+  letter-spacing: 0.025em;
+  color: #414C69;
+  margin-bottom: 1rem;
+}
+
+.container_novedades .card_novedades .card_novedades_texto a.leer_mas {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0.165em;
+  text-align: left;
+  color: #414C69;
+}
+
+/* BOTONES FLOTANTES */
+.botones_flotantes {
+  position: fixed;
+  bottom: 5rem;
+  right: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.botones_flotantes .pronto_pago {
+  margin: 0 2.2rem;
+}
+
+.botones_flotantes .pronto_pago .fa {
+  border-radius: 100%;
+  background-color: #02CE99;
+  color: white;
+  height: 4.6rem;
+  width: 4.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.3rem;
+  position: relative;
+}
+
+.botones_flotantes .mesa_ayuda {
+  margin: 0 2.2rem;
+}
+
+.botones_flotantes .mesa_ayuda .fa {
+  border-radius: 100%;
+  background-color: #336CFB;
+  color: white;
+  height: 4.6rem;
+  width: 4.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3rem;
+  position: relative;
+}
+
+.botones_flotantes .mesa_ayuda .fa .signo_pregunta .fa.fa-question {
+  position: absolute;
+  font-size: 1rem;
+  background-color: transparent;
+  right: 0.4rem;
+  top: -.3rem;
+}
+
+.botones_flotantes .manuales_guias {
+  margin: 0 2.2rem;
+}
+
+.botones_flotantes .manuales_guias .fa {
+  border-radius: 100%;
+  background-color: #02CECE;
+  color: white;
+  height: 4.6rem;
+  width: 4.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.container_novedad {
+  padding: 2rem 5rem 15rem 5rem;
+}
+
+.container_novedad .novedad .novedad_imagen {
+  width: 55rem;
+  height: 13rem;
+  overflow: hidden;
+  border-radius: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.container_novedad .novedad .novedad_imagen img {
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+}
+
+.container_novedad .novedad .novedad_texto .novedaded_texto__titulo {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 25px;
+  letter-spacing: 0.075em;
+  color: #414C69;
+  margin-bottom: 2rem;
+}
+
+.container_novedad .novedad .novedad_texto .novedaded_texto__bajada {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.025em;
+  color: #414C69;
+  margin-bottom: 4rem;
+}
+
+.container_novedad .novedad .novedad_texto .novedad_texto__texto {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: justify;
+  letter-spacing: 0.025em;
+  color: #414C69;
+}
+
+@media screen and (max-width: 690px) {
   .modal-dialog {
     max-width: 99vw;
+  }
+  .container_novedades {
+    padding: 0 0 15rem 0;
+  }
+  .botones_flotantes {
+    right: 5%;
+    bottom: 3rem;
+  }
+  .botones_flotantes .pronto_pago {
+    margin: 0 .8rem;
+  }
+  .botones_flotantes .mesa_ayuda {
+    margin: 0 .8rem;
+  }
+  .botones_flotantes .manuales_guias {
+    margin: 0 .8rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
