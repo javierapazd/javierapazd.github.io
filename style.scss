@@ -47,6 +47,9 @@ a {
   margin-bottom: 2em;
   &.inicio {
     margin-bottom: 3.5em !important;
+    .logo {
+      margin-left: 1em;
+    }
   }
   .logo {
     font-family: 'Inter', sans-serif;

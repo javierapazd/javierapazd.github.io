@@ -50,6 +50,9 @@ a {
 .header.inicio {
   margin-bottom: 3.5em !important;
 }
+.header.inicio .logo {
+  margin-left: 1em;
+}
 .header .logo {
   font-family: "Inter", sans-serif;
 }
