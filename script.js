@@ -41,3 +41,26 @@ $("#filtro").keyup(function () {
       });
   });
 });
+
+
+////menu lateral colapsable
+var state = "expanded";
+//Check if navbar is expanded or minimized and handle
+//$('#navbar-toggler').click(function() {
+   // if (state == "expanded") {
+   //     $('.sidebar').addClass('collapse');
+   //     state = "minimized";
+    //} else {
+    //    if (state == "minimized") {
+    //        $('.sidebar').removeClass('collapse');
+   //         state = "expanded";
+    //    }
+  //  }
+//})
+
+//menu lateral colapsable
+$('.collapse-sidebar-button').on('click', function() {
+	$(".sidebar").toggleClass('sidebar-collapsed');
+	$('.main').toggleClass('main-slide');
+  $('#toggle-icon').toggleClass('rotate');
+});

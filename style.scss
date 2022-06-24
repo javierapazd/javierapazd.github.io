@@ -704,7 +704,7 @@ form {
     width: 1rem;
     margin-right: 0.3rem;
     font-size: 0.7rem;
-    padding-top: 4px;   
+    padding-top: 4px;
     }
   .breadcrumb-item {
     a {
@@ -727,6 +727,166 @@ form {
         }
     }
   }
+}
+
+/*SIDEBAR*/
+
+.sidebar {
+  width: 210px;
+  -moz-transition: width 0.5s ease-out;
+  -o-transition: width 0.5s ease-out;
+  -webkit-transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out;
+  display: inline-block;
+  z-index: 0;
+  color: #FFF;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  background-color: #5B5B5B;
+  width: 18em;
+  max-width: 20em;
+  height: 100%;
+  float: left;
+  .nav-sidebar {
+    background: none;
+    margin-top: 5px;
+    margin-right: -21px; /* 20px padding + 1px  border */
+    margin-bottom: 20px;
+    margin-left: -20px;
+    .nav-item {
+      .nav-link {
+        -moz-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        -webkit-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+        color: white;
+        opacity:1;
+        span.fa {
+          font-size: 20px;
+          color: white;
+        }
+      }
+      .submenu {
+        list-style: none;
+        padding-left: 2.7rem;
+        li {
+          .sub-nav {
+            opacity: 1;
+            -moz-transition: all .7s ease-out;
+            -o-transition: all .7s ease-out;
+            -webkit-transition: all .7s ease-out;
+            transition: all .7s ease-out;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .nav-sidebar > li > a {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .navbar-brand {
+    img {
+      width: 3em;
+    }
+  }
+  &.sidebar-collapsed {
+    width: 7em;
+    .nav-sidebar {
+      .nav-item {
+        .menu-item {
+          opacity: 0;
+          -moz-transition: all 0.3s ease-out;
+          -o-transition: all 0.3s ease-out;
+          -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+        }
+        .submenu {
+          -moz-transition: all 6s ease-out;
+          -o-transition: all 6s ease-out;
+          -webkit-transition: all 6s ease-out;
+          transition: all 6s ease-out;
+          opacity: 0 !important;
+          li {
+            .sub-nav {
+              opacity: 0 !important;
+              -moz-transition: all 0.3s ease-out;
+              -o-transition: all 0.3s ease-out;
+              -webkit-transition: all 0.3s ease-out;
+              transition: all 0.3s ease-out;
+            }
+          }
+        }
+      }
+    }
+  }
+  .collapse-sidebar-button {
+    padding-left: 4px;
+    display: block;
+    cursor: pointer;
+    padding-right: 5px;
+  }
+
+}
+
+.menu-item {
+  left: 50px;
+  opacity: 1;
+  -moz-transition: opacity 0.6s 0.2s ease-out;
+  -o-transition: opacity 0.6s 0.2s ease-out;
+  -webkit-transition: opacity 0.6s 0.2s ease-out;
+  transition: opacity 0.6s 0.2s ease-out;
+  position: absolute;
+  color: white;
+  font-weight: 600;
+}
+
+#toggle-icon {
+  -moz-transition: transform 0.4s ease-out;
+  -o-transition: transform 0.4s ease-out;
+  -webkit-transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+  &.rotate {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -moz-transition: transform 0.4s ease-out;
+    -o-transition: transform 0.4s ease-out;
+    -webkit-transition: transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+  }
+}
+
+.main {
+  margin-left: 18em;
+  -moz-transition: margin-left 0.55s ease-out;
+  -o-transition: margin-left 0.55s ease-out;
+  -webkit-transition: margin-left 0.55s ease-out;
+  transition: margin-left 0.55s ease-out;
+  padding-right: 1em;
+  padding-left: 1em;
+  &.main-slide {
+    -moz-transition: margin-left 0.6s ease-out;
+    -o-transition: margin-left 0.6s ease-out;
+    -webkit-transition: margin-left 0.6s ease-out;
+    transition: margin-left 0.6s ease-out;
+    margin-left: 7em;
+  }
+}
+
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
 }
 
 /* TABLA FACTURAS EMITIDAS*/
@@ -776,7 +936,7 @@ form {
           border-bottom: solid 3px #F2F5FA;
           padding: 1rem 0.75rem;
           &:nth-of-type(1) {
-            border-radius: 1rem 0 0 1rem;      
+            border-radius: 1rem 0 0 1rem;
           }
           &:last-of-type {
             border-radius:  0 1rem 1rem 0;
@@ -806,7 +966,7 @@ form {
         }
         th {
           background-color: white;
-          
+
           .circle {
             background-color: #414C69;
             border-radius: 100%;
@@ -820,7 +980,7 @@ form {
           }
         }
         td {
-          background-color: white; 
+          background-color: white;
           font-family: Inter;
           font-size: 12px;
           font-weight: 400;
@@ -835,7 +995,7 @@ form {
               .fa {
                 font-size: 1.5rem !important;
                 display: flex;
-                
+
                 &.fa-check-circle {
                   color: #B4EDDE;
                   background-color: green;
@@ -895,7 +1055,7 @@ form {
       li.page-item {
         a.page-link {
           color: #C4C4C4;
-          
+
           font-style: normal;
           font-weight: 400;
           font-size: 14px;
@@ -907,7 +1067,7 @@ form {
             color: #3A3A3A;
             background-color: white;
             border-color: #C4C4C4;
-            
+
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
@@ -918,7 +1078,7 @@ form {
       }
     }
   }
-}  
+}
 
 .estados_factura {
 display: flex;
@@ -1101,7 +1261,7 @@ right: 0;
                   }
                 }
               }
-            
+
         }
       }
       .modal-footer {
@@ -1174,7 +1334,7 @@ right: 0;
         text-align: left;
         color: #414C69;
       }
-    } 
+    }
   }
 }
  /* BOTONES FLOTANTES */
@@ -1291,6 +1451,9 @@ right: 0;
     }
   }
 
+
+
+
  @media screen and (max-width: 690px) {
     .modal-dialog {
       max-width: 99vw;
@@ -1311,5 +1474,5 @@ right: 0;
       margin: 0 .8rem;
     }
   }
-    
+
   }
