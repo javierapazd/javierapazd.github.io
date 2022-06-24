@@ -712,13 +712,14 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   overflow-y: auto;
   /* Scrollable contents if viewport is shorter than content. */
   background-color: #5B5B5B;
-  width: 18em;
+  width: 20em;
   max-width: 20em;
   height: 100%;
   float: left;
 }
 .sidebar .logo {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+  padding-top: 1em;
 }
 .sidebar .logo a img {
   width: 5em;
@@ -726,10 +727,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 .sidebar .nav-sidebar {
   background: none;
   margin-top: 5px;
-  margin-right: -21px;
-  /* 20px padding + 1px  border */
   margin-bottom: 20px;
-  margin-left: -20px;
 }
 .sidebar .nav-sidebar .nav-item {
   margin-bottom: 1em;
@@ -748,7 +746,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 .sidebar .nav-sidebar .nav-item .submenu {
   list-style: none;
-  padding-left: 3em;
+  padding-left: 4.2em;
 }
 .sidebar .nav-sidebar .nav-item .submenu li .sub-nav {
   opacity: 1;
@@ -777,6 +775,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   -o-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  display: none;
 }
 .sidebar.sidebar-collapsed .nav-sidebar .nav-item .submenu {
   -moz-transition: all 6s ease-out;
@@ -809,15 +808,14 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 
 .menu-item {
-  left: 50px;
   opacity: 1;
   -moz-transition: all 0.6s 0.2s ease-out;
   -o-transition: all 0.6s 0.2s ease-out;
   -webkit-transition: all 0.6s 0.2s ease-out;
   transition: all 0.6s 0.2s ease-out;
-  position: absolute;
   color: white;
   font-weight: 600;
+  margin-left: 1em;
 }
 
 #toggle-icon {
@@ -839,7 +837,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 
 .main {
-  margin-left: 18em;
+  margin-left: 20em;
   -moz-transition: all 0.55s ease-out;
   -o-transition: all 0.55s ease-out;
   -webkit-transition: all 0.55s ease-out;
