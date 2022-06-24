@@ -696,10 +696,10 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 /*SIDEBAR*/
 .sidebar {
   width: 210px;
-  -moz-transition: width 0.5s ease-out;
-  -o-transition: width 0.5s ease-out;
-  -webkit-transition: width 0.5s ease-out;
-  transition: width 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   display: inline-block;
   z-index: 0;
   color: #FFF;
@@ -707,7 +707,6 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   bottom: 0;
   left: 0;
   z-index: 1000;
-  display: block;
   padding: 20px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -718,6 +717,12 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   height: 100%;
   float: left;
 }
+.sidebar .logo {
+  margin-bottom: 1em;
+}
+.sidebar .logo a img {
+  width: 5em;
+}
 .sidebar .nav-sidebar {
   background: none;
   margin-top: 5px;
@@ -725,6 +730,9 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   /* 20px padding + 1px  border */
   margin-bottom: 20px;
   margin-left: -20px;
+}
+.sidebar .nav-sidebar .nav-item {
+  margin-bottom: 1em;
 }
 .sidebar .nav-sidebar .nav-item .nav-link {
   -moz-transition: all 0.5s ease-out;
@@ -740,7 +748,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 .sidebar .nav-sidebar .nav-item .submenu {
   list-style: none;
-  padding-left: 2.7rem;
+  padding-left: 3em;
 }
 .sidebar .nav-sidebar .nav-item .submenu li .sub-nav {
   opacity: 1;
@@ -760,7 +768,10 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 .sidebar.sidebar-collapsed {
   width: 7em;
 }
-.sidebar.sidebar-collapsed .nav-sidebar .nav-item .menu-item {
+.sidebar.sidebar-collapsed .nav-sidebar {
+  margin: 1em auto !important;
+}
+.sidebar.sidebar-collapsed .nav-sidebar .nav-item .nav-link .menu-item {
   opacity: 0;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -773,6 +784,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   -webkit-transition: all 6s ease-out;
   transition: all 6s ease-out;
   opacity: 0 !important;
+  display: none;
 }
 .sidebar.sidebar-collapsed .nav-sidebar .nav-item .submenu li .sub-nav {
   opacity: 0 !important;
@@ -781,30 +793,38 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+.sidebar.sidebar-collapsed .collapse-sidebar-button {
+  margin: 0em auto !important;
+  position: relative;
+  left: unset;
+}
 .sidebar .collapse-sidebar-button {
   padding-left: 4px;
   display: block;
   cursor: pointer;
   padding-right: 5px;
+  float: left;
+  position: relative;
+  left: 14em;
 }
 
 .menu-item {
   left: 50px;
   opacity: 1;
-  -moz-transition: opacity 0.6s 0.2s ease-out;
-  -o-transition: opacity 0.6s 0.2s ease-out;
-  -webkit-transition: opacity 0.6s 0.2s ease-out;
-  transition: opacity 0.6s 0.2s ease-out;
+  -moz-transition: all 0.6s 0.2s ease-out;
+  -o-transition: all 0.6s 0.2s ease-out;
+  -webkit-transition: all 0.6s 0.2s ease-out;
+  transition: all 0.6s 0.2s ease-out;
   position: absolute;
   color: white;
   font-weight: 600;
 }
 
 #toggle-icon {
-  -moz-transition: transform 0.4s ease-out;
-  -o-transition: transform 0.4s ease-out;
-  -webkit-transition: transform 0.4s ease-out;
-  transition: transform 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 #toggle-icon.rotate {
   -moz-transform: rotate(180deg);
@@ -812,26 +832,26 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   -o-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
-  -moz-transition: transform 0.4s ease-out;
-  -o-transition: transform 0.4s ease-out;
-  -webkit-transition: transform 0.4s ease-out;
-  transition: transform 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .main {
   margin-left: 18em;
-  -moz-transition: margin-left 0.55s ease-out;
-  -o-transition: margin-left 0.55s ease-out;
-  -webkit-transition: margin-left 0.55s ease-out;
-  transition: margin-left 0.55s ease-out;
+  -moz-transition: all 0.55s ease-out;
+  -o-transition: all 0.55s ease-out;
+  -webkit-transition: all 0.55s ease-out;
+  transition: all 0.55s ease-out;
   padding-right: 1em;
   padding-left: 1em;
 }
 .main.main-slide {
-  -moz-transition: margin-left 0.6s ease-out;
-  -o-transition: margin-left 0.6s ease-out;
-  -webkit-transition: margin-left 0.6s ease-out;
-  transition: margin-left 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  -webkit-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
   margin-left: 7em;
 }
 

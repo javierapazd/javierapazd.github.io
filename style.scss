@@ -733,10 +733,10 @@ form {
 
 .sidebar {
   width: 210px;
-  -moz-transition: width 0.5s ease-out;
-  -o-transition: width 0.5s ease-out;
-  -webkit-transition: width 0.5s ease-out;
-  transition: width 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   display: inline-block;
   z-index: 0;
   color: #FFF;
@@ -744,7 +744,6 @@ form {
   bottom: 0;
   left: 0;
   z-index: 1000;
-  display: block;
   padding: 20px;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
@@ -753,6 +752,14 @@ form {
   max-width: 20em;
   height: 100%;
   float: left;
+  .logo {
+    margin-bottom: 1em;
+    a {
+      img {
+        width: 5em;
+      }
+    }
+  }
   .nav-sidebar {
     background: none;
     margin-top: 5px;
@@ -760,6 +767,7 @@ form {
     margin-bottom: 20px;
     margin-left: -20px;
     .nav-item {
+      margin-bottom: 1em;
       .nav-link {
         -moz-transition: all 0.5s ease-out;
         -o-transition: all 0.5s ease-out;
@@ -774,7 +782,7 @@ form {
       }
       .submenu {
         list-style: none;
-        padding-left: 2.7rem;
+        padding-left: 3em;
         li {
           .sub-nav {
             opacity: 1;
@@ -800,13 +808,16 @@ form {
   &.sidebar-collapsed {
     width: 7em;
     .nav-sidebar {
+      margin: 1em auto !important;
       .nav-item {
-        .menu-item {
-          opacity: 0;
-          -moz-transition: all 0.3s ease-out;
-          -o-transition: all 0.3s ease-out;
-          -webkit-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
+        .nav-link {
+          .menu-item {
+            opacity: 0;
+            -moz-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+          }
         }
         .submenu {
           -moz-transition: all 6s ease-out;
@@ -814,6 +825,7 @@ form {
           -webkit-transition: all 6s ease-out;
           transition: all 6s ease-out;
           opacity: 0 !important;
+          display: none;
           li {
             .sub-nav {
               opacity: 0 !important;
@@ -826,12 +838,20 @@ form {
         }
       }
     }
+    .collapse-sidebar-button {
+      margin: 0em auto !important;
+      position: relative;
+      left: unset;
+    }
   }
   .collapse-sidebar-button {
     padding-left: 4px;
     display: block;
     cursor: pointer;
     padding-right: 5px;
+    float: left;
+    position: relative;
+    left: 14em;
   }
 
 }
@@ -839,46 +859,46 @@ form {
 .menu-item {
   left: 50px;
   opacity: 1;
-  -moz-transition: opacity 0.6s 0.2s ease-out;
-  -o-transition: opacity 0.6s 0.2s ease-out;
-  -webkit-transition: opacity 0.6s 0.2s ease-out;
-  transition: opacity 0.6s 0.2s ease-out;
+  -moz-transition: all 0.6s 0.2s ease-out;
+  -o-transition: all 0.6s 0.2s ease-out;
+  -webkit-transition: all 0.6s 0.2s ease-out;
+  transition: all 0.6s 0.2s ease-out;
   position: absolute;
   color: white;
   font-weight: 600;
 }
 
 #toggle-icon {
-  -moz-transition: transform 0.4s ease-out;
-  -o-transition: transform 0.4s ease-out;
-  -webkit-transition: transform 0.4s ease-out;
-  transition: transform 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
   &.rotate {
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
-    -moz-transition: transform 0.4s ease-out;
-    -o-transition: transform 0.4s ease-out;
-    -webkit-transition: transform 0.4s ease-out;
-    transition: transform 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
   }
 }
 
 .main {
   margin-left: 18em;
-  -moz-transition: margin-left 0.55s ease-out;
-  -o-transition: margin-left 0.55s ease-out;
-  -webkit-transition: margin-left 0.55s ease-out;
-  transition: margin-left 0.55s ease-out;
+  -moz-transition: all 0.55s ease-out;
+  -o-transition: all 0.55s ease-out;
+  -webkit-transition: all 0.55s ease-out;
+  transition: all 0.55s ease-out;
   padding-right: 1em;
   padding-left: 1em;
   &.main-slide {
-    -moz-transition: margin-left 0.6s ease-out;
-    -o-transition: margin-left 0.6s ease-out;
-    -webkit-transition: margin-left 0.6s ease-out;
-    transition: margin-left 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    -webkit-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
     margin-left: 7em;
   }
 }
