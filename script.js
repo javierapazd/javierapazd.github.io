@@ -64,3 +64,27 @@ $('.collapse-sidebar-button').on('click', function() {
 	$('.main').toggleClass('main-slide');
   $('#toggle-icon').toggleClass('rotate');
 });
+
+
+var linkB = '${boton.linkB.getData()}';
+var linkB2 = '${boton2.linkB2.getData()}';
+
+	$(document).ready(function(){
+	    
+	    $(".tipo_ayuda").hide();
+
+		$("#ayuda_select").on("change",function() {
+            $(".tipo_ayuda").hide();
+            $("#"+ $(this).val()).show();
+    		
+        });
+	});
+
+  function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }

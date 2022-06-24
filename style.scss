@@ -700,7 +700,7 @@ form {
 
 
 
-/* MIGAS FACTURAS */
+/* MIGAS */
 .breadcrumb {
   background-color: transparent;
   .breadcrumb-item + .breadcrumb-item::before {
@@ -712,7 +712,7 @@ form {
     margin-left: 0.3rem;
     font-size: 0.7rem;
     padding-top: 0.3rem;
-    }
+  }
   .breadcrumb-item {
     a {
     text-decoration: none;
@@ -724,15 +724,22 @@ form {
     line-height: 25px;
     }
     &.active {
-      a {
-        text-decoration: none;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 25px;
-        }
+      padding-left: 11px;
+      color: #414C69;
+
+      text-decoration: none;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      color: #414C69;
     }
+  }
+  li.breadcrumb-item.active::before {
+    color: #414C69 !important;
+    margin-right: 4px;
+    padding-top: 0px;
   }
 }
 
@@ -1480,9 +1487,153 @@ right: 0;
       }
     }
   }
+/* PAGINA MESA AYUDA*/
+.container_mesa_ayuda {
+  padding: 2rem 4.5rem;
+  .titulo {
+    margin-bottom:5rem;
+    h5 {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 25px;
+      letter-spacing: 0.165em;
+      color: #414C69;
+    }
+  }
+  p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.01em;
+    color: #414C69;
+  }
+  .form-mesa-ayuda {
+    width: 23rem;
+
+  }
+}
+.card-secundaria {
+  padding: 2rem 4.5rem;
+  .form-group {
+    p {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: 0.01em;
+      color: #414C69;
+    }
+    .form-control {
+      margin-bottom: 2rem;
+      height: 10rem;
+      display: flex;
+      align-items: center;
+      color: #757575;
+      padding-top: 2rem;
+    }
+  }
+}
+.tipo_ayuda {
+	display: none;
+  .card-secundaria {
+    padding: 2rem 4.5rem;
+    .form-group {
+      p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0.01em;
+        color: #414C69;
+      }
+      .form-control {
+        margin-bottom: 2rem;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        color: #757575;
+        padding-top: 2rem;
+      }
+    }
+  }
+  .cancelar {
+    background-color: #FA3451;
+    width: 8rem;
+    border: none;
+    cursor: all-scroll;
+    &:hover {
+      background-color: #FA3451;
+    }
+  }
+  .enviar {
+    background-color: #03CC98;
+    width: 8rem;
+    border: none;
+    cursor: all-scroll;
+    &:hover {
+      background-color: #03CC98;
+    }
+  }
+}
+
+p.mas_info {
+  margin-left: 4.5rem;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.01em;
+  color: #414C69;
+  a.rojo {
+    color: #FA3451;
+  }
+}
+
+/* FORMULARIO AYUDA */
+.container_mesa_ayuda {
+  form {
+   .form-row {
+
+   }
+   .cancelar {
+    background-color: #FA3451;
+    width: 8rem;
+    border: none;
+    cursor: all-scroll;
+    &:hover {
+      background-color: #FA3451;
+    }
+  }
+  .enviar {
+    background-color: #03CC98;
+    width: 8rem;
+    border: none;
+    cursor: all-scroll;
+    &:hover {
+      background-color: #03CC98;
+    }
+  }
+  }
+ }
 
 
-
+ /* NOVEDADES */
+ .user-login {
+  &.display_flex {
+    .collapse {
+      &.navbar-collapse {
+        display: flex;
+      }
+    }
+  }
+}
 
  @media screen and (max-width: 690px) {
     .modal-dialog {

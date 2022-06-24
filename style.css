@@ -668,7 +668,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   color: rgba(34, 67, 119, 0.85);
   position: relative;
 } */
-/* MIGAS FACTURAS */
+/* MIGAS */
 .breadcrumb {
   background-color: transparent;
 }
@@ -691,13 +691,21 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   font-size: 18px;
   line-height: 25px;
 }
-.breadcrumb .breadcrumb-item.active a {
+.breadcrumb .breadcrumb-item.active {
+  padding-left: 11px;
+  color: #414C69;
   text-decoration: none;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
+  color: #414C69;
+}
+.breadcrumb li.breadcrumb-item.active::before {
+  color: #414C69 !important;
+  margin-right: 4px;
+  padding-top: 0px;
 }
 
 /*SIDEBAR*/
@@ -1392,6 +1400,137 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   letter-spacing: 0.025em;
   color: #414C69;
   line-height: 1.5em;
+}
+
+/* PAGINA MESA AYUDA*/
+.container_mesa_ayuda {
+  padding: 2rem 4.5rem;
+}
+.container_mesa_ayuda .titulo {
+  margin-bottom: 5rem;
+}
+.container_mesa_ayuda .titulo h5 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 25px;
+  letter-spacing: 0.165em;
+  color: #414C69;
+}
+.container_mesa_ayuda p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.01em;
+  color: #414C69;
+}
+.container_mesa_ayuda .form-mesa-ayuda {
+  width: 23rem;
+}
+
+.card-secundaria {
+  padding: 2rem 4.5rem;
+}
+.card-secundaria .form-group p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.01em;
+  color: #414C69;
+}
+.card-secundaria .form-group .form-control {
+  margin-bottom: 2rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  color: #757575;
+  padding-top: 2rem;
+}
+
+.tipo_ayuda {
+  display: none;
+}
+.tipo_ayuda .card-secundaria {
+  padding: 2rem 4.5rem;
+}
+.tipo_ayuda .card-secundaria .form-group p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.01em;
+  color: #414C69;
+}
+.tipo_ayuda .card-secundaria .form-group .form-control {
+  margin-bottom: 2rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  color: #757575;
+  padding-top: 2rem;
+}
+.tipo_ayuda .cancelar {
+  background-color: #FA3451;
+  width: 8rem;
+  border: none;
+  cursor: all-scroll;
+}
+.tipo_ayuda .cancelar:hover {
+  background-color: #FA3451;
+}
+.tipo_ayuda .enviar {
+  background-color: #03CC98;
+  width: 8rem;
+  border: none;
+  cursor: all-scroll;
+}
+.tipo_ayuda .enviar:hover {
+  background-color: #03CC98;
+}
+
+p.mas_info {
+  margin-left: 4.5rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.01em;
+  color: #414C69;
+}
+p.mas_info a.rojo {
+  color: #FA3451;
+}
+
+/* FORMULARIO AYUDA */
+.container_mesa_ayuda form .cancelar {
+  background-color: #FA3451;
+  width: 8rem;
+  border: none;
+  cursor: all-scroll;
+}
+.container_mesa_ayuda form .cancelar:hover {
+  background-color: #FA3451;
+}
+.container_mesa_ayuda form .enviar {
+  background-color: #03CC98;
+  width: 8rem;
+  border: none;
+  cursor: all-scroll;
+}
+.container_mesa_ayuda form .enviar:hover {
+  background-color: #03CC98;
+}
+
+/* NOVEDADES */
+.user-login.display_flex .collapse.navbar-collapse {
+  display: flex;
 }
 
 @media screen and (max-width: 690px) {
