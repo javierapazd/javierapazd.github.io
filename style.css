@@ -24,7 +24,7 @@ body {
   min-height: 100vh;
 }
 
-.container-fluid {
+.container-fluid.inicio {
   --bs-gutter-x: 0rem !important;
   width: 95% !important;
 }
@@ -869,6 +869,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 .tabla_facturas_emitidas .container {
   position: relative;
+  max-width: 97%;
   /* PAGER */
 }
 .tabla_facturas_emitidas .container input.buscador {

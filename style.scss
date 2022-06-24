@@ -23,7 +23,7 @@ body {
   min-height: 100vh;
 }
 
-.container-fluid {
+.container-fluid.inicio{
   --bs-gutter-x: 0rem !important;
   width: 95% !important;
 }
@@ -918,6 +918,7 @@ form {
 
 .container {
   position: relative;
+  max-width: 97%;
   input.buscador {
     color: #C4C4C4;
     position: absolute;
