@@ -26,9 +26,6 @@ body {
 .container-fluid {
   --bs-gutter-x: 0rem !important;
   width: 95% !important;
-  &.facturas {
-    background-color: #E5E5E5;
-  }
 }
 a {
   text-decoration: none !important;
@@ -735,33 +732,48 @@ form {
 /* TABLA FACTURAS EMITIDAS*/
 
 .tabla_facturas_emitidas {
-background-color: #E5E5E5;
-font-size: 12px;
+  font-size: 12px;
 
-.titulo {
-  margin-top: 3rem;
-  margin-left: 3rem;
-  margin-bottom:2rem;
-  h5 {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 25px;
-    letter-spacing: 0.165em;
-    color: #414C69;
-  }
-}
 .container {
+  position: relative;
+  input.buscador {
+    color: #C4C4C4;
+    position: absolute;
+    right: 1rem;
+    top: 3rem;
+    border-radius: 6px;
+    border: solid 1px #C4C4C4;
+    padding: .3rem;
+  }
+  .titulo {
+    margin-top: 3rem;
+    margin-bottom:2rem;
+    h5 {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 25px;
+      letter-spacing: 0.165em;
+      color: #414C69;
+    }
+  }
   .table {
-    border-color: #E5E5E5;
+    border-color: #F2F5FA;
     text-align: center;
     thead {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.035em;
+      color: #5D6B73;
       tr {
         th {
           background-color: white;
           border-top: none;
-          border-bottom: solid 3px #E5E5E5;
+          border-bottom: solid 3px #F2F5FA;
           padding: 1rem 0.75rem;
           &:nth-of-type(1) {
             border-radius: 1rem 0 0 1rem;      
@@ -794,6 +806,7 @@ font-size: 12px;
         }
         th {
           background-color: white;
+          
           .circle {
             background-color: #414C69;
             border-radius: 100%;
@@ -808,6 +821,12 @@ font-size: 12px;
         }
         td {
           background-color: white; 
+          font-family: Inter;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 25px;
+          letter-spacing: 0.05em;
+          color: #68696E;
           &.iconos {
             .td-iconos {
              display: flex;
@@ -829,6 +848,7 @@ font-size: 12px;
                 }
                 &.fa-eye {
                   height: 19px;
+                  color: #5D6B73;
                 }
                 &.fa-times-circle {
                   color: #F8C0CA;
@@ -843,6 +863,21 @@ font-size: 12px;
               }
             }
           }
+          &:first-of-type {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 25px;
+            letter-spacing: 0.05em;
+            color: #414C69;
+          }
+          &.pagada_verde {
+            color: #03CC98;
+          }
+          &.rechazada_rojo {
+            color: #FA3451;
+          }
         }
         &:last-of-type {
           th {
@@ -855,7 +890,34 @@ font-size: 12px;
       }
     }
   }
-}
+  /* PAGER */
+    .pagination {
+      li.page-item {
+        a.page-link {
+          color: #C4C4C4;
+          
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 25px;
+          padding: 3px 9px;
+        }
+        &.active {
+          a.page-link {
+            color: #3A3A3A;
+            background-color: white;
+            border-color: #C4C4C4;
+            
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 25px;
+            padding: 3px 9px;
+          }
+        }
+      }
+    }
+  }
 }  
 
 .estados_factura {
@@ -1054,10 +1116,200 @@ right: 0;
       }
     }
   }
-@media screen and (max-width: 1200px) {
-.modal-dialog {
-    max-width: 99vw;
-}
-}
 
 
+
+  /* NOVEDADES */
+.container_novedades {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1.8rem;
+  padding: 2rem 4.5rem 10rem 4.5rem;
+  .card_novedades {
+    display: flex;
+    flex-direction: column;
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    width: 100%;
+    border-radius: 1.1rem;
+    background-color: white;
+    .card_novedades_imagen {
+      height: 200px;
+      border-radius: 1.1rem;
+      overflow: hidden;
+      img {
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+    .card_novedades_texto {
+      padding: 2.5rem 1.5rem;
+      .card_novedades_texto__titulo {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 25px;
+        letter-spacing: 0.075em;
+        color: #414C69;
+        margin-bottom: 1rem;
+      }
+      .card_novedades_texto__texto {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 25px;
+        text-align: justify;
+        letter-spacing: 0.025em;
+        color: #414C69;
+        margin-bottom: 1rem;
+      }
+      a.leer_mas {
+        font-family: Inter;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 0.165em;
+        text-align: left;
+        color: #414C69;
+      }
+    } 
+  }
+}
+ /* BOTONES FLOTANTES */
+ .botones_flotantes {
+    position: fixed;
+    bottom: 5rem;
+    right: 0%;
+    display: flex;
+    justify-content: center;
+    .pronto_pago {
+      margin: 0 2.2rem;
+      .fa {
+        border-radius: 100%;
+        background-color: #02CE99;
+        color: white;
+        height: 4.6rem;
+        width: 4.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.3rem;
+        position: relative;
+      }
+     }
+   .mesa_ayuda {
+    margin: 0 2.2rem;
+    .fa {
+      border-radius: 100%;
+      background-color:  #336CFB;
+      color: white;
+      height: 4.6rem;
+      width: 4.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      position: relative;
+      .signo_pregunta {
+        .fa {
+          &.fa-question {
+            position: absolute;
+            font-size: 1rem;
+            background-color: transparent;
+            right: 0.4rem;
+            top: -.3rem;
+          }
+        }
+      }
+    }
+   }
+   .manuales_guias {
+    margin: 0 2.2rem;
+    .fa {
+      border-radius: 100%;
+      background-color: #02CECE;
+      color: white;
+      height: 4.6rem;
+      width: 4.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.5rem;
+      position: relative;
+    }
+   }
+ }
+  .container_novedad {
+    padding: 2rem 5rem 15rem 5rem;
+    .novedad {
+      .novedad_imagen {
+        width: 55rem;
+        height: 13rem;
+        overflow: hidden;
+        border-radius: 1.1rem;
+        margin-bottom: 2rem;
+        img {
+          width: 100%;
+          background-position: center;
+          background-size: contain;
+        }
+      }
+      .novedad_texto {
+        .novedaded_texto__titulo {
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 25px;
+          letter-spacing: 0.075em;
+          color: #414C69;
+          margin-bottom: 2rem;
+        }
+        .novedaded_texto__bajada {
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 25px;
+          letter-spacing: 0.025em;
+          color: #414C69;
+          margin-bottom: 4rem;
+        }
+        .novedad_texto__texto {
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 25px;
+          text-align: justify;
+          letter-spacing: 0.025em;
+          color: #414C69;
+        }
+      }
+    }
+  }
+
+ @media screen and (max-width: 690px) {
+    .modal-dialog {
+      max-width: 99vw;
+    }
+    .container_novedades {
+      padding: 0 0 15rem 0;
+    }
+    .botones_flotantes {
+    right: 5%;
+    bottom: 3rem;
+    .pronto_pago {
+      margin: 0 .8rem;
+    }
+    .mesa_ayuda {
+      margin: 0 .8rem;
+    }
+    .manuales_guias {
+      margin: 0 .8rem;
+    }
+  }
+    
+  }
