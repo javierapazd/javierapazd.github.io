@@ -726,8 +726,8 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 .sidebar .nav-sidebar {
   background: none;
-  margin-top: 5px;
   margin-bottom: 20px;
+  margin-top: 1em;
 }
 .sidebar .nav-sidebar .nav-item {
   margin-bottom: 1em;
@@ -764,10 +764,15 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   width: 3em;
 }
 .sidebar.sidebar-collapsed {
-  width: 7em;
+  width: 9em;
 }
 .sidebar.sidebar-collapsed .nav-sidebar {
   margin: 1em auto !important;
+}
+.sidebar.sidebar-collapsed .nav-sidebar .nav-item {
+  margin-right: auto !important;
+  margin-left: auto !important;
+  margin-bottom: 0.5em;
 }
 .sidebar.sidebar-collapsed .nav-sidebar .nav-item .nav-link .menu-item {
   opacity: 0;
@@ -804,7 +809,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   padding-right: 5px;
   float: left;
   position: relative;
-  left: 14em;
+  left: 15em;
 }
 
 .menu-item {
@@ -850,7 +855,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   -o-transition: all 0.6s ease-out;
   -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
-  margin-left: 7em;
+  margin-left: 9em;
 }
 
 /* Hide for mobile, show later */
