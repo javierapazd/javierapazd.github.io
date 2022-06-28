@@ -12,116 +12,120 @@
 </head>
 
 <body>
+
+
 <div class="container-fluid inicio">
   <div class="wrapper">
-    <div class="header inicio row align-items-center">
-      <nav class="navbar navbar-expand-lg navbar-light float-end user-login">
-        <div class="logo col-md-6 float-start ps-5">
-          <a href="index.html"><img src="images/logo-ebco.svg" alt=""></a>
-          <div class="iso">
-            <h5>Portal de</h5>
-            <h5>Proveedores</h5>
-            <h6>Creciendo junto a mis socios de negocio</h6>
-          </div>
-        </div>
-        <div class="container">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
-                <a class="user" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  MS
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
-                  <li><a class="dropdown-item" href="#">Configuración</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div> <!-- fin header -->
+
+
+<div class="header">
+  <nav class="navbar navbar-light navbar-expand-sm">
+          <div class="container-fluid logo">
+            <a href="index.html" class="navbar-brand">
+              <img src="images/logo-ebco.svg" alt="">
+            </a>
+            <div class="iso">
+              <h5>Portal de</h5>
+              <h5>Proveedores</h5>
+              <h6>Creciendo junto a mis socios de negocio</h6>
+            </div>
+            <div id="navbarCollapse" class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item dropdown">
+                      <a class="user" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        MS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
+                            <li><a class="dropdown-item" href="#">Configuración</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                        </ul>
+                  </li>
+              </ul>
+            </div>
+      </div>
+  </nav>
+</div>
     <div class="row main border-right">
         <div class="left-content col-md-6 ps-5 pe-4">
           <div class="left-wrapper">
             <div class="row">
               <h3 class="page-name">Inicio</h3>
               <h6 class="page-subtitle">Accesos rápidos</h6>
-              <div class="button-lg col">
-                <div class="content">
-                  <i class="fa fa-exchange" aria-hidden="true"></i>
-                   <a href="#"><p>Pagos</p></a>
-                  <ul>
-                    <a href="#"><li>Últimos pagos realizados</li></a>
-                    <a href="#"><li>Historial de pagos</li></a>
-                  </ul>
-                 </div>
-              </div>
-              <div class="button-lg col">
-                <div class="content">
-                  <i class="fa fa-exchange" aria-hidden="true"></i>
-                  <a href="#"><p>Facturas</p></a>
-                  <ul>
-                    <a href="#"><li>Pendientes de pago</li></a>
-                    <a href="facturas_emitidas.html"><li>Facturas emitidas</li></a>
-                  </ul>
-                 </div>
-              </div>
-              <div class="button-lg col">
-                <div class="content">
-                  <i class="fa fa-exchange" aria-hidden="true"></i>
-                  <a href="#"><p>Recepción/HES</p></a>
-                  <ul>
-                    <a href="#"><li>Recepción/HES en curso</li></a>
-                    <a href="#"><li>Historial de recepción /HES</li></a>
-                  </ul>
-                 </div>
-              </div>
             </div>
-            <div class="row">
-              <div class="button-lg col">
-                <div class="content">
-                  <i class="fa fa-exchange" aria-hidden="true"></i>
-                  <a href="#"><p>OC/Contratos</p></a>
-                  <ul>
-                    <a href="#"><li>OC /Contratos activos</li></a>
-                    <a href="#"><li>Historial OC Completas</li></a>
-                  </ul>
-                 </div>
-              </div>
-              <div class="button-lg col">
-                <div class="content">
-                  <i class="fa fa-exchange" aria-hidden="true"></i>
-                  <a href="#"><p>Estados de pago</p></a>
-                  <ul>
-                    <a href="#"><li>Nuevo estado de pago</li></a>
-                    <a href="#"><li>Estado de pago en proceso</li></a>
-                    <a href="#"><li>Historial de estados de pago</li></a>
-                  </ul>
-                 </div>
-              </div>
-              <div class="button-lg col">
-                <div class="content">
-                  <i class="fa fa-exchange" aria-hidden="true"></i>
-                  <a href="#"><p>Mi espacio</p></a>
-                  <ul>
-                    <a href="#"><li>Perfil</li></a>
-                    <a href="#"><li>Mi evaluación</li></a>
-                    <a href="#"><li>Catálogo de productos</li></a>
-                  </ul>
-                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+            <div class="buttons">
+                <div class="button-lg">
+                  <div class="content">
+                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                    <a href="#"><p>Pagos</p></a>
+                    <ul>
+                      <a href="#"><li>Últimos pagos realizados</li></a>
+                      <a href="#"><li>Historial de pagos</li></a>
+                    </ul>
+                  </div>
+                </div>
+                <div class="button-lg">
+                  <div class="content">
+                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                    <a href="#"><p>Facturas</p></a>
+                    <ul>
+                      <a href="#"><li>Pendientes de pago</li></a>
+                      <a href="facturas_emitidas.html"><li>Facturas emitidas</li></a>
+                    </ul>
+                  </div>
+                </div>
+                <div class="button-lg">
+                  <div class="content">
+                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                    <a href="#"><p>Recepción/HES</p></a>
+                    <ul>
+                      <a href="#"><li>Recepción/HES en curso</li></a>
+                      <a href="#"><li>Historial de recepción /HES</li></a>
+                    </ul>
+                  </div>
+                </div>
+                <div class="button-lg">
+                  <div class="content">
+                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                    <a href="#"><p>OC/Contratos</p></a>
+                    <ul>
+                      <a href="#"><li>OC /Contratos activos</li></a>
+                      <a href="#"><li>Historial OC Completas</li></a>
+                    </ul>
+                  </div>
+                </div>
+                <div class="button-lg">
+                  <div class="content">
+                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                    <a href="#"><p>Estados de pago</p></a>
+                    <ul>
+                      <a href="#"><li>Nuevo estado de pago</li></a>
+                      <a href="#"><li>Estado de pago en proceso</li></a>
+                      <a href="#"><li>Historial de estados de pago</li></a>
+                    </ul>
+                  </div>
+                </div>
+                <div class="button-lg">
+                  <div class="content">
+                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                    <a href="#"><p>Mi espacio</p></a>
+                    <ul>
+                      <a href="#"><li>Perfil</li></a>
+                      <a href="#"><li>Mi evaluación</li></a>
+                      <a href="#"><li>Catálogo de productos</li></a>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!--buttons-->
+          </div> <!--left wrapper-->
+        </div> <!--left content-->
         <div class="right-content col-md-6 ps-5">
           <div class="right-wrapper">
-              <div class="row">
+              <div class="contenido">
                 <h5>Soporte EBCO</h5>
-                <div class="row accesos-rapidos ps-5 float-start">
-                  <div class="item col-2 justify-content-center text-center me-5">
+                <div class="accesos-rapidos">
+                  <div class="item">
                     <a href="#">
                       <div class="button-sll gr">
                         <i class="fa fa-exchange" aria-hidden="true"></i>
@@ -129,7 +133,7 @@
                       <p>Pronto Pago</p>
                     </a>
                   </div>
-                  <div class="item col-2 justify-content-center text-center me-5">
+                  <div class="item">
                     <a href="#">
                       <div class="button-sll bl">
                         <i class="fa fa-exchange" aria-hidden="true"></i>
@@ -137,7 +141,7 @@
                       <p>Mesa de ayuda</p>
                     </a>
                   </div>
-                  <div class="item col-2 justify-content-center text-center me-5">
+                  <div class="item">
                     <a href="#">
                       <div class="button-sll cy">
                       <i class="fa fa-exchange" aria-hidden="true"></i>
@@ -145,47 +149,43 @@
                       <p>Manuales y guías</p>
                     </a>
                   </div>
-                </div>
+                </div> <!--row accesos rapidos-->
               </div>
-              <div class="novedades row ps-2">
+              <div class="news">
                 <h5>Novedades</h5>
-                <div class="col-md-6">
-                  <div class="noticia">
-                    <img class="noticia-lg" src="images/example.png" alt="">
-                    <div class="info-noticia">
-                      <h2 class="titulo">Titulo Ejemplo</h2>
-                      <p class="texto">Descripción ejemplo</p>
-                      <br>
-                      <a href="novedad.html" class="btn btn-default" role="button">Leer más</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="mini-noticia row">
-                    <div class="mini">
-                      <img class="noticia-sm" src="images/example.png" alt="">
-                      <div class="info-noticia">
-                        <h2 class="titulo"></h2>
-                        <p class="texto"></p>
-                        <br>
-
+                  <div class="novedades">
+                      <div class="noticia lg">
+                        <img class="noticia-lg" src="images/example.png" alt="">
+                        <div class="info-noticia">
+                          <h2 class="titulo">Titulo Ejemplo</h2>
+                          <p class="texto">Descripción ejemplo</p>
+                          <br>
+                          <a href="novedad.html" class="btn btn-default" role="button">Leer más</a>
+                        </div>
                       </div>
-                    </div>
-                  <div class="mini">
-                      <img class="noticia-sm" src="images/example2.jpg" alt="">
-                      <div class="info-noticia">
-                        <h2 class="titulo"></h2>
-                        <p class="texto"></p>
-                        <br>
-
+                      <div class="noticia mini">
+                        <img class="noticia-sm" src="images/example.png" alt="">
+                        <div class="info-noticia">
+                          <h4 class="titulo">Titulo</h4>
+                          <p class="texto">Resumen</p>
+                          <a href="novedad.html" class="btn btn-default" role="button">Leer más</a>
+                        </div>
                       </div>
-                  </div>
-                </div>
-              </div>
-           </div>
-        </div>
-  </div>
-</div>
+                      <div class="noticia mini">
+                          <img class="noticia-sm" src="images/example.png" alt="">
+                          <div class="info-noticia">
+                            <h4 class="titulo">Titulo 2</h4>
+                            <p class="texto">Resumen 2</p>
+                            <a href="novedad.html" class="btn btn-default" role="button">Leer más</a>
+                          </div>
+                      </div>
+                </div> <!--novedades-->
+            </div>
+          </div> <!--right wrapper-->
+      </div> <!--right content-->
+  </div> <!--row main-->
+</div> <!--wrapper-->
+</div> <!--container-->
 <div class="row footer">
   <div class="iconos">
     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
@@ -194,8 +194,8 @@
     </a>
     <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i>
     </a>
-  </div>
-</div>
+  </div> <!--iconos-->
+</div> <!--footer-->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
