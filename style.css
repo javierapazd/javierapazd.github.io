@@ -1392,7 +1392,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 
 .container_novedad {
-  padding: 0rem 5rem 15rem 5rem;
+  padding: 0rem 4rem 15rem 4rem;
 }
 .container_novedad .novedad .novedad_imagen {
   width: 100%;
@@ -1571,20 +1571,35 @@ p.mas_info a.rojo {
   display: flex;
 }
 
+@media screen and (max-width: 767px) {
+  .border-right::after {
+    display: none;
+  }
+
+  .container_novedades {
+    padding: 0 1rem 15rem 1rem;
+  }
+
+  .container_novedad {
+    padding: 0rem 3rem 15rem 3rem !important;
+  }
+}
 @media screen and (max-width: 690px) {
   .modal-dialog {
     max-width: 99vw;
   }
 
   .container_novedades {
-    padding: 0 0 15rem 0;
+    padding: 0 1rem 15rem 1rem;
   }
 
-  .border-right::after {
-    display: none;
+  .container_novedad {
+    padding: 0rem 3rem 15rem 3rem !important;
   }
-}
-@media screen and (max-width: 767px) {
+  .container_novedad .novedad .novedad_imagen {
+    height: unset;
+  }
+
   .border-right::after {
     display: none;
   }

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="sidebar side-navbar active-nav d-flex flex-column">
+    <div id="sidebar" class="sidebar side-navbar active-nav">
         <div class="logo mx-auto">
             <a href="index.html"><img src="images/logo-ebco.svg" alt=""></a>
         </div>
@@ -20,7 +20,7 @@
             <span id="toggle-icon" class="fa fa-chevron-left"></span>
         </div>
 
-        <ul class="nav nav-sidebar flex-column text-white w-100 mx-auto">
+        <ul class="nav nav-sidebar text-white w-100 mx-auto">
             <li class="nav-item">
                 <a href="index.html" class="nav-link">
                     <span class="fa fa-codepen"></span>
@@ -93,38 +93,38 @@
         </ul>
     </div>
 
-    <div class="main">
+    <div id="main" class="main">
         <div class="container-fluid">
             <div class="wrapper">
-                <div class="header row align-items-center">
-                    <div class="logo col-md-6 float-start ps-5">
-                        <!-- breadcrumb -->
+                <div class="header">
+                    <nav class="navbar navbar-light navbar-expand-sm">
+                        <div class="container-fluid logo">
+                            <!-- breadcrumb -->
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Novedades</li>
+                                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Mesa de Ayuda</li>
                                 </ol>
                             </nav>
                         <!-- fin breadcrumb -->
-                    </div>
-                    <div class="user-login display_flex col-md-6 float-end pe-5">
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item dropdown">
-                                <a class="user" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                MS
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
-                                <li><a class="dropdown-item" href="#">Configuración</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                              <div id="navbarCollapse" class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item dropdown">
+                                        <a class="user" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          MS
+                                          </a>
+                                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                              <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
+                                              <li><a class="dropdown-item" href="#">Configuración</a></li>
+                                              <li><hr class="dropdown-divider"></li>
+                                              <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                                          </ul>
+                                    </li>
                                 </ul>
-                            </li>
-                            </ul>
+                              </div> <!-- menu colapsable-->
                         </div>
-                    </div>
-                </div>
+                    </nav>
+                  </div>
 
                 <div class="container_novedad">
                         <div class="novedad">
@@ -147,15 +147,15 @@
                 </div>
 
                 <div class="botones_flotantes">
-                    <div class="pronto_pago col-md-1">
+                    <div class="boton pronto_pago col-md-1">
                         <i class="fa fa-usd" aria-hidden="true"></i>
                     </div>
-                    <div class="mesa_ayuda col-md-1">
+                    <div class="boton mesa_ayuda col-md-1">
                         <i class="fa fa-comments-o" aria-hidden="true">
                             <span class="signo_pregunta"><i class="fa fa-question" aria-hidden="true"></i>
                         </span></i>
                     </div>
-                    <div class="manuales_guias col-md-1">
+                    <div class="boton manuales_guias col-md-1">
                         <i class="fa fa-files-o" aria-hidden="true"></i>
                     </div>
                 </div>
