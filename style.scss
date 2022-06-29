@@ -786,7 +786,6 @@ form {
   }
   li.breadcrumb-item.active::before {
     color: #414C69 !important;
-    margin-right: 4px;
     padding-top: 0px;
   }
 }
@@ -814,6 +813,8 @@ form {
   max-width: 20em;
   height: 100%;
   float: left;
+  display: flex;
+  flex-direction: column !important;
   .logo {
     margin-bottom: 1.5em;
     padding-top: 1em;
@@ -827,6 +828,7 @@ form {
     background: none;
     margin-bottom: 20px;
     margin-top: 1em;
+    flex-direction: column !important;
     .nav-item {
       margin-bottom: 1em;
       .nav-link {
@@ -969,12 +971,6 @@ form {
     transition: all 0.6s ease-out;
     margin-left: 9em;
   }
-}
-
-
-/* Hide for mobile, show later */
-.sidebar {
-  display: none;
 }
 
 /* TABLA FACTURAS EMITIDAS*/
@@ -1722,11 +1718,54 @@ p.mas_info {
   }
 }
 
+
+/*tamaño intermedio*/
 @media screen and (max-width: 576px) {
-.header {
-  .iso {
-    display: none !important;
+  .header {
+    .iso {
+      display: none !important;
+    }
+  }
+  .sidebar {
+    display: flex;
+    flex-direction: row !important;
+    position: unset;
+    padding: 0px;
+    max-width: unset;
+    width: 100%;
+    .collapse-sidebar-button {
+      display: none;
+    }
+    .sidebar-collapsed {
+      width: 100% !important;
+      .collapse-sidebar-button {
+        margin: 0em auto !important;
+        position: relative;
+        left: unset;
+      }
+    }
+    .nav-sidebar {
+      flex-direction: row !important;
+      flex-wrap: unset;
+      display: none;
+    }
+  }
+
+  .main {
+    margin-left: unset;
+    padding-right: unset;
+    padding-left: unset;
+  }
+  .container_mesa_ayuda {
+    padding: 0rem 1rem;
   }
 }
-}
 
+/*celulares*/
+@media screen and (max-width: 480px) {
+  .header {
+    .iso {
+      display: none !important;
+    }
+  }
+}

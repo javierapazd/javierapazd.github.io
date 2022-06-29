@@ -48,17 +48,17 @@ var state = "expanded";
 //Check if navbar is expanded or minimized and handle
 //$('#navbar-toggler').click(function() {
    // if (state == "expanded") {
-   //     $('.sidebar').addClass('collapse');
+   //     $('.sidebar').addClass('sidebar-collapsed');
    //     state = "minimized";
     //} else {
     //    if (state == "minimized") {
-    //        $('.sidebar').removeClass('collapse');
+    //        $('.sidebar').removeClass('sidebar-collapsed');
    //         state = "expanded";
     //    }
   //  }
 //})
 
-//menu lateral colapsable
+  /* sidebar  */
 $('.collapse-sidebar-button').on('click', function() {
 	$(".sidebar").toggleClass('sidebar-collapsed');
 	$('.main').toggleClass('main-slide');
@@ -66,17 +66,34 @@ $('.collapse-sidebar-button').on('click', function() {
 });
 
 
+
+$(window).resize(function()
+{
+var $theWindowSize = $(this).width();
+    if($theWindowSize < 900)
+    {
+      $("#sidebar").addClass('sidebar-collapsed');
+      $('#main').addClass('main-slide');
+    }
+    if($theWindowSize < 576)
+    {
+      $("#sidebar").removeClass('sidebar-collapsed').addClass('mobile');
+      $('#main').removeClass('main-slide');
+    }
+});
+
+
 var linkB = '${boton.linkB.getData()}';
 var linkB2 = '${boton2.linkB2.getData()}';
 
 	$(document).ready(function(){
-	    
+
 	    $(".tipo_ayuda").hide();
 
 		$("#ayuda_select").on("change",function() {
             $(".tipo_ayuda").hide();
             $("#"+ $(this).val()).show();
-    		
+
         });
 	});
 
@@ -88,3 +105,6 @@ var linkB2 = '${boton2.linkB2.getData()}';
       x.style.display = "none";
     }
   }
+
+
+
