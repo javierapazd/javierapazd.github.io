@@ -1425,66 +1425,53 @@ right: 0;
  /* BOTONES FLOTANTES */
  .botones_flotantes {
     position: fixed;
-    bottom: 5rem;
+    bottom: 3rem;
     right: 0%;
     display: flex;
     justify-content: center;
-    .pronto_pago {
+    .boton {
       margin: 0 2.2rem;
       .fa {
         border-radius: 100%;
-        background-color: #02CE99;
         color: white;
         height: 4.6rem;
         width: 4.6rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 2.3rem;
+        position: relative;
+      }
+      &.pronto_pago {
+        .fa {
+          background-color: #02CE99;
+          font-size: 2.3rem;
+        }
+       }
+      &.mesa_ayuda {
+        .fa {
+          background-color:  #336CFB;
+          font-size: 3rem;
+          .signo_pregunta {
+            .fa {
+              &.fa-question {
+                position: absolute;
+                font-size: 1rem;
+                background-color: transparent;
+                right: 0.4rem;
+                top: -.3rem;
+              }
+            }
+          }
+        }
+       }
+     &.manuales_guias {
+      .fa {
+        background-color: #02CECE;
+        font-size: 2.5rem;
         position: relative;
       }
      }
-   .mesa_ayuda {
-    margin: 0 2.2rem;
-    .fa {
-      border-radius: 100%;
-      background-color:  #336CFB;
-      color: white;
-      height: 4.6rem;
-      width: 4.6rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 3rem;
-      position: relative;
-      .signo_pregunta {
-        .fa {
-          &.fa-question {
-            position: absolute;
-            font-size: 1rem;
-            background-color: transparent;
-            right: 0.4rem;
-            top: -.3rem;
-          }
-        }
-      }
     }
-   }
-   .manuales_guias {
-    margin: 0 2.2rem;
-    .fa {
-      border-radius: 100%;
-      background-color: #02CECE;
-      color: white;
-      height: 4.6rem;
-      width: 4.6rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2.5rem;
-      position: relative;
-    }
-   }
  }
   .container_novedad {
     padding: 0rem 5rem 15rem 5rem;
@@ -1537,7 +1524,7 @@ right: 0;
   }
 /* PAGINA MESA AYUDA*/
 .container_mesa_ayuda {
-  padding: 2rem 4.5rem;
+  padding: 1rem 3rem;
   .titulo {
     margin-bottom:5rem;
     h5 {
@@ -1560,12 +1547,13 @@ right: 0;
     color: #414C69;
   }
   .form-mesa-ayuda {
-    width: 23rem;
+    max-width: 20em;
+    min-width: 19em;
 
   }
 }
 .card-secundaria {
-  padding: 2rem 4.5rem;
+  padding: 2rem 3rem;
   .form-group {
     p {
       font-family: 'Inter';
@@ -1578,11 +1566,13 @@ right: 0;
     }
     .form-control {
       margin-bottom: 2rem;
-      height: 10rem;
+      min-height: 10rem;
       display: flex;
       align-items: center;
       color: #757575;
       padding-top: 2rem;
+      max-width: 40em;
+      min-width: 19em;
     }
   }
 }
@@ -1631,7 +1621,7 @@ right: 0;
 }
 
 p.mas_info {
-  margin-left: 4.5rem;
+  margin-left: 3rem;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -1690,19 +1680,6 @@ p.mas_info {
   .container_novedades {
     padding: 0 0 15rem 0;
   }
-  .botones_flotantes {
-  right: 5%;
-  bottom: 3rem;
-  .pronto_pago {
-    margin: 0 .8rem;
-  }
-  .mesa_ayuda {
-    margin: 0 .8rem;
-  }
-  .manuales_guias {
-    margin: 0 .8rem;
-  }
-}
   .border-right {
     &::after {
     display: none;
@@ -1722,8 +1699,16 @@ p.mas_info {
 /*tamaño intermedio*/
 @media screen and (max-width: 576px) {
   .header {
+    margin-bottom: 2em;
     .iso {
       display: none !important;
+    }
+    .navbar {
+      padding-left: 0;
+      padding-top: 1em;
+    }
+    .navbar-collapse {
+      padding-right: 0 !important;
     }
   }
   .sidebar {
@@ -1758,6 +1743,39 @@ p.mas_info {
   }
   .container_mesa_ayuda {
     padding: 0rem 1rem;
+    .form-mesa-ayuda {
+      max-width: 32em;
+    }
+  }
+  .card-secundaria {
+    padding: 2rem 1rem;
+  }
+  p.mas_info {
+    margin-left: 1rem;
+  }
+  .tipo_ayuda .card-secundaria {
+    padding: 2rem 1rem;
+  }
+  .botones_flotantes {
+    position: unset !important;
+    margin: 0 auto;
+    align-content: middle;
+    text-align: center;
+    justify-content: center;
+    width: 95%;
+    margin: 5px;
+    margin-top: 4em;
+    bottom: unset !important;
+    .boton {
+      .fa {
+        width: 3.6rem;
+        height: 3.6rem;
+        font-size: 2rem;
+      }
+    }
+    .mesa_ayuda {
+      margin: unset;
+    }
   }
 }
 
