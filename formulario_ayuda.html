@@ -14,119 +14,118 @@
 
 <body>
 
-<div class="sidebar side-navbar active-nav d-flex flex-column">
-    <div class="logo mx-auto">
-        <a href="index.html"><img src="images/logo-ebco.svg" alt=""></a>
-    </div>
-    <div class="collapse-sidebar-button">
-        <span id="toggle-icon" class="fa fa-chevron-left"></span>
-    </div>
+    <div id="sidebar" class="sidebar side-navbar active-nav">
+        <div class="logo mx-auto">
+            <a href="index.html"><img src="images/logo-ebco.svg" alt=""></a>
+        </div>
+        <div class="collapse-sidebar-button">
+            <span id="toggle-icon" class="fa fa-chevron-left"></span>
+        </div>
 
-    <ul class="nav nav-sidebar flex-column text-white w-100 mx-auto">
-        <li class="nav-item">
-            <a href="index.html" class="nav-link">
-                <span class="fa fa-codepen"></span>
-                <span class="menu-item">Inicio</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">
-                <span class="fa fa-paperclip"></span>
-                <span class="menu-item">OC/Contratos</span>
-            </a>
-            <ul class="submenu flex-wrap">
-                <li><a class="sub-nav" href="#">OC/Contratos activos</a></li>
-                <li><a class="sub-nav" href="#">Historial OC Completo</a></li>
-            </ul>
-        </li>
+        <ul class="nav nav-sidebar text-white w-100 mx-auto">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <span class="fa fa-codepen"></span>
+                    <span class="menu-item">Inicio</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="fa fa-paperclip"></span>
+                    <span class="menu-item">OC/Contratos</span>
+                </a>
+                <ul class="submenu flex-wrap">
+                    <li><a class="sub-nav" href="#">OC/Contratos activos</a></li>
+                    <li><a class="sub-nav" href="#">Historial OC Completo</a></li>
+                </ul>
+            </li>
 
-        <li class="nav-item">
-            <a href="#" class="nav-link">
-                <span class="fa fa-credit-card"></span>
-                <span class="menu-item">Estados de pago</span>
-            </a>
-            <ul class="submenu">
-                <li><a class="sub-nav" href="#">Nuevo estado de pago</a></li>
-                <li><a class="sub-nav" href="#">Pagos en proceso</a></li>
-                <li><a class="sub-nav" href="#">Historial</a></li>
-            </ul>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">
-                <span class="fa fa-twitter"></span>
-                <span class="menu-item">Migos/Hes</span>
-            </a>
-            <ul class="submenu">
-                <li><a class="sub-nav" href="#">Migos/Hes en curso</a></li>
-                <li><a class="sub-nav" href="#">Historial de entregas</a></li>
-            </ul>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">
-                <span class="fa fa-twitter"></span>
-                <span class="menu-item">Facturas</span>
-            </a>
-            <ul class="submenu">
-                <li><a class="sub-nav" href="#">Pendientes de pago</a></li>
-                <li><a class="sub-nav" href="#">Facturas emitidas</a></li>
-            </ul>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">
-                <span class="fa fa-check"></span>
-                <span class="menu-item">Pagos</span>
-            </a>
-            <ul class="submenu">
-                <li><a class="sub-nav" href="#">Últimos pagos realizados</a></li>
-                <li><a class="sub-nav" href="#">Historial de pagos</a></li>
-            </ul>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">
-                <span class="fa fa-user"></span>
-                <span class="menu-item">Mi espacio</span>
-            </a>
-            <ul class="submenu">
-                <li><a class="sub-nav" href="#">Perfil</a></li>
-                <li><a class="sub-nav" href="#">Mi evaluación</a></li>
-                <li><a class="sub-nav" href="#">Catálogo de productos</a></li>
-            </ul>
-        </li>
-    </ul>
-</div>
-<div class="main">
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="fa fa-credit-card"></span>
+                    <span class="menu-item">Estados de pago</span>
+                </a>
+                <ul class="submenu">
+                    <li><a class="sub-nav" href="#">Nuevo estado de pago</a></li>
+                    <li><a class="sub-nav" href="#">Pagos en proceso</a></li>
+                    <li><a class="sub-nav" href="#">Historial</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="fa fa-twitter"></span>
+                    <span class="menu-item">Migos/Hes</span>
+                </a>
+                <ul class="submenu">
+                    <li><a class="sub-nav" href="#">Migos/Hes en curso</a></li>
+                    <li><a class="sub-nav" href="#">Historial de entregas</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="fa fa-twitter"></span>
+                    <span class="menu-item">Facturas</span>
+                </a>
+                <ul class="submenu">
+                    <li><a class="sub-nav" href="#">Pendientes de pago</a></li>
+                    <li><a class="sub-nav" href="facturas_emitidas.html">Facturas emitidas</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="fa fa-check"></span>
+                    <span class="menu-item">Pagos</span>
+                </a>
+                <ul class="submenu">
+                    <li><a class="sub-nav" href="#">Últimos pagos realizados</a></li>
+                    <li><a class="sub-nav" href="#">Historial de pagos</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="fa fa-user"></span>
+                    <span class="menu-item">Mi espacio</span>
+                </a>
+                <ul class="submenu">
+                    <li><a class="sub-nav" href="#">Perfil</a></li>
+                    <li><a class="sub-nav" href="#">Mi evaluación</a></li>
+                    <li><a class="sub-nav" href="#">Catálogo de productos</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+<div id="main"class="main">
     <div class="container-fluid">
         <div class="wrapper">
-          <div class="header row align-items-center">
-            <div class="logo col-md-6 float-start ps-5">
-                <!-- breadcrumb -->
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                        <li class="breadcrumb-item"><a href="#">Mesa de ayuda</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Formulario de ayuda</li>
-                        </ol>
-                    </nav>
-                <!-- fin breadcrumb -->
-            </div>
-            <div class="user-login display_flex col-md-6 float-end pe-5">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="user" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        MS
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
-                        <li><a class="dropdown-item" href="#">Configuración</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-                        </ul>
-                    </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+            <div class="header">
+                <nav class="navbar navbar-light navbar-expand-sm">
+                    <div class="container-fluid logo">
+                        <!-- breadcrumb -->
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Mesa de Ayuda</li>
+                            </ol>
+                        </nav>
+                    <!-- fin breadcrumb -->
+                          <div id="navbarCollapse" class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item dropdown">
+                                    <a class="user" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      MS
+                                      </a>
+                                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                          <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
+                                          <li><a class="dropdown-item" href="#">Configuración</a></li>
+                                          <li><hr class="dropdown-divider"></li>
+                                          <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                                      </ul>
+                                </li>
+                            </ul>
+                          </div> <!-- menu colapsable-->
+                    </div>
+                </nav>
+              </div>
             <div class="container_mesa_ayuda">
                 <div class="titulo"><h5>Mesa de Ayuda</h5></div>
                     <div class="row">

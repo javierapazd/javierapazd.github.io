@@ -981,6 +981,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   border-top: none;
   border-bottom: solid 3px #F2F5FA;
   padding: 1rem 0.75rem;
+  vertical-align: middle;
 }
 .tabla_facturas_emitidas .container .table thead tr th:nth-of-type(1) {
   border-radius: 1rem 0 0 1rem;
