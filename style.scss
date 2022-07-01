@@ -22,6 +22,9 @@ body {
   margin: 0 auto;
 }
 
+.right-content {
+  padding-left: 3rem !important;
+}
 .container-fluid.inicio{
   --bs-gutter-x: 0rem !important;
 }
@@ -1083,6 +1086,10 @@ form {
               height: 2rem;
               width: 2rem;
               margin-left: .8rem;
+              &.verde {
+                background-color: #03CC98;
+                ;
+              }
             }
           }
           td {
@@ -1793,6 +1800,9 @@ p.mas_info {
     display: none;
     }
   }
+  .right-content {
+    padding-right: 3em !important;
+  }
   .container_novedades {
     padding: 0 1rem 15rem 1rem;
   }
@@ -1895,6 +1905,9 @@ p.mas_info {
     margin-left: unset;
     padding-right: unset;
     padding-left: unset;
+  }
+  .right-content {
+    padding-right: 3em !important;
   }
   .container_mesa_ayuda {
     padding: 0rem 1rem;

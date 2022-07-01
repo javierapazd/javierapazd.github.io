@@ -23,6 +23,10 @@ body {
   margin: 0 auto;
 }
 
+.right-content {
+  padding-left: 3rem !important;
+}
+
 .container-fluid.inicio {
   --bs-gutter-x: 0rem !important;
 }
@@ -1039,6 +1043,9 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   width: 2rem;
   margin-left: 0.8rem;
 }
+.tabla_facturas .container-fluid .table tbody tr th .circle.verde {
+  background-color: #03CC98;
+}
 .tabla_facturas .container-fluid .table tbody tr td {
   background-color: white;
   font-family: Inter;
@@ -1685,6 +1692,10 @@ p.mas_info a.rojo {
     display: none;
   }
 
+  .right-content {
+    padding-right: 3em !important;
+  }
+
   .container_novedades {
     padding: 0 1rem 15rem 1rem;
   }
@@ -1784,6 +1795,10 @@ p.mas_info a.rojo {
     margin-left: unset;
     padding-right: unset;
     padding-left: unset;
+  }
+
+  .right-content {
+    padding-right: 3em !important;
   }
 
   .container_mesa_ayuda {
