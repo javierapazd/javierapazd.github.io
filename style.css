@@ -933,15 +933,20 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 
 /* TABLA FACTURAS EMITIDAS*/
-.tabla_facturas_emitidas {
+.tabla_facturas {
   font-size: 12px;
+  padding-left: 3em;
 }
-.tabla_facturas_emitidas .container {
-  position: relative;
-  max-width: 97%;
+.tabla_facturas .container-fluid {
+  display: flex;
+  flex-wrap: wrap;
   /* PAGER */
 }
-.tabla_facturas_emitidas .container input.buscador {
+.tabla_facturas .container-fluid .buscador {
+  flex: 1 0 0%;
+  position: relative;
+}
+.tabla_facturas .container-fluid .buscador input.buscador {
   color: #C4C4C4;
   position: absolute;
   right: 1rem;
@@ -949,25 +954,27 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   border-radius: 6px;
   border: solid 1px #C4C4C4;
   padding: 0.3rem;
+  min-width: 17em;
 }
-.tabla_facturas_emitidas .container .titulo {
-  margin-top: 3rem;
+.tabla_facturas .container-fluid .titulo {
+  margin-top: 2rem;
   margin-bottom: 2rem;
+  flex: 1 0 0%;
 }
-.tabla_facturas_emitidas .container .titulo h5 {
+.tabla_facturas .container-fluid .titulo h5 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 30px;
-  line-height: 25px;
+  font-size: 2.5em;
+  line-height: 1.2em;
   letter-spacing: 0.165em;
   color: #414C69;
 }
-.tabla_facturas_emitidas .container .table {
+.tabla_facturas .container-fluid .table {
   border-color: #F2F5FA;
   text-align: center;
 }
-.tabla_facturas_emitidas .container .table thead {
+.tabla_facturas .container-fluid .table thead {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -976,39 +983,41 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   letter-spacing: 0.035em;
   color: #5D6B73;
 }
-.tabla_facturas_emitidas .container .table thead tr th {
+.tabla_facturas .container-fluid .table thead tr th {
   background-color: white;
   border-top: none;
   border-bottom: solid 3px #F2F5FA;
   padding: 1rem 0.75rem;
   vertical-align: middle;
 }
-.tabla_facturas_emitidas .container .table thead tr th:nth-of-type(1) {
+.tabla_facturas .container-fluid .table thead tr th:nth-of-type(1) {
   border-radius: 1rem 0 0 1rem;
 }
-.tabla_facturas_emitidas .container .table thead tr th:last-of-type {
+.tabla_facturas .container-fluid .table thead tr th:last-of-type {
   border-radius: 0 1rem 1rem 0;
+  padding-right: 1em;
 }
-.tabla_facturas_emitidas .container .table tbody tr:nth-of-type(1) th {
+.tabla_facturas .container-fluid .table tbody tr:nth-of-type(1) th {
   border-top: solid 3px #E5E5E5;
   padding-top: 1rem;
   background-color: white;
 }
-.tabla_facturas_emitidas .container .table tbody tr:nth-of-type(1) th:nth-of-type(1) {
+.tabla_facturas .container-fluid .table tbody tr:nth-of-type(1) th:nth-of-type(1) {
   border-radius: 1rem 0 0 0;
 }
-.tabla_facturas_emitidas .container .table tbody tr:nth-of-type(1) td {
+.tabla_facturas .container-fluid .table tbody tr:nth-of-type(1) td {
   background-color: white;
   border-top: solid 3px #E5E5E5;
   padding-top: 1rem;
 }
-.tabla_facturas_emitidas .container .table tbody tr:nth-of-type(1) td:last-of-type {
+.tabla_facturas .container-fluid .table tbody tr:nth-of-type(1) td:last-of-type {
   border-radius: 0 1rem 0 0;
+  padding-right: 1em;
 }
-.tabla_facturas_emitidas .container .table tbody tr th {
+.tabla_facturas .container-fluid .table tbody tr th {
   background-color: white;
 }
-.tabla_facturas_emitidas .container .table tbody tr th .circle {
+.tabla_facturas .container-fluid .table tbody tr th .circle {
   background-color: #414C69;
   border-radius: 100%;
   display: flex;
@@ -1019,7 +1028,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   width: 2rem;
   margin-left: 0.8rem;
 }
-.tabla_facturas_emitidas .container .table tbody tr td {
+.tabla_facturas .container-fluid .table tbody tr td {
   background-color: white;
   font-family: Inter;
   font-size: 12px;
@@ -1027,17 +1036,18 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   line-height: 25px;
   letter-spacing: 0.05em;
   color: #68696E;
+  text-align: left;
 }
-.tabla_facturas_emitidas .container .table tbody tr td.iconos .td-iconos {
+.tabla_facturas .container-fluid .table tbody tr td.iconos .td-iconos {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.tabla_facturas_emitidas .container .table tbody tr td.iconos .td-iconos .fa {
+.tabla_facturas .container-fluid .table tbody tr td.iconos .td-iconos .fa {
   font-size: 1.5rem !important;
   display: flex;
 }
-.tabla_facturas_emitidas .container .table tbody tr td.iconos .td-iconos .fa.fa-check-circle {
+.tabla_facturas .container-fluid .table tbody tr td.iconos .td-iconos .fa.fa-check-circle {
   color: #B4EDDE;
   background-color: green;
   border-radius: 100%;
@@ -1047,11 +1057,11 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   align-items: center;
   margin-right: 0.5rem;
 }
-.tabla_facturas_emitidas .container .table tbody tr td.iconos .td-iconos .fa.fa-eye {
+.tabla_facturas .container-fluid .table tbody tr td.iconos .td-iconos .fa.fa-eye {
   height: 19px;
   color: #5D6B73;
 }
-.tabla_facturas_emitidas .container .table tbody tr td.iconos .td-iconos .fa.fa-times-circle {
+.tabla_facturas .container-fluid .table tbody tr td.iconos .td-iconos .fa.fa-times-circle {
   color: #F8C0CA;
   background-color: red;
   border-radius: 100%;
@@ -1061,7 +1071,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   align-items: center;
   margin-right: 0.5rem;
 }
-.tabla_facturas_emitidas .container .table tbody tr td:first-of-type {
+.tabla_facturas .container-fluid .table tbody tr td:first-of-type {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -1070,19 +1080,19 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   letter-spacing: 0.05em;
   color: #414C69;
 }
-.tabla_facturas_emitidas .container .table tbody tr td.pagada_verde {
+.tabla_facturas .container-fluid .table tbody tr td.pagada_verde {
   color: #03CC98;
 }
-.tabla_facturas_emitidas .container .table tbody tr td.rechazada_rojo {
+.tabla_facturas .container-fluid .table tbody tr td.rechazada_rojo {
   color: #FA3451;
 }
-.tabla_facturas_emitidas .container .table tbody tr:last-of-type th {
+.tabla_facturas .container-fluid .table tbody tr:last-of-type th {
   border-radius: 0 0 0 1rem;
 }
-.tabla_facturas_emitidas .container .table tbody tr:last-of-type td:last-of-type {
+.tabla_facturas .container-fluid .table tbody tr:last-of-type td:last-of-type {
   border-radius: 0 0 1rem 0;
 }
-.tabla_facturas_emitidas .container .pagination li.page-item a.page-link {
+.tabla_facturas .container-fluid .pagination li.page-item a.page-link {
   color: #C4C4C4;
   font-style: normal;
   font-weight: 400;
@@ -1090,7 +1100,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   line-height: 25px;
   padding: 3px 9px;
 }
-.tabla_facturas_emitidas .container .pagination li.page-item.active a.page-link {
+.tabla_facturas .container-fluid .pagination li.page-item.active a.page-link {
   color: #3A3A3A;
   background-color: white;
   border-color: #C4C4C4;
@@ -1104,19 +1114,18 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 .estados_factura {
   display: flex;
   justify-content: end;
-  margin-top: 3rem;
+  margin: 2em 2em 2em 2em;
   bottom: 0;
-  position: absolute;
   right: 0;
+  flex-wrap: wrap;
+  padding: 1em;
 }
-.estados_factura .estados_factura_pagada {
+.estados_factura .icono_factura {
   display: flex;
   margin-right: 2.5rem;
 }
-.estados_factura .estados_factura_pagada .fa {
-  font-size: 0.8rem !important;
+.estados_factura .icono_factura .fa {
   color: white;
-  background-color: #02CE99;
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -1125,107 +1134,35 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   width: 22px;
   margin-right: 0.5rem;
 }
-.estados_factura .estados_factura_pagada p {
+.estados_factura .icono_factura p {
   color: #414C69;
   padding-top: 0.15rem;
 }
-.estados_factura .estados_factura_revision {
-  display: flex;
-  margin-right: 2.5rem;
+.estados_factura .icono_factura.pagada .fa {
+  background-color: #02CE99;
+  font-size: 0.8rem !important;
 }
-.estados_factura .estados_factura_revision .fa {
-  font-size: 1.2rem !important;
-  color: white;
+.estados_factura .icono_factura.revision .fa {
   background-color: #FFE600;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 22px;
-  width: 22px;
-  margin-right: 0.5rem;
+  font-size: 1.2rem !important;
 }
-.estados_factura .estados_factura_revision p {
-  color: #414C69;
-  padding-top: 0.15rem;
-}
-.estados_factura .estados_factura_aprobada {
-  display: flex;
-  margin-right: 2.5rem;
-}
-.estados_factura .estados_factura_aprobada .fa {
-  font-size: 0.7rem !important;
-  color: white;
+.estados_factura .icono_factura.aprobada .fa {
   background-color: #02CE99;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 22px;
-  width: 22px;
-  margin-right: 0.5rem;
+  font-size: 0.7rem !important;
 }
-.estados_factura .estados_factura_aprobada p {
-  color: #414C69;
-  padding-top: 0.15rem;
-}
-.estados_factura .estados_factura_rechazada {
-  display: flex;
-  margin-right: 2.5rem;
-}
-.estados_factura .estados_factura_rechazada .fa {
-  font-size: 0.8rem !important;
-  color: white;
+.estados_factura .icono_factura.rechazada .fa, .estados_factura .icono_factura.cedida .fa {
   background-color: #FA3451;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 22px;
-  width: 22px;
-  margin-right: 0.5rem;
-}
-.estados_factura .estados_factura_rechazada p {
-  color: #414C69;
-  padding-top: 0.15rem;
-}
-.estados_factura .estados_factura_cedida {
-  display: flex;
-  margin-right: 2.5rem;
-}
-.estados_factura .estados_factura_cedida .fa {
   font-size: 0.8rem !important;
-  color: white;
-  background-color: #FA3451;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 22px;
-  width: 22px;
-  margin-right: 0.5rem;
 }
-.estados_factura .estados_factura_cedida p {
-  color: #414C69;
-  padding-top: 0.15rem;
+.estados_factura .icono_factura.xml {
+  position: relative !important;
 }
-.estados_factura .estados_factura_xml {
-  display: flex;
-  margin-right: 2.5rem;
-  position: relative;
-}
-.estados_factura .estados_factura_xml .fa {
-  font-size: 1.6rem !important;
+.estados_factura .icono_factura.xml .fa {
   color: #FA3451;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 22px;
-  width: 22px;
+  font-size: 1.6rem !important;
   margin-right: 1rem;
 }
-.estados_factura .estados_factura_xml span.xml {
+.estados_factura .icono_factura.xml span.xml {
   background-color: #FA3451;
   color: white;
   height: 0.8rem;
@@ -1236,14 +1173,10 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   right: 1.8rem;
   top: -0.2rem;
 }
-.estados_factura .estados_factura_xml p {
-  color: #414C69;
-  padding-top: 0.15rem;
-}
 
 /* MODAL */
 .modal-dialog {
-  max-width: 40vw;
+  min-width: 45%;
 }
 .modal-dialog .modal-content {
   border-radius: 0.7rem;
@@ -1572,6 +1505,170 @@ p.mas_info a.rojo {
   display: flex;
 }
 
+/*tooltips*/
+/* START TOOLTIP STYLES */
+[tooltip] {
+  position: relative;
+  /* opinion 1 */
+}
+
+/* Applies to all tooltips */
+[tooltip]::before,
+[tooltip]::after {
+  text-transform: none;
+  /* opinion 2 */
+  font-size: 0.9em;
+  /* opinion 3 */
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+
+[tooltip]::before {
+  content: "";
+  border: 5px solid transparent;
+  /* opinion 4 */
+  z-index: 1001;
+  /* absurdity 1 */
+}
+
+[tooltip]::after {
+  content: attr(tooltip);
+  /* magic! */
+  /* most of the rest of this is opinion */
+  text-align: center;
+  /*
+    Let the content set the size of the tooltips
+    but this will also keep them from being obnoxious
+    */
+  min-width: 3em;
+  max-width: 21em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1em 1.5em;
+  border-radius: 0.3ch;
+  /*box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);*/
+  background: rgb(255, 255, 255);
+  color: #484848;
+  z-index: 1000;
+  /* absurdity 2 */
+  border-radius: 12px;
+}
+
+/* Make the tooltips respond to hover */
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+  display: block;
+}
+
+/* don't show empty tooltips */
+[tooltip=""]::before,
+[tooltip=""]::after {
+  display: none !important;
+}
+
+/* FLOW: UP */
+[tooltip]:not([flow])::before,
+[tooltip][flow^=up]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #333;
+}
+
+[tooltip]:not([flow])::after,
+[tooltip][flow^=up]::after {
+  bottom: calc(100% + 5px);
+}
+
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after,
+[tooltip][flow^=up]::before,
+[tooltip][flow^=up]::after {
+  left: 50%;
+  transform: translate(-50%, -0.5em);
+}
+
+/* FLOW: DOWN */
+[tooltip][flow^=down]::before {
+  top: calc(100% + 0.4em);
+  border-top-width: 0;
+  border-bottom-color: rgb(255, 255, 255);
+}
+
+[tooltip][flow^=down]::after {
+  top: calc(100% + 0.8em);
+}
+
+[tooltip][flow^=down]::before,
+[tooltip][flow^=down]::after {
+  left: 50%;
+  transform: translate(-50%, 0.5em);
+}
+
+/* FLOW: LEFT */
+[tooltip][flow^=left]::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: #333;
+  left: calc(0em - 5px);
+  transform: translate(-0.5em, -50%);
+}
+
+[tooltip][flow^=left]::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translate(-0.5em, -50%);
+}
+
+/* FLOW: RIGHT */
+[tooltip][flow^=right]::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: #333;
+  right: calc(0em - 5px);
+  transform: translate(0.5em, -50%);
+}
+
+[tooltip][flow^=right]::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translate(0.5em, -50%);
+}
+
+/* KEYFRAMES */
+@keyframes tooltips-vert {
+  to {
+    opacity: 0.9;
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes tooltips-horz {
+  to {
+    opacity: 0.9;
+    transform: translate(0, -50%);
+  }
+}
+/* FX All The Things */
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^=up]:hover::before,
+[tooltip][flow^=up]:hover::after,
+[tooltip][flow^=down]:hover::before,
+[tooltip][flow^=down]:hover::after {
+  animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[tooltip][flow^=left]:hover::before,
+[tooltip][flow^=left]:hover::after,
+[tooltip][flow^=right]:hover::before,
+[tooltip][flow^=right]:hover::after {
+  animation: tooltips-horz 300ms ease-out forwards;
+}
+
 @media screen and (max-width: 767px) {
   .border-right::after {
     display: none;
@@ -1583,6 +1680,32 @@ p.mas_info a.rojo {
 
   .container_novedad {
     padding: 0rem 3rem 15rem 3rem !important;
+  }
+
+  .tabla_facturas {
+    margin-right: 2em;
+  }
+  .tabla_facturas .container-fluid {
+    flex-direction: column;
+    padding-right: 0;
+    padding-left: 0;
+    --bs-gutter-x: 0rem;
+  }
+  .tabla_facturas .container-fluid .titulo {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .tabla_facturas .container-fluid .buscador {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .tabla_facturas .container-fluid .buscador input.buscador {
+    position: unset;
+    right: unset;
+    top: unset;
+  }
+  .tabla_facturas .estados_factura {
+    margin: 0;
   }
 }
 @media screen and (max-width: 690px) {

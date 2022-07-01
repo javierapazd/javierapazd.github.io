@@ -975,167 +975,176 @@ form {
 
 /* TABLA FACTURAS EMITIDAS*/
 
-.tabla_facturas_emitidas {
+.tabla_facturas {
   font-size: 12px;
-
-.container {
-  position: relative;
-  max-width: 97%;
-  input.buscador {
-    color: #C4C4C4;
-    position: absolute;
-    right: 1rem;
-    top: 3rem;
-    border-radius: 6px;
-    border: solid 1px #C4C4C4;
-    padding: .3rem;
-  }
-  .titulo {
-    margin-top: 3rem;
-    margin-bottom:2rem;
-    h5 {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 30px;
-      line-height: 25px;
-      letter-spacing: 0.165em;
-      color: #414C69;
+  padding-left: 3em;
+  .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    .buscador {
+      flex: 1 0 0%;
+      position: relative;
+      input.buscador {
+        color: #C4C4C4;
+        position: absolute;
+        right: 1rem;
+        top: 3rem;
+        border-radius: 6px;
+        border: solid 1px #C4C4C4;
+        padding: .3rem;
+        min-width: 17em;
+      }
     }
-  }
-  .table {
-    border-color: #F2F5FA;
-    text-align: center;
-    thead {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 12px;
-      line-height: 18px;
-      letter-spacing: 0.035em;
-      color: #5D6B73;
-      tr {
-        th {
-          background-color: white;
-          border-top: none;
-          border-bottom: solid 3px #F2F5FA;
-          padding: 1rem 0.75rem;
-          vertical-align: middle;
-          &:nth-of-type(1) {
-            border-radius: 1rem 0 0 1rem;
-          }
-          &:last-of-type {
-            border-radius:  0 1rem 1rem 0;
+    .titulo {
+      margin-top: 2rem;
+      margin-bottom:2rem;
+      flex: 1 0 0%;
+      h5 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.5em;
+        line-height: 1.2em;
+        letter-spacing: 0.165em;
+        color: #414C69;
+      }
+    }
+    .table {
+      border-color: #F2F5FA;
+      text-align: center;
+      thead {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.035em;
+        color: #5D6B73;
+        tr {
+          th {
+            background-color: white;
+            border-top: none;
+            border-bottom: solid 3px #F2F5FA;
+            padding: 1rem 0.75rem;
+            vertical-align: middle;
+            &:nth-of-type(1) {
+              border-radius: 1rem 0 0 1rem;
+            }
+            &:last-of-type {
+              border-radius:  0 1rem 1rem 0;
+              padding-right: 1em;
+            }
           }
         }
       }
-    }
-    tbody {
-      tr {
-        &:nth-of-type(1) {
+      tbody {
+        tr {
+          &:nth-of-type(1) {
+            th {
+              border-top: solid 3px #E5E5E5;
+              padding-top: 1rem;
+              background-color: white;
+              &:nth-of-type(1) {
+                border-radius: 1rem 0 0 0;
+              }
+            }
+            td {
+              background-color: white;
+              border-top: solid 3px #E5E5E5;
+              padding-top: 1rem;
+              &:last-of-type {
+              border-radius: 0 1rem 0 0;
+              padding-right: 1em;
+              }
+            }
+          }
           th {
-            border-top: solid 3px #E5E5E5;
-            padding-top: 1rem;
             background-color: white;
-            &:nth-of-type(1) {
-              border-radius: 1rem 0 0 0;
+
+            .circle {
+              background-color: #414C69;
+              border-radius: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: white;
+              height: 2rem;
+              width: 2rem;
+              margin-left: .8rem;
             }
           }
           td {
             background-color: white;
-            border-top: solid 3px #E5E5E5;
-            padding-top: 1rem;
-            &:last-of-type {
-            border-radius: 0 1rem 0 0;
-            }
-          }
-        }
-        th {
-          background-color: white;
+            font-family: Inter;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 25px;
+            letter-spacing: 0.05em;
+            color: #68696E;
+            text-align: left;
+            &.iconos {
+              .td-iconos {
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+                .fa {
+                  font-size: 1.5rem !important;
+                  display: flex;
 
-          .circle {
-            background-color: #414C69;
-            border-radius: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            height: 2rem;
-            width: 2rem;
-            margin-left: .8rem;
-          }
-        }
-        td {
-          background-color: white;
-          font-family: Inter;
-          font-size: 12px;
-          font-weight: 400;
-          line-height: 25px;
-          letter-spacing: 0.05em;
-          color: #68696E;
-          &.iconos {
-            .td-iconos {
-             display: flex;
-             justify-content: space-evenly;
-             align-items: center;
-              .fa {
-                font-size: 1.5rem !important;
-                display: flex;
-
-                &.fa-check-circle {
-                  color: #B4EDDE;
-                  background-color: green;
-                  border-radius: 100%;
-                  height: 19px;
-                  width: 19px;
-                  justify-content:center;
-                  align-items: center;
-                  margin-right: .5rem
-                }
-                &.fa-eye {
-                  height: 19px;
-                  color: #5D6B73;
-                }
-                &.fa-times-circle {
-                  color: #F8C0CA;
-                  background-color: red;
-                  border-radius: 100%;
-                  height: 19px;
-                  width: 19px;
-                  justify-content:center;
-                  align-items: center;
-                  margin-right: .5rem
+                  &.fa-check-circle {
+                    color: #B4EDDE;
+                    background-color: green;
+                    border-radius: 100%;
+                    height: 19px;
+                    width: 19px;
+                    justify-content:center;
+                    align-items: center;
+                    margin-right: .5rem
+                  }
+                  &.fa-eye {
+                    height: 19px;
+                    color: #5D6B73;
+                  }
+                  &.fa-times-circle {
+                    color: #F8C0CA;
+                    background-color: red;
+                    border-radius: 100%;
+                    height: 19px;
+                    width: 19px;
+                    justify-content:center;
+                    align-items: center;
+                    margin-right: .5rem
+                  }
                 }
               }
             }
+            &:first-of-type {
+              font-family: 'Inter';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 25px;
+              letter-spacing: 0.05em;
+              color: #414C69;
+            }
+            &.pagada_verde {
+              color: #03CC98;
+            }
+            &.rechazada_rojo {
+              color: #FA3451;
+            }
           }
-          &:first-of-type {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 12px;
-            line-height: 25px;
-            letter-spacing: 0.05em;
-            color: #414C69;
-          }
-          &.pagada_verde {
-            color: #03CC98;
-          }
-          &.rechazada_rojo {
-            color: #FA3451;
-          }
-        }
-        &:last-of-type {
-          th {
-            border-radius: 0 0 0 1rem;
-          }
-          td:last-of-type {
-            border-radius: 0 0 1rem 0;
+          &:last-of-type {
+            th {
+              border-radius: 0 0 0 1rem;
+            }
+            td:last-of-type {
+              border-radius: 0 0 1rem 0;
+            }
           }
         }
       }
     }
-  }
   /* PAGER */
     .pagination {
       li.page-item {
@@ -1169,17 +1178,16 @@ form {
 .estados_factura {
 display: flex;
 justify-content: end;
-margin-top: 3rem;
+margin: 2em 2em 2em 2em;
 bottom: 0;
-position: absolute;
 right: 0;
-.estados_factura_pagada{
+flex-wrap: wrap;
+padding: 1em;
+.icono_factura {
   display:flex;
   margin-right: 2.5rem;
   .fa {
-    font-size: .8rem !important;
     color: white;
-    background-color: #02CE99;
     border-radius: 100%;
     display: flex;
     justify-content: center;
@@ -1192,125 +1200,57 @@ right: 0;
     color:#414C69;
     padding-top: .15rem;
   }
-}
-.estados_factura_revision {
-  display: flex;
-  margin-right: 2.5rem;
-  .fa {
-    font-size: 1.2rem !important;
-    color: white;
-    background-color: #FFE600;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    height: 22px;
-    width: 22px;
-    margin-right: .5rem;
+  &.pagada {
+    .fa {
+      background-color: #02CE99;
+      font-size: .8rem !important;
+    }
   }
-  p {
-    color:#414C69;
-    padding-top: .15rem;
+  &.revision{
+    .fa {
+      background-color: #FFE600;
+      font-size: 1.2rem !important;
+    }
   }
-}
-.estados_factura_aprobada {
-  display: flex;
-  margin-right: 2.5rem;
-  .fa {
-    font-size: .7rem !important;
-    color: white;
-    background-color: #02CE99;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    height: 22px;
-    width: 22px;
-    margin-right: .5rem;
+  &.aprobada {
+    .fa {
+      background-color: #02CE99;
+      font-size: .7rem !important;
+    }
   }
-  p {
-    color:#414C69;
-    padding-top: .15rem;
+  &.rechazada, &.cedida {
+    .fa {
+      background-color: #FA3451;
+      font-size: 0.8rem !important;
+    }
   }
-}
-.estados_factura_rechazada {
-  display: flex;
-  margin-right: 2.5rem;
-  .fa {
-    font-size: 0.8rem !important;
-    color: white;
-    background-color: #FA3451;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    height: 22px;
-    width: 22px;
-    margin-right: .5rem;
+  &.xml {
+    position: relative !important;
+    .fa {
+      color: #FA3451;
+      font-size: 1.6rem !important;
+      margin-right: 1rem;
+    }
+    span.xml {
+      background-color: #FA3451;
+      color: white;
+      height: .8rem;
+      font-size: .4rem;
+      padding: .08rem 0.13rem;
+      border-radius: .1rem;
+      position: absolute;
+      right: 1.8rem;
+      top: -.2rem;
+      }
+    }
   }
-  p {
-    color:#414C69;
-    padding-top: .15rem;
-  }
-}
-.estados_factura_cedida {
-  display: flex;
-  margin-right: 2.5rem;
-  .fa {
-    font-size: 0.8rem !important;
-    color: white;
-    background-color: #FA3451;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    height: 22px;
-    width: 22px;
-    margin-right: .5rem;
-  }
-  p {
-    color:#414C69;
-    padding-top: .15rem;
-  }
-}
-.estados_factura_xml {
-  display: flex;
-  margin-right: 2.5rem;
-  position: relative;
-  .fa {
-    font-size: 1.6rem !important;
-    color: #FA3451;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    height: 22px;
-    width: 22px;
-    margin-right: 1rem;
-  }
-  span.xml {
-    background-color: #FA3451;
-    color: white;
-    height: .8rem;
-    font-size: .4rem;
-    padding: .08rem 0.13rem;
-    border-radius: .1rem;
-    position: absolute;
-    right: 1.8rem;
-    top: -.2rem;
-  }
-  p {
-    color:#414C69;
-    padding-top: .15rem;
-  }
-}
 }
 
 
 /* MODAL */
 
   .modal-dialog {
-    max-width: 40vw;
+    min-width: 45%;
     .modal-content {
       border-radius: .7rem;
       padding: 1rem 2rem;
@@ -1674,6 +1614,167 @@ p.mas_info {
 }
 
 
+
+
+/*tooltips*/
+
+
+/* START TOOLTIP STYLES */
+[tooltip] {
+  position: relative; /* opinion 1 */
+}
+
+/* Applies to all tooltips */
+[tooltip]::before,
+[tooltip]::after {
+  text-transform: none; /* opinion 2 */
+  font-size: .9em; /* opinion 3 */
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+[tooltip]::before {
+  content: '';
+  border: 5px solid transparent; /* opinion 4 */
+  z-index: 1001; /* absurdity 1 */
+}
+[tooltip]::after {
+  content: attr(tooltip); /* magic! */
+
+  /* most of the rest of this is opinion */
+
+  text-align: center;
+
+  /*
+    Let the content set the size of the tooltips
+    but this will also keep them from being obnoxious
+    */
+  min-width: 3em;
+  max-width: 21em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1em 1.5em;
+  border-radius: .3ch;
+  /*box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);*/
+  background: rgb(255, 255, 255);
+  color: #484848;
+  z-index: 1000; /* absurdity 2 */
+  border-radius: 12px;
+}
+
+/* Make the tooltips respond to hover */
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+  display: block;
+}
+
+/* don't show empty tooltips */
+[tooltip='']::before,
+[tooltip='']::after {
+  display: none !important;
+}
+
+/* FLOW: UP */
+[tooltip]:not([flow])::before,
+[tooltip][flow^="up"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #333;
+}
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::after {
+  bottom: calc(100% + 5px);
+}
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after {
+  left: 50%;
+  transform: translate(-50%, -.5em);
+}
+
+/* FLOW: DOWN */
+[tooltip][flow^="down"]::before {
+  top: calc(100% + .4em);
+  border-top-width: 0;
+  border-bottom-color: rgb(255, 255, 255);
+}
+[tooltip][flow^="down"]::after {
+  top: calc(100% + .8em);
+}
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after {
+  left: 50%;
+  transform: translate(-50%, .5em);
+}
+
+/* FLOW: LEFT */
+[tooltip][flow^="left"]::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: #333;
+  left: calc(0em - 5px);
+  transform: translate(-.5em, -50%);
+}
+[tooltip][flow^="left"]::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translate(-.5em, -50%);
+}
+
+/* FLOW: RIGHT */
+[tooltip][flow^="right"]::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: #333;
+  right: calc(0em - 5px);
+  transform: translate(.5em, -50%);
+}
+[tooltip][flow^="right"]::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translate(.5em, -50%);
+}
+
+/* KEYFRAMES */
+@keyframes tooltips-vert {
+  to {
+    opacity: .9;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: .9;
+    transform: translate(0, -50%);
+  }
+}
+
+/* FX All The Things */
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="up"]:hover::before,
+[tooltip][flow^="up"]:hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after {
+  animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[tooltip][flow^="left"]:hover::before,
+[tooltip][flow^="left"]:hover::after,
+[tooltip][flow^="right"]:hover::before,
+[tooltip][flow^="right"]:hover::after {
+  animation: tooltips-horz 300ms ease-out forwards;
+}
+
+
+//media queries
+
 @media screen and (max-width: 767px) {
   .border-right {
     &::after {
@@ -1685,6 +1786,31 @@ p.mas_info {
   }
   .container_novedad {
     padding: 0rem 3rem 15rem 3rem !important;
+  }
+  .tabla_facturas {
+    margin-right: 2em;
+    .container-fluid {
+      flex-direction: column;
+      padding-right: 0;
+      padding-left: 0;
+      --bs-gutter-x: 0rem;
+      .titulo {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      .buscador {
+        width: 100%;
+        margin-bottom: 1rem;
+        input.buscador {
+          position: unset;
+          right: unset;
+          top: unset;
+        }
+      }
+    }
+    .estados_factura {
+      margin: 0;
+    }
   }
 }
 
