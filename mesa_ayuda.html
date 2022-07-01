@@ -133,44 +133,77 @@
                                 <!--Selector ayuda-->
                                 <p>Tipo de consulta</p>
                                 <select class="form-select select-field-trigger form-mesa-ayuda" name="ayuda" id="ayuda_select">
-                                        <option value="">Seleccione</option>
-                                        <option value="1" onclick="myFunction()">Rechazo del documento - Sin HES</option>
-                                        <option value="2" onclick="myFunction()">Rechazo del documento - Sin OC</option>
-                                        <option value="3" onclick="myFunction()">Rechazo del documento - HES sin saldo</option>
-                                        <option value="4" onclick="myFunction()">Rechazo del documento - OC sin saldo</option>
+                                    <option value="0" onclick="myFunction()" class="show-1-yes">Seleccione</option>
+                                    <option value="1" onclick="myFunction()" class="show-1-yes">Rechazo del documento - Sin HES</option>
+                                    <option value="2" onclick="myFunction()" class="show-1-yes">Rechazo del documento - Sin OC</option>
+                                    <option value="3" onclick="myFunction()" class="show-1-yes">Rechazo del documento - HES sin saldo</option>
+                                    <option value="4" onclick="myFunction()" class="show-1-yes">Rechazo del documento - OC sin saldo</option>
 
-                                    </select>
-                                </div>
-                        </div>
-                </div>
-                <div class="row">
-                    <div class="">
-                        <div class="card-secundaria" id="myDIV">
-                            <div class="form-group">
-                                <p>Antes de consultar, tenga en cuenta lo siguiente:</p>
-                                <textarea class="form-control" id="exampleFormControlTextarea1"></textarea>
+                                </select>
                             </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card-secundaria esconder" id="target-1">
+                        <div class="form-group col-sm-6">
+                            <p>Antes de consultar, tenga en cuenta lo siguiente:</p>
+                            <textarea class="form-control" id="exampleFormControlTextarea1"></textarea>
+                        </div>
+                    </div><!--div card-->
+                </div><!--div col-->
+            </div>
+            <div id="0" class="tipo_ayuda">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-secundaria">
+                            <div class="form-group col-sm-6">
+                                <p>Antes de consultar, tenga en cuenta lo siguiente:</p>
+                                <textarea class="form-control" id="exampleFormControlTextarea0" placeholder="Favor tomar contacto con la obra solicitando el número de HES y refacturar.">
+                                </textarea>
+                            </div>
+
+
+                            <input class="btn btn-primary cancelar hBack" type="reset" value="Cancelar">
+                            <input class="btn btn-primary enviar"  type="submit" value="Continuar">
                         </div><!--div card-->
                     </div><!--div col-->
-                </div>
+                </div> <!--div row-->
+            </div>
 
-                <div id="1" class="tipo_ayuda">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="card-secundaria">
-                                <div class="form-group col-sm-6">
-                                    <p>Antes de consultar, tenga en cuenta lo siguiente:</p>
-                                    <textarea class="form-control" id="exampleFormControlTextarea2" placeholder="Favor tomar contacto con la obra solicitando el número de HES y refacturar.">
-                                        </textarea>
-                                </div>
+            <div id="1" class="tipo_ayuda">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-secundaria">
+                            <div class="form-group col-sm-6">
+                                <p>Antes de consultar, tenga en cuenta lo siguiente:</p>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Favor tomar contacto con la obra solicitando el número de HES y refacturar.">Favor tomar contacto con la obra solicitando el número de HES y refacturar.</textarea>
+                            </div>
 
 
-                                <input class="btn btn-primary cancelar hBack" type="reset" value="Cancelar">
-                                <input class="btn btn-primary enviar"  type="submit" value="Continuar">
-                            </div><!--div card-->
-                        </div><!--div col-->
-                    </div> <!--div row-->
-                </div>
+                            <input class="btn btn-primary cancelar hBack" type="reset" value="Cancelar">
+                            <input class="btn btn-primary enviar"  type="submit" value="Continuar">
+                        </div><!--div card-->
+                    </div><!--div col-->
+                </div> <!--div row-->
+            </div>
+
+            <div id="2" class="tipo_ayuda">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-secundaria">
+                            <div class="form-group col-sm-6">
+                                <p>Antes de consultar, tenga en cuenta lo siguiente:</p>
+                                <textarea class="form-control" id="exampleFormControlTextarea2" placeholder="Favor tomar contacto con la obra solicitando el número de HES y refacturar.">Favor tomar contacto con la obra solicitando el número de HES y refacturar.</textarea>
+                            </div>
+
+
+                            <input class="btn btn-primary cancelar hBack" type="reset" value="Cancelar">
+                            <input class="btn btn-primary enviar"  type="submit" value="Continuar">
+                        </div><!--div card-->
+                    </div><!--div col-->
+                </div> <!--div row-->
+            </div>
 
                 <p class="mas_info">Si necesitas más información escribe a <a class="rojo" href="mailto:rodrigo@ebco.cl"> rodrigo@ebco.cl</a></p>
                 <div class="botones_flotantes">
