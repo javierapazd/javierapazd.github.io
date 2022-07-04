@@ -258,7 +258,8 @@ a {
   height: 100%;
   overflow: hidden;
   border-radius: 1em;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: inset 0px 145px 80px 0 rgba(0, 0, 0, 0.48);
 }
 .novedades .noticia.lg .info-noticia {
@@ -297,7 +298,8 @@ a {
   height: 100%;
   overflow: hidden;
   border-radius: 1em;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: inset 0px 145px 80px 0 rgba(0, 0, 0, 0.48);
 }
 .novedades .noticia.mini .info-noticia {
@@ -394,6 +396,14 @@ form input option {
 }
 form input:focus {
   outline: none;
+}
+form input ::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+form input :-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
 }
 form input ::placeholder {
   color: #6c757d;
@@ -778,9 +788,6 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 /*SIDEBAR*/
 .sidebar {
   width: 210px;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   display: inline-block;
   z-index: 0;
@@ -818,9 +825,6 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   margin-bottom: 1em;
 }
 .sidebar .nav-sidebar .nav-item .nav-link {
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   color: white;
   opacity: 1;
@@ -835,9 +839,6 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 .sidebar .nav-sidebar .nav-item .submenu li .sub-nav {
   opacity: 1;
-  -moz-transition: all 0.7s ease-out;
-  -o-transition: all 0.7s ease-out;
-  -webkit-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out;
   color: white;
 }
@@ -865,25 +866,16 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 .sidebar.sidebar-collapsed .nav-sidebar .nav-item .nav-link .menu-item {
   opacity: 0;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   display: none;
 }
 .sidebar.sidebar-collapsed .nav-sidebar .nav-item .submenu {
-  -moz-transition: all 6s ease-out;
-  -o-transition: all 6s ease-out;
-  -webkit-transition: all 6s ease-out;
   transition: all 6s ease-out;
   opacity: 0 !important;
   display: none;
 }
 .sidebar.sidebar-collapsed .nav-sidebar .nav-item .submenu li .sub-nav {
   opacity: 0 !important;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 .sidebar.sidebar-collapsed .collapse-sidebar-button {
@@ -903,9 +895,6 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 
 .menu-item {
   opacity: 1;
-  -moz-transition: all 0.6s 0.2s ease-out;
-  -o-transition: all 0.6s 0.2s ease-out;
-  -webkit-transition: all 0.6s 0.2s ease-out;
   transition: all 0.6s 0.2s ease-out;
   color: white;
   font-weight: 600;
@@ -913,36 +902,20 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 
 #toggle-icon {
-  -moz-transition: all 0.4s ease-out;
-  -o-transition: all 0.4s ease-out;
-  -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
 #toggle-icon.rotate {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
-  -moz-transition: all 0.4s ease-out;
-  -o-transition: all 0.4s ease-out;
-  -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
 
 .main {
   margin-left: 20em;
-  -moz-transition: all 0.55s ease-out;
-  -o-transition: all 0.55s ease-out;
-  -webkit-transition: all 0.55s ease-out;
   transition: all 0.55s ease-out;
   padding-right: 1em;
   padding-left: 1em;
 }
 .main.main-slide {
-  -moz-transition: all 0.6s ease-out;
-  -o-transition: all 0.6s ease-out;
-  -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
   margin-left: 9em;
 }
@@ -1446,7 +1419,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   display: none;
 }
 .tipo_ayuda .card-secundaria {
-  padding: 2rem 4.5rem;
+  padding: 2rem 3rem;
 }
 .tipo_ayuda .card-secundaria .form-group p {
   font-family: "Inter";
@@ -1504,6 +1477,7 @@ p.mas_info a.rojo {
   width: 8rem;
   border: none;
   cursor: all-scroll;
+  margin-right: 1rem;
 }
 .container_mesa_ayuda form .cancelar:hover {
   background-color: #FA3451;
@@ -1516,6 +1490,102 @@ p.mas_info a.rojo {
 }
 .container_mesa_ayuda form .enviar:hover {
   background-color: #03CC98;
+}
+
+form .form-group {
+  position: relative;
+  width: 22rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+form .form-group.file {
+  background-color: transparent;
+}
+form .form-group.file [type=file] {
+  /* Style the color of the message that says 'No file chosen' */
+  color: #878787;
+}
+form .form-group.file [type=file]::-webkit-file-upload-button {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: #224377;
+  cursor: pointer;
+  padding-left: 0;
+  padding-top: 0;
+}
+form .form-group.file input {
+  padding-left: 1rem !important;
+  padding-top: 0.6rem !important;
+}
+form .form-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+form .form-row .before-icon::before {
+  content: "";
+  display: block;
+  background: url("img/layout_set_logo.png") no-repeat;
+  width: 4px;
+  height: 4px;
+  float: left;
+  margin: 0 6px 0 0;
+}
+form .form-row input {
+  width: 100%;
+  height: 2rem;
+  font-size: 1rem;
+  background: white !important;
+  font-family: "Source Sans Pro", sans-serif;
+  border-radius: 0 12px 0 12px;
+  background: #eef2f9;
+  color: #224377;
+  border: 1px solid #eef2f9;
+  height: 48px;
+  margin-top: 0px;
+  padding-left: 2.5em;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  transition: all 0.2s ease-in;
+}
+form .form-row input option {
+  color: #6c757d;
+  opacity: 1;
+}
+form .form-row input:focus {
+  outline: none;
+}
+form .form-row input ::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+form .form-row input :-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+form .form-row input ::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+form .form-row select {
+  width: 100%;
+  height: 2rem;
+  font-size: 1rem;
+  background-color: white !important;
+  font-family: "Source Sans Pro", sans-serif;
+  border-radius: 0 12px 0 12px;
+  background: #eef2f9;
+  color: rgba(34, 67, 119, 0.85);
+  border: 1px solid #eef2f9;
+  height: 48px;
+  margin-top: 0px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 14px;
+  transition: all 0.2s ease-in;
+}
+form .form-row select option.placeholder {
+  opacity: 0.85;
 }
 
 /* NOVEDADES */
@@ -1538,7 +1608,10 @@ p.mas_info a.rojo {
   font-size: 0.9em;
   /* opinion 3 */
   line-height: 1;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   pointer-events: none;
   position: absolute;
   display: none;
@@ -1658,10 +1731,22 @@ p.mas_info a.rojo {
 }
 
 /* KEYFRAMES */
+@-webkit-keyframes tooltips-vert {
+  to {
+    opacity: 0.9;
+    transform: translate(-50%, 0);
+  }
+}
 @keyframes tooltips-vert {
   to {
     opacity: 0.9;
     transform: translate(-50%, 0);
+  }
+}
+@-webkit-keyframes tooltips-horz {
+  to {
+    opacity: 0.9;
+    transform: translate(0, -50%);
   }
 }
 @keyframes tooltips-horz {
@@ -1677,14 +1762,16 @@ p.mas_info a.rojo {
 [tooltip][flow^=up]:hover::after,
 [tooltip][flow^=down]:hover::before,
 [tooltip][flow^=down]:hover::after {
-  animation: tooltips-vert 300ms ease-out forwards;
+  -webkit-animation: tooltips-vert 300ms ease-out forwards;
+          animation: tooltips-vert 300ms ease-out forwards;
 }
 
 [tooltip][flow^=left]:hover::before,
 [tooltip][flow^=left]:hover::after,
 [tooltip][flow^=right]:hover::before,
 [tooltip][flow^=right]:hover::after {
-  animation: tooltips-horz 300ms ease-out forwards;
+  -webkit-animation: tooltips-horz 300ms ease-out forwards;
+          animation: tooltips-horz 300ms ease-out forwards;
 }
 
 @media screen and (max-width: 767px) {
@@ -1845,6 +1932,4 @@ p.mas_info a.rojo {
   .header .iso {
     display: none !important;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
