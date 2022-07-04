@@ -258,8 +258,7 @@ a {
   height: 100%;
   overflow: hidden;
   border-radius: 1em;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   box-shadow: inset 0px 145px 80px 0 rgba(0, 0, 0, 0.48);
 }
 .novedades .noticia.lg .info-noticia {
@@ -298,8 +297,7 @@ a {
   height: 100%;
   overflow: hidden;
   border-radius: 1em;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   box-shadow: inset 0px 145px 80px 0 rgba(0, 0, 0, 0.48);
 }
 .novedades .noticia.mini .info-noticia {
@@ -396,14 +394,6 @@ form input option {
 }
 form input:focus {
   outline: none;
-}
-form input ::-moz-placeholder {
-  color: #6c757d;
-  opacity: 1;
-}
-form input :-ms-input-placeholder {
-  color: #6c757d;
-  opacity: 1;
 }
 form input ::placeholder {
   color: #6c757d;
@@ -788,6 +778,9 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 /*SIDEBAR*/
 .sidebar {
   width: 210px;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   display: inline-block;
   z-index: 0;
@@ -825,6 +818,9 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   margin-bottom: 1em;
 }
 .sidebar .nav-sidebar .nav-item .nav-link {
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   color: white;
   opacity: 1;
@@ -839,6 +835,9 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 .sidebar .nav-sidebar .nav-item .submenu li .sub-nav {
   opacity: 1;
+  -moz-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  -webkit-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out;
   color: white;
 }
@@ -866,16 +865,25 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 .sidebar.sidebar-collapsed .nav-sidebar .nav-item .nav-link .menu-item {
   opacity: 0;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   display: none;
 }
 .sidebar.sidebar-collapsed .nav-sidebar .nav-item .submenu {
+  -moz-transition: all 6s ease-out;
+  -o-transition: all 6s ease-out;
+  -webkit-transition: all 6s ease-out;
   transition: all 6s ease-out;
   opacity: 0 !important;
   display: none;
 }
 .sidebar.sidebar-collapsed .nav-sidebar .nav-item .submenu li .sub-nav {
   opacity: 0 !important;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 .sidebar.sidebar-collapsed .collapse-sidebar-button {
@@ -895,6 +903,9 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 
 .menu-item {
   opacity: 1;
+  -moz-transition: all 0.6s 0.2s ease-out;
+  -o-transition: all 0.6s 0.2s ease-out;
+  -webkit-transition: all 0.6s 0.2s ease-out;
   transition: all 0.6s 0.2s ease-out;
   color: white;
   font-weight: 600;
@@ -902,39 +913,55 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 
 #toggle-icon {
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
 #toggle-icon.rotate {
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
 
 .main {
   margin-left: 20em;
+  -moz-transition: all 0.55s ease-out;
+  -o-transition: all 0.55s ease-out;
+  -webkit-transition: all 0.55s ease-out;
   transition: all 0.55s ease-out;
   padding-right: 1em;
   padding-left: 1em;
 }
 .main.main-slide {
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
   margin-left: 9em;
 }
 
 /* TABLA FACTURAS EMITIDAS*/
-.tabla_facturas {
+.tabla_ebco {
   font-size: 12px;
   padding-left: 3em;
 }
-.tabla_facturas .container-fluid {
+.tabla_ebco .container-fluid {
   display: flex;
   flex-wrap: wrap;
   /* PAGER */
 }
-.tabla_facturas .container-fluid .buscador {
+.tabla_ebco .container-fluid .buscador {
   flex: 1 0 0%;
   position: relative;
 }
-.tabla_facturas .container-fluid .buscador input.buscador {
+.tabla_ebco .container-fluid .buscador input.buscador {
   color: #C4C4C4;
   position: absolute;
   right: 1rem;
@@ -944,12 +971,12 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   padding: 0.3rem;
   min-width: 17em;
 }
-.tabla_facturas .container-fluid .titulo {
+.tabla_ebco .container-fluid .titulo {
   margin-top: 2rem;
   margin-bottom: 2rem;
   flex: 1 0 0%;
 }
-.tabla_facturas .container-fluid .titulo h5 {
+.tabla_ebco .container-fluid .titulo h5 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
@@ -958,11 +985,11 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   letter-spacing: 0.165em;
   color: #414C69;
 }
-.tabla_facturas .container-fluid .table {
+.tabla_ebco .container-fluid .table {
   border-color: #F2F5FA;
   text-align: center;
 }
-.tabla_facturas .container-fluid .table thead {
+.tabla_ebco .container-fluid .table thead {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -971,41 +998,41 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   letter-spacing: 0.035em;
   color: #5D6B73;
 }
-.tabla_facturas .container-fluid .table thead tr th {
+.tabla_ebco .container-fluid .table thead tr th {
   background-color: white;
   border-top: none;
   border-bottom: solid 3px #F2F5FA;
   padding: 1rem 0.75rem;
   vertical-align: middle;
 }
-.tabla_facturas .container-fluid .table thead tr th:nth-of-type(1) {
+.tabla_ebco .container-fluid .table thead tr th:nth-of-type(1) {
   border-radius: 1rem 0 0 1rem;
 }
-.tabla_facturas .container-fluid .table thead tr th:last-of-type {
+.tabla_ebco .container-fluid .table thead tr th:last-of-type {
   border-radius: 0 1rem 1rem 0;
   padding-right: 1em;
 }
-.tabla_facturas .container-fluid .table tbody tr:nth-of-type(1) th {
+.tabla_ebco .container-fluid .table tbody tr:nth-of-type(1) th {
   border-top: solid 3px #E5E5E5;
   padding-top: 1rem;
   background-color: white;
 }
-.tabla_facturas .container-fluid .table tbody tr:nth-of-type(1) th:nth-of-type(1) {
+.tabla_ebco .container-fluid .table tbody tr:nth-of-type(1) th:nth-of-type(1) {
   border-radius: 1rem 0 0 0;
 }
-.tabla_facturas .container-fluid .table tbody tr:nth-of-type(1) td {
+.tabla_ebco .container-fluid .table tbody tr:nth-of-type(1) td {
   background-color: white;
   border-top: solid 3px #E5E5E5;
   padding-top: 1rem;
 }
-.tabla_facturas .container-fluid .table tbody tr:nth-of-type(1) td:last-of-type {
+.tabla_ebco .container-fluid .table tbody tr:nth-of-type(1) td:last-of-type {
   border-radius: 0 1rem 0 0;
   padding-right: 1em;
 }
-.tabla_facturas .container-fluid .table tbody tr th {
+.tabla_ebco .container-fluid .table tbody tr th {
   background-color: white;
 }
-.tabla_facturas .container-fluid .table tbody tr th .circle {
+.tabla_ebco .container-fluid .table tbody tr th .circle {
   background-color: #414C69;
   border-radius: 100%;
   display: flex;
@@ -1016,10 +1043,10 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   width: 2rem;
   margin-left: 0.8rem;
 }
-.tabla_facturas .container-fluid .table tbody tr th .circle.verde {
+.tabla_ebco .container-fluid .table tbody tr th .circle.verde {
   background-color: #03CC98;
 }
-.tabla_facturas .container-fluid .table tbody tr td {
+.tabla_ebco .container-fluid .table tbody tr td {
   background-color: white;
   font-family: Inter;
   font-size: 12px;
@@ -1029,16 +1056,16 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   color: #68696E;
   text-align: left;
 }
-.tabla_facturas .container-fluid .table tbody tr td.iconos .td-iconos {
+.tabla_ebco .container-fluid .table tbody tr td.iconos .td-iconos {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.tabla_facturas .container-fluid .table tbody tr td.iconos .td-iconos .fa {
+.tabla_ebco .container-fluid .table tbody tr td.iconos .td-iconos .fa {
   font-size: 1.5rem !important;
   display: flex;
 }
-.tabla_facturas .container-fluid .table tbody tr td.iconos .td-iconos .fa.fa-check-circle {
+.tabla_ebco .container-fluid .table tbody tr td.iconos .td-iconos .fa.fa-check-circle {
   color: #B4EDDE;
   background-color: green;
   border-radius: 100%;
@@ -1048,11 +1075,11 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   align-items: center;
   margin-right: 0.5rem;
 }
-.tabla_facturas .container-fluid .table tbody tr td.iconos .td-iconos .fa.fa-eye {
+.tabla_ebco .container-fluid .table tbody tr td.iconos .td-iconos .fa.fa-eye {
   height: 19px;
   color: #5D6B73;
 }
-.tabla_facturas .container-fluid .table tbody tr td.iconos .td-iconos .fa.fa-times-circle {
+.tabla_ebco .container-fluid .table tbody tr td.iconos .td-iconos .fa.fa-times-circle {
   color: #F8C0CA;
   background-color: red;
   border-radius: 100%;
@@ -1062,7 +1089,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   align-items: center;
   margin-right: 0.5rem;
 }
-.tabla_facturas .container-fluid .table tbody tr td:first-of-type {
+.tabla_ebco .container-fluid .table tbody tr td:first-of-type {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -1071,19 +1098,19 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   letter-spacing: 0.05em;
   color: #414C69;
 }
-.tabla_facturas .container-fluid .table tbody tr td.pagada_verde {
+.tabla_ebco .container-fluid .table tbody tr td.pagada_verde {
   color: #03CC98;
 }
-.tabla_facturas .container-fluid .table tbody tr td.rechazada_rojo {
+.tabla_ebco .container-fluid .table tbody tr td.rechazada_rojo {
   color: #FA3451;
 }
-.tabla_facturas .container-fluid .table tbody tr:last-of-type th {
+.tabla_ebco .container-fluid .table tbody tr:last-of-type th {
   border-radius: 0 0 0 1rem;
 }
-.tabla_facturas .container-fluid .table tbody tr:last-of-type td:last-of-type {
+.tabla_ebco .container-fluid .table tbody tr:last-of-type td:last-of-type {
   border-radius: 0 0 1rem 0;
 }
-.tabla_facturas .container-fluid .pagination li.page-item a.page-link {
+.tabla_ebco .container-fluid .pagination li.page-item a.page-link {
   color: #C4C4C4;
   font-style: normal;
   font-weight: 400;
@@ -1091,7 +1118,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   line-height: 25px;
   padding: 3px 9px;
 }
-.tabla_facturas .container-fluid .pagination li.page-item.active a.page-link {
+.tabla_ebco .container-fluid .pagination li.page-item.active a.page-link {
   color: #3A3A3A;
   background-color: white;
   border-color: #C4C4C4;
@@ -1101,8 +1128,35 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   line-height: 25px;
   padding: 3px 9px;
 }
-
-.estados_factura {
+.tabla_ebco.version-modal {
+  margin-top: 2em;
+  overflow: auto;
+}
+.tabla_ebco.version-modal .titulo h6 {
+  font-weight: 600;
+  margin-bottom: 1.8em;
+}
+.tabla_ebco.version-modal .container-fluid .table {
+  border-radius: 1rem 0 0 1rem;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+.tabla_ebco.version-modal .container-fluid .table thead {
+  text-align: left;
+  padding: 0.5em;
+}
+.tabla_ebco.version-modal .container-fluid .table thead tr th {
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+.tabla_ebco.version-modal .container-fluid .table thead tr th:nth-of-type(1) {
+  border-radius: 1rem 0 0 1rem;
+}
+.tabla_ebco.version-modal .container-fluid .table tbody tr td:first-of-type {
+  font-weight: unset;
+  color: unset;
+}
+.tabla_ebco .estados_factura {
   display: flex;
   justify-content: end;
   margin: 2em 2em 2em 2em;
@@ -1111,11 +1165,11 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   flex-wrap: wrap;
   padding: 1em;
 }
-.estados_factura .icono_factura {
+.tabla_ebco .estados_factura .icono_factura {
   display: flex;
   margin-right: 2.5rem;
 }
-.estados_factura .icono_factura .fa {
+.tabla_ebco .estados_factura .icono_factura .fa {
   color: white;
   border-radius: 100%;
   display: flex;
@@ -1125,35 +1179,35 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   width: 22px;
   margin-right: 0.5rem;
 }
-.estados_factura .icono_factura p {
+.tabla_ebco .estados_factura .icono_factura p {
   color: #414C69;
   padding-top: 0.15rem;
 }
-.estados_factura .icono_factura.pagada .fa {
+.tabla_ebco .estados_factura .icono_factura.pagada .fa {
   background-color: #02CE99;
   font-size: 0.8rem !important;
 }
-.estados_factura .icono_factura.revision .fa {
+.tabla_ebco .estados_factura .icono_factura.revision .fa {
   background-color: #FFE600;
   font-size: 1.2rem !important;
 }
-.estados_factura .icono_factura.aprobada .fa {
+.tabla_ebco .estados_factura .icono_factura.aprobada .fa {
   background-color: #02CE99;
   font-size: 0.7rem !important;
 }
-.estados_factura .icono_factura.rechazada .fa, .estados_factura .icono_factura.cedida .fa {
+.tabla_ebco .estados_factura .icono_factura.rechazada .fa, .tabla_ebco .estados_factura .icono_factura.cedida .fa {
   background-color: #FA3451;
   font-size: 0.8rem !important;
 }
-.estados_factura .icono_factura.xml {
+.tabla_ebco .estados_factura .icono_factura.xml {
   position: relative !important;
 }
-.estados_factura .icono_factura.xml .fa {
+.tabla_ebco .estados_factura .icono_factura.xml .fa {
   color: #FA3451;
   font-size: 1.6rem !important;
   margin-right: 1rem;
 }
-.estados_factura .icono_factura.xml span.xml {
+.tabla_ebco .estados_factura .icono_factura.xml span.xml {
   background-color: #FA3451;
   color: white;
   height: 0.8rem;
@@ -1168,6 +1222,9 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 /* MODAL */
 .modal-dialog {
   min-width: 45%;
+}
+.modal-dialog.ancho {
+  min-width: 83%;
 }
 .modal-dialog .modal-content {
   border-radius: 0.7rem;
@@ -1555,14 +1612,6 @@ form .form-row input option {
 form .form-row input:focus {
   outline: none;
 }
-form .form-row input ::-moz-placeholder {
-  color: #6c757d;
-  opacity: 1;
-}
-form .form-row input :-ms-input-placeholder {
-  color: #6c757d;
-  opacity: 1;
-}
 form .form-row input ::placeholder {
   color: #6c757d;
   opacity: 1;
@@ -1608,10 +1657,7 @@ form .form-row select option.placeholder {
   font-size: 0.9em;
   /* opinion 3 */
   line-height: 1;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   pointer-events: none;
   position: absolute;
   display: none;
@@ -1731,22 +1777,10 @@ form .form-row select option.placeholder {
 }
 
 /* KEYFRAMES */
-@-webkit-keyframes tooltips-vert {
-  to {
-    opacity: 0.9;
-    transform: translate(-50%, 0);
-  }
-}
 @keyframes tooltips-vert {
   to {
     opacity: 0.9;
     transform: translate(-50%, 0);
-  }
-}
-@-webkit-keyframes tooltips-horz {
-  to {
-    opacity: 0.9;
-    transform: translate(0, -50%);
   }
 }
 @keyframes tooltips-horz {
@@ -1762,16 +1796,14 @@ form .form-row select option.placeholder {
 [tooltip][flow^=up]:hover::after,
 [tooltip][flow^=down]:hover::before,
 [tooltip][flow^=down]:hover::after {
-  -webkit-animation: tooltips-vert 300ms ease-out forwards;
-          animation: tooltips-vert 300ms ease-out forwards;
+  animation: tooltips-vert 300ms ease-out forwards;
 }
 
 [tooltip][flow^=left]:hover::before,
 [tooltip][flow^=left]:hover::after,
 [tooltip][flow^=right]:hover::before,
 [tooltip][flow^=right]:hover::after {
-  -webkit-animation: tooltips-horz 300ms ease-out forwards;
-          animation: tooltips-horz 300ms ease-out forwards;
+  animation: tooltips-horz 300ms ease-out forwards;
 }
 
 @media screen and (max-width: 767px) {
@@ -1791,29 +1823,29 @@ form .form-row select option.placeholder {
     padding: 0rem 3rem 15rem 3rem !important;
   }
 
-  .tabla_facturas {
+  .tabla_ebco {
     margin-right: 2em;
   }
-  .tabla_facturas .container-fluid {
+  .tabla_ebco .container-fluid {
     flex-direction: column;
     padding-right: 0;
     padding-left: 0;
     --bs-gutter-x: 0rem;
   }
-  .tabla_facturas .container-fluid .titulo {
+  .tabla_ebco .container-fluid .titulo {
     width: 100%;
     margin-bottom: 1rem;
   }
-  .tabla_facturas .container-fluid .buscador {
+  .tabla_ebco .container-fluid .buscador {
     width: 100%;
     margin-bottom: 1rem;
   }
-  .tabla_facturas .container-fluid .buscador input.buscador {
+  .tabla_ebco .container-fluid .buscador input.buscador {
     position: unset;
     right: unset;
     top: unset;
   }
-  .tabla_facturas .estados_factura {
+  .tabla_ebco .estados_factura {
     margin: 0;
   }
 }
@@ -1932,4 +1964,6 @@ form .form-row select option.placeholder {
   .header .iso {
     display: none !important;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
