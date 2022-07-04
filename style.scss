@@ -990,7 +990,7 @@ form {
 
 /* TABLA FACTURAS EMITIDAS*/
 
-.tabla_facturas {
+.tabla_ebco {
   font-size: 12px;
   padding-left: 3em;
   .container-fluid {
@@ -1641,11 +1641,11 @@ p.mas_info {
           cursor: pointer;
           padding-left: 0;
           padding-top: 0;
-          
+
         }
-        
+
         [type="file"]::-webkit-file-upload-button:hover {
-          
+
         }
       input {
         padding-left: 1rem !important;
@@ -1717,7 +1717,7 @@ p.mas_info {
       }
     }
   }
- }  
+ }
 }
  /* NOVEDADES */
  .user-login {
@@ -1907,7 +1907,7 @@ p.mas_info {
   .container_novedad {
     padding: 0rem 3rem 15rem 3rem !important;
   }
-  .tabla_facturas {
+  .tabla_ebco {
     margin-right: 2em;
     .container-fluid {
       flex-direction: column;
