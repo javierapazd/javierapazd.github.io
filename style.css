@@ -258,7 +258,8 @@ a {
   height: 100%;
   overflow: hidden;
   border-radius: 1em;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: inset 0px 145px 80px 0 rgba(0, 0, 0, 0.48);
 }
 .novedades .noticia.lg .info-noticia {
@@ -297,7 +298,8 @@ a {
   height: 100%;
   overflow: hidden;
   border-radius: 1em;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: inset 0px 145px 80px 0 rgba(0, 0, 0, 0.48);
 }
 .novedades .noticia.mini .info-noticia {
@@ -394,6 +396,14 @@ form input option {
 }
 form input:focus {
   outline: none;
+}
+form input ::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+form input :-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
 }
 form input ::placeholder {
   color: #6c757d;
@@ -778,9 +788,6 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 /*SIDEBAR*/
 .sidebar {
   width: 210px;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   display: inline-block;
   z-index: 0;
@@ -818,9 +825,6 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   margin-bottom: 1em;
 }
 .sidebar .nav-sidebar .nav-item .nav-link {
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   color: white;
   opacity: 1;
@@ -835,9 +839,6 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 .sidebar .nav-sidebar .nav-item .submenu li .sub-nav {
   opacity: 1;
-  -moz-transition: all 0.7s ease-out;
-  -o-transition: all 0.7s ease-out;
-  -webkit-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out;
   color: white;
 }
@@ -865,25 +866,16 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 .sidebar.sidebar-collapsed .nav-sidebar .nav-item .nav-link .menu-item {
   opacity: 0;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   display: none;
 }
 .sidebar.sidebar-collapsed .nav-sidebar .nav-item .submenu {
-  -moz-transition: all 6s ease-out;
-  -o-transition: all 6s ease-out;
-  -webkit-transition: all 6s ease-out;
   transition: all 6s ease-out;
   opacity: 0 !important;
   display: none;
 }
 .sidebar.sidebar-collapsed .nav-sidebar .nav-item .submenu li .sub-nav {
   opacity: 0 !important;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 .sidebar.sidebar-collapsed .collapse-sidebar-button {
@@ -903,9 +895,6 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 
 .menu-item {
   opacity: 1;
-  -moz-transition: all 0.6s 0.2s ease-out;
-  -o-transition: all 0.6s 0.2s ease-out;
-  -webkit-transition: all 0.6s 0.2s ease-out;
   transition: all 0.6s 0.2s ease-out;
   color: white;
   font-weight: 600;
@@ -913,36 +902,20 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 
 #toggle-icon {
-  -moz-transition: all 0.4s ease-out;
-  -o-transition: all 0.4s ease-out;
-  -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
 #toggle-icon.rotate {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
-  -moz-transition: all 0.4s ease-out;
-  -o-transition: all 0.4s ease-out;
-  -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
 
 .main {
   margin-left: 20em;
-  -moz-transition: all 0.55s ease-out;
-  -o-transition: all 0.55s ease-out;
-  -webkit-transition: all 0.55s ease-out;
   transition: all 0.55s ease-out;
   padding-right: 1em;
   padding-left: 1em;
 }
 .main.main-slide {
-  -moz-transition: all 0.6s ease-out;
-  -o-transition: all 0.6s ease-out;
-  -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
   margin-left: 9em;
 }
@@ -1495,22 +1468,24 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   color: #757575;
   padding-top: 2rem;
 }
-.tipo_ayuda .cancelar {
+
+/* BOTONES CANCELAR ENVIAR */
+.btn.btn-primary.cancelar {
   background-color: #FA3451;
   width: 8rem;
   border: none;
   cursor: all-scroll;
 }
-.tipo_ayuda .cancelar:hover {
+.btn.btn-primary.cancelar:hover {
   background-color: #FA3451;
 }
-.tipo_ayuda .enviar {
+.btn.btn-primary.enviar {
   background-color: #03CC98;
   width: 8rem;
   border: none;
   cursor: all-scroll;
 }
-.tipo_ayuda .enviar:hover {
+.btn.btn-primary.enviar:hover {
   background-color: #03CC98;
 }
 
@@ -1529,23 +1504,23 @@ p.mas_info a.rojo {
 }
 
 /* FORMULARIO AYUDA */
-.container_mesa_ayuda form .cancelar {
+.mesa_ayuda form .cancelar {
   background-color: #FA3451;
   width: 8rem;
   border: none;
   cursor: all-scroll;
   margin-right: 1rem;
 }
-.container_mesa_ayuda form .cancelar:hover {
+.mesa_ayuda form .cancelar:hover {
   background-color: #FA3451;
 }
-.container_mesa_ayuda form .enviar {
+.mesa_ayuda form .enviar {
   background-color: #03CC98;
   width: 8rem;
   border: none;
   cursor: all-scroll;
 }
-.container_mesa_ayuda form .enviar:hover {
+.mesa_ayuda form .enviar:hover {
   background-color: #03CC98;
 }
 
@@ -1554,6 +1529,7 @@ form .form-group {
   width: 22rem;
   margin-right: 2rem;
   margin-bottom: 1rem;
+  flex: 1 0 19rem;
 }
 form .form-group.file {
   background-color: transparent;
@@ -1612,6 +1588,14 @@ form .form-row input option {
 form .form-row input:focus {
   outline: none;
 }
+form .form-row input ::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+form .form-row input :-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
 form .form-row input ::placeholder {
   color: #6c757d;
   opacity: 1;
@@ -1657,7 +1641,10 @@ form .form-row select option.placeholder {
   font-size: 0.9em;
   /* opinion 3 */
   line-height: 1;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   pointer-events: none;
   position: absolute;
   display: none;
@@ -1777,10 +1764,22 @@ form .form-row select option.placeholder {
 }
 
 /* KEYFRAMES */
+@-webkit-keyframes tooltips-vert {
+  to {
+    opacity: 0.9;
+    transform: translate(-50%, 0);
+  }
+}
 @keyframes tooltips-vert {
   to {
     opacity: 0.9;
     transform: translate(-50%, 0);
+  }
+}
+@-webkit-keyframes tooltips-horz {
+  to {
+    opacity: 0.9;
+    transform: translate(0, -50%);
   }
 }
 @keyframes tooltips-horz {
@@ -1796,14 +1795,16 @@ form .form-row select option.placeholder {
 [tooltip][flow^=up]:hover::after,
 [tooltip][flow^=down]:hover::before,
 [tooltip][flow^=down]:hover::after {
-  animation: tooltips-vert 300ms ease-out forwards;
+  -webkit-animation: tooltips-vert 300ms ease-out forwards;
+          animation: tooltips-vert 300ms ease-out forwards;
 }
 
 [tooltip][flow^=left]:hover::before,
 [tooltip][flow^=left]:hover::after,
 [tooltip][flow^=right]:hover::before,
 [tooltip][flow^=right]:hover::after {
-  animation: tooltips-horz 300ms ease-out forwards;
+  -webkit-animation: tooltips-horz 300ms ease-out forwards;
+          animation: tooltips-horz 300ms ease-out forwards;
 }
 
 @media screen and (max-width: 767px) {
@@ -1964,6 +1965,4 @@ form .form-row select option.placeholder {
   .header .iso {
     display: none !important;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
