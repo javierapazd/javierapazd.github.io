@@ -1250,9 +1250,14 @@ form {
         }
         tbody {
           tr {
-            td:first-of-type {
-              font-weight: unset;
-              color: unset;
+            td {
+              color: #68696E !important;
+              text-align: left;
+              &:first-of-type {
+                font-weight: unset;
+                color: unset;
+                text-align: left;
+              }
             }
           }
         }
@@ -1631,7 +1636,7 @@ padding: 1em;
       }
     }
   }
-  
+
 }
 
 
