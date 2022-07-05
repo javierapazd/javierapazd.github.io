@@ -46,7 +46,7 @@ a {
 
 .header {
   position: relative;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
   .navbar {
     padding-top: 3em;
     padding-left: 2.5em;
@@ -1100,6 +1100,9 @@ form {
               border-radius: 0 1rem 0 0;
               padding-right: 1em;
               }
+              &:nth-of-type(1) {
+                border-radius: 1rem 0 0 0;
+              }
             }
           }
           th {
@@ -1129,7 +1132,6 @@ form {
             line-height: 25px;
             letter-spacing: 0.05em;
             color: #68696E;
-            text-align: left;
             &.iconos {
               .td-iconos {
               display: flex;
@@ -1188,6 +1190,9 @@ form {
             }
             td:last-of-type {
               border-radius: 0 0 1rem 0;
+            }
+            td:first-of-type {
+              border-radius: 0 0 0 1rem;
             }
           }
         }
@@ -1252,7 +1257,6 @@ form {
           tr {
             td {
               color: #68696E !important;
-              text-align: left;
               &:first-of-type {
                 font-weight: unset;
                 color: unset;
@@ -1334,7 +1338,24 @@ padding: 1em;
       }
     }
   }
-}
+  &.montos {
+    margin: 0em 0em 3em 0em;
+    padding: 1em 0 1em 1em;
+    .icono_factura {
+      background-color: white !important;
+      margin-right: 1.5rem;
+      border-radius: 1rem;
+      p {
+        padding:2em 2.2em;
+        margin: 0 !important;
+        font-size: 1.2em;
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+ }
 }
 
 /* MODAL */
@@ -1354,6 +1375,9 @@ padding: 1em;
       .modal-body {
         color: #5D6B73;
         .container-fluid_m {
+          .datos-dinamicos {
+            margin-top: 2em;
+          }
           .titulo-body-m {
             margin-bottom: .5rem;
             }

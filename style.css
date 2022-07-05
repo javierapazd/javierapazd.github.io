@@ -46,7 +46,7 @@ a {
 
 .header {
   position: relative;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
 }
 .header .navbar {
   padding-top: 3em;
@@ -1026,6 +1026,9 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   border-radius: 0 1rem 0 0;
   padding-right: 1em;
 }
+.tabla_ebco .container-fluid .table tbody tr:nth-of-type(1) td:nth-of-type(1) {
+  border-radius: 1rem 0 0 0;
+}
 .tabla_ebco .container-fluid .table tbody tr th {
   background-color: white;
 }
@@ -1051,7 +1054,6 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   line-height: 25px;
   letter-spacing: 0.05em;
   color: #68696E;
-  text-align: left;
 }
 .tabla_ebco .container-fluid .table tbody tr td.iconos .td-iconos {
   display: flex;
@@ -1107,6 +1109,9 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 .tabla_ebco .container-fluid .table tbody tr:last-of-type td:last-of-type {
   border-radius: 0 0 1rem 0;
 }
+.tabla_ebco .container-fluid .table tbody tr:last-of-type td:first-of-type {
+  border-radius: 0 0 0 1rem;
+}
 .tabla_ebco .container-fluid .pagination li.page-item a.page-link {
   color: #C4C4C4;
   font-style: normal;
@@ -1151,7 +1156,6 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 .tabla_ebco.version-modal .container-fluid .table tbody tr td {
   color: #68696E !important;
-  text-align: left;
 }
 .tabla_ebco.version-modal .container-fluid .table tbody tr td:first-of-type {
   font-weight: unset;
@@ -1220,6 +1224,23 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   right: 1.8rem;
   top: -0.2rem;
 }
+.tabla_ebco .estados_factura.montos {
+  margin: 0em 0em 3em 0em;
+  padding: 1em 0 1em 1em;
+}
+.tabla_ebco .estados_factura.montos .icono_factura {
+  background-color: white !important;
+  margin-right: 1.5rem;
+  border-radius: 1rem;
+}
+.tabla_ebco .estados_factura.montos .icono_factura p {
+  padding: 2em 2.2em;
+  margin: 0 !important;
+  font-size: 1.2em;
+}
+.tabla_ebco .estados_factura.montos .icono_factura p span {
+  font-weight: 600;
+}
 
 /* MODAL */
 .modal-dialog {
@@ -1238,6 +1259,9 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 .modal-dialog .modal-content .modal-body {
   color: #5D6B73;
+}
+.modal-dialog .modal-content .modal-body .container-fluid_m .datos-dinamicos {
+  margin-top: 2em;
 }
 .modal-dialog .modal-content .modal-body .container-fluid_m .titulo-body-m {
   margin-bottom: 0.5rem;
