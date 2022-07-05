@@ -1629,25 +1629,34 @@ padding: 1em;
       }
     }
   }
-  .cancelar {
-    background-color: #FA3451;
-    width: 8rem;
-    border: none;
-    cursor: all-scroll;
-    &:hover {
+  
+}
+
+
+/* BOTONES CANCELAR ENVIAR */
+.btn {
+  &.btn-primary {
+    &.cancelar {
       background-color: #FA3451;
+      width: 8rem;
+      border: none;
+      cursor: all-scroll;
+      &:hover {
+        background-color: #FA3451;
+      }
     }
-  }
-  .enviar {
-    background-color: #03CC98;
-    width: 8rem;
-    border: none;
-    cursor: all-scroll;
-    &:hover {
+    &.enviar {
       background-color: #03CC98;
+      width: 8rem;
+      border: none;
+      cursor: all-scroll;
+      &:hover {
+        background-color: #03CC98;
+      }
     }
   }
 }
+
 
 p.mas_info {
   margin-left: 3rem;
@@ -1664,11 +1673,9 @@ p.mas_info {
 }
 
 /* FORMULARIO AYUDA */
-.container_mesa_ayuda {
-  form {
-   .form-row {
+.mesa_ayuda {
 
-   }
+  form {
    .cancelar {
     background-color: #FA3451;
     width: 8rem;
@@ -1696,6 +1703,7 @@ p.mas_info {
     width: 22rem;
     margin-right: 2rem;
     margin-bottom: 1rem;
+    flex: 1 0 19rem;
     &.file {
       background-color: transparent;
       [type="file"] {
