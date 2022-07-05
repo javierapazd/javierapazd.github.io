@@ -839,6 +839,26 @@ form {
       }
     }
   }
+  .collapse-sidebar-button {
+    .fa-chevron-left {
+      background-color: #5B5B5B;
+      display: flex;
+      height: 1.5rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      width: 1.5rem;
+      padding-left: 0;
+      position: fixed;
+      left: 19.1rem;
+    }
+    .fa-chevron-left::before {
+      font-size: 13px;
+      content: "\f053";
+      
+      
+    }
+  }
   .nav-sidebar {
     background: none;
     margin-bottom: 20px;
@@ -928,6 +948,15 @@ form {
       margin: 0em auto !important;
       position: relative;
       left: unset;
+      #toggle-icon {
+        left: 8.2rem;
+        padding-left: 0;
+
+      }
+      .fa-chevron-left::before {
+        font-size: 13px;
+        content: "\f053";
+      }
     }
   }
   .collapse-sidebar-button {
@@ -954,20 +983,20 @@ form {
 }
 
 #toggle-icon {
-  -moz-transition: all 0.4s ease-out;
-  -o-transition: all 0.4s ease-out;
-  -webkit-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   &.rotate {
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-    -moz-transition: all 0.4s ease-out;
-    -o-transition: all 0.4s ease-out;
-    -webkit-transition: all 0.4s ease-out;
-    transition: all 0.4s ease-out;
+    -moz-transform: rotate(182deg);
+    -ms-transform: rotate(182deg);
+    -o-transform: rotate(182deg);
+    -webkit-transform: rotate(182deg);
+    transform: rotate(182deg);
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
   }
 }
 
@@ -1523,37 +1552,39 @@ padding: 1em;
     }
   }
 /* PAGINA MESA AYUDA*/
-.container_mesa_ayuda {
-  padding: 1rem 3rem;
-  .titulo {
-    margin-bottom:5rem;
-    h5 {
+.container {
+  &.mesa_ayuda {
+    padding: 1rem 3rem;
+    .titulo {
+      margin-bottom:5rem;
+      h5 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 25px;
+        letter-spacing: 0.165em;
+        color: #414C69;
+      }
+    }
+    p {
       font-family: 'Inter';
       font-style: normal;
-      font-weight: 700;
-      font-size: 30px;
+      font-weight: 400;
+      font-size: 18px;
       line-height: 25px;
-      letter-spacing: 0.165em;
+      letter-spacing: 0.01em;
       color: #414C69;
     }
-  }
-  p {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-    letter-spacing: 0.01em;
-    color: #414C69;
-  }
-  .form-mesa-ayuda {
-    max-width: 20em;
-    min-width: 19em;
+    .form-mesa-ayuda {
+      max-width: 20em;
+      min-width: 19em;
 
+    }
   }
 }
 .card-secundaria {
-  padding: 2rem 3rem;
+  padding: 2rem 0;
   .form-group {
     p {
       font-family: 'Inter';
@@ -1579,7 +1610,7 @@ padding: 1em;
 .tipo_ayuda {
 	display: none;
   .card-secundaria {
-    padding: 2rem 3rem;
+    padding: 2rem 0;
     .form-group {
       p {
         font-family: 'Inter';
@@ -1630,7 +1661,7 @@ padding: 1em;
 
 
 p.mas_info {
-  margin-left: 3rem;
+  margin-left: 1rem;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -1671,8 +1702,8 @@ p.mas_info {
  form {
   .form-group {
     position: relative;
-    width: 22rem;
-    margin-right: 2rem;
+    width: unset;
+    margin-right: 1rem;
     margin-bottom: 1rem;
     flex: 1 0 19rem;
     &.file {
@@ -1700,6 +1731,9 @@ p.mas_info {
         padding-top: 0.6rem !important;
       }
     }
+    textarea {
+      margin-top: .8rem;
+    }
   }
  .form-row {
   display: flex;
@@ -1721,12 +1755,12 @@ p.mas_info {
     font-size: 1rem;
     background: white !important;
     font-family: 'Source Sans Pro', sans-serif;
-    border-radius: 0 12px 0 12px;
+    border-radius: 9px;
     background: #eef2f9;
     color: #224377;
     border: 1px solid #eef2f9;
     height: 48px;
-    margin-top: 0px;
+    margin-top: .8rem;
     padding-left: 2.5em;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -1749,12 +1783,12 @@ p.mas_info {
     font-size: 1rem;
     background-color: white !important;
     font-family: 'Source Sans Pro', sans-serif;
-    border-radius: 0 12px 0 12px;
+    border-radius: 9px;
     background: #eef2f9;
     color: rgba(34, 67, 119, .85);
     border: 1px solid #eef2f9;
     height: 48px;
-    margin-top: 0px;
+    margin-top: .8rem;
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 14px;
@@ -1940,6 +1974,14 @@ p.mas_info {
 
 //media queries
 
+
+//grande//
+@media screen and (min-width:1200px) {
+  form {
+  padding-right: 20rem !important;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .border-right {
     &::after {
@@ -2055,20 +2097,22 @@ p.mas_info {
   .right-content {
     padding-right: 3em !important;
   }
-  .container_mesa_ayuda {
-    padding: 0rem 1rem;
-    .form-mesa-ayuda {
-      max-width: 32em;
+  .container {
+    &.mesa_ayuda {
+      padding: 0rem 1rem;
+      .form-mesa-ayuda {
+        max-width: 32em;
+      }
     }
   }
   .card-secundaria {
-    padding: 2rem 1rem;
+    padding: 2rem 0;
   }
   p.mas_info {
     margin-left: 1rem;
   }
   .tipo_ayuda .card-secundaria {
-    padding: 2rem 1rem;
+    padding: 2rem 0;
   }
   .botones_flotantes {
     position: unset !important;
@@ -2091,6 +2135,9 @@ p.mas_info {
       margin: unset;
     }
   }
+  form .form-group {
+    flex: 1 0 22.5rem;
+  }
 }
 
 /*celulares*/
@@ -2099,5 +2146,8 @@ p.mas_info {
     .iso {
       display: none !important;
     }
+  }
+  form .form-group {
+    flex: 1 0 18rem;
   }
 }
