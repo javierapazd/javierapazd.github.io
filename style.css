@@ -808,6 +808,22 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 .sidebar .logo a img {
   width: 5em;
 }
+.sidebar .collapse-sidebar-button .fa-chevron-left {
+  background-color: #5B5B5B;
+  display: flex;
+  height: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 1.5rem;
+  padding-left: 0;
+  position: fixed;
+  left: 19.1rem;
+}
+.sidebar .collapse-sidebar-button .fa-chevron-left::before {
+  font-size: 13px;
+  content: "\f053";
+}
 .sidebar .nav-sidebar {
   background: none;
   margin-bottom: 20px;
@@ -891,6 +907,14 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   position: relative;
   left: unset;
 }
+.sidebar.sidebar-collapsed .collapse-sidebar-button #toggle-icon {
+  left: 8.2rem;
+  padding-left: 0;
+}
+.sidebar.sidebar-collapsed .collapse-sidebar-button .fa-chevron-left::before {
+  font-size: 13px;
+  content: "\f053";
+}
 .sidebar .collapse-sidebar-button {
   padding-left: 4px;
   display: block;
@@ -928,6 +952,11 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   -o-transition: all 0.4s ease-out;
   -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
+  transition: all 0.5s ease-out;
+}
+#toggle-icon.rotate {
+  transform: rotate(182deg);
+  transition: all 0.5s ease-out;
 }
 
 .main {
@@ -1450,13 +1479,13 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 
 /* PAGINA MESA AYUDA*/
-.container_mesa_ayuda {
+.container.mesa_ayuda {
   padding: 1rem 3rem;
 }
-.container_mesa_ayuda .titulo {
+.container.mesa_ayuda .titulo {
   margin-bottom: 5rem;
 }
-.container_mesa_ayuda .titulo h5 {
+.container.mesa_ayuda .titulo h5 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
@@ -1465,7 +1494,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   letter-spacing: 0.165em;
   color: #414C69;
 }
-.container_mesa_ayuda p {
+.container.mesa_ayuda p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -1474,13 +1503,13 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   letter-spacing: 0.01em;
   color: #414C69;
 }
-.container_mesa_ayuda .form-mesa-ayuda {
+.container.mesa_ayuda .form-mesa-ayuda {
   max-width: 20em;
   min-width: 19em;
 }
 
 .card-secundaria {
-  padding: 2rem 3rem;
+  padding: 2rem 0;
 }
 .card-secundaria .form-group p {
   font-family: "Inter";
@@ -1506,7 +1535,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   display: none;
 }
 .tipo_ayuda .card-secundaria {
-  padding: 2rem 3rem;
+  padding: 2rem 0;
 }
 .tipo_ayuda .card-secundaria .form-group p {
   font-family: "Inter";
@@ -1547,7 +1576,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
 }
 
 p.mas_info {
-  margin-left: 3rem;
+  margin-left: 1rem;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -1583,8 +1612,8 @@ p.mas_info a.rojo {
 
 form .form-group {
   position: relative;
-  width: 22rem;
-  margin-right: 2rem;
+  width: unset;
+  margin-right: 1rem;
   margin-bottom: 1rem;
   flex: 1 0 19rem;
 }
@@ -1608,6 +1637,9 @@ form .form-group.file input {
   padding-left: 1rem !important;
   padding-top: 0.6rem !important;
 }
+form .form-group textarea {
+  margin-top: 0.8rem;
+}
 form .form-row {
   display: flex;
   flex-wrap: wrap;
@@ -1627,12 +1659,12 @@ form .form-row input {
   font-size: 1rem;
   background: white !important;
   font-family: "Source Sans Pro", sans-serif;
-  border-radius: 0 12px 0 12px;
+  border-radius: 9px;
   background: #eef2f9;
   color: #224377;
   border: 1px solid #eef2f9;
   height: 48px;
-  margin-top: 0px;
+  margin-top: 0.8rem;
   padding-left: 2.5em;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -1655,12 +1687,12 @@ form .form-row select {
   font-size: 1rem;
   background-color: white !important;
   font-family: "Source Sans Pro", sans-serif;
-  border-radius: 0 12px 0 12px;
+  border-radius: 9px;
   background: #eef2f9;
   color: rgba(34, 67, 119, 0.85);
   border: 1px solid #eef2f9;
   height: 48px;
-  margin-top: 0px;
+  margin-top: 0.8rem;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 14px;
@@ -1839,6 +1871,11 @@ form .form-row select option.placeholder {
   animation: tooltips-horz 300ms ease-out forwards;
 }
 
+@media screen and (min-width: 1200px) {
+  form {
+    padding-right: 20rem !important;
+  }
+}
 @media screen and (max-width: 767px) {
   .border-right::after {
     display: none;
@@ -1953,15 +1990,15 @@ form .form-row select option.placeholder {
     padding-right: 3em !important;
   }
 
-  .container_mesa_ayuda {
+  .container.mesa_ayuda {
     padding: 0rem 1rem;
   }
-  .container_mesa_ayuda .form-mesa-ayuda {
+  .container.mesa_ayuda .form-mesa-ayuda {
     max-width: 32em;
   }
 
   .card-secundaria {
-    padding: 2rem 1rem;
+    padding: 2rem 0;
   }
 
   p.mas_info {
@@ -1969,7 +2006,7 @@ form .form-row select option.placeholder {
   }
 
   .tipo_ayuda .card-secundaria {
-    padding: 2rem 1rem;
+    padding: 2rem 0;
   }
 
   .botones_flotantes {
@@ -1991,12 +2028,18 @@ form .form-row select option.placeholder {
   .botones_flotantes .mesa_ayuda {
     margin: unset;
   }
+
+  form .form-group {
+    flex: 1 0 22.5rem;
+  }
 }
 /*celulares*/
 @media screen and (max-width: 480px) {
   .header .iso {
     display: none !important;
   }
-}
 
-/*# sourceMappingURL=style.css.map */
+  form .form-group {
+    flex: 1 0 18rem;
+  }
+}/*# sourceMappingURL=style.css.map */
