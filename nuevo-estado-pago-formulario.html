@@ -128,49 +128,97 @@
               </div>
               <div class="container mesa_ayuda">
                 <div class="titulo"><h5>Mesa de Ayuda</h5></div>
-                    <div class="row">
+                   
+                    
+                    <div class="row col-md-5">
                             
-                            <form>
+                            <form class="ne-pago">
                                 <div class="form-row">
                                     <div class="form-group">
-                                        <label for="inputObra">Obra</label>
+                                        <label for="inputObra">Tipo de Pago</label>
                                         <select id="inputObra" class="form-control form-select select-field-trigger">
                                             <option selected>Selecciona</option>
-                                            <option>1</option>
-                                            <option>2</option>
+                                            <option>Anticipo</option>
+                                            <option>Primero</option>
+                                            <option>Avance de Obra</option>
+                                            <option>Final</option>
+                                            <option>Único</option>
+                                            <option>Canje de Retenciones</option>
                                         </select>
                                         <span class="fa fa-chevron-down"></span>
                                     </div>
                                     <div class="form-group">
-                                    <label for="inputFactura">Factura</label>
-                                    <input type="text" class="form-control" id="inputFactura" placeholder="">
-                                    </div>
-                                    <div class="form-group">
-                                    <label for="inputSolicita">¿Qué Solicita?</label>
-                                    <input type="text" class="form-control" id="inputSolicita" placeholder="">
+                                        <label for="exampleFormControlDetalles">Descripción</label>
+                                        <textarea class="form-control" id="exampleFormControlDetalles" rows="3" placeholder=""></textarea>
                                     </div>
                                     <div class="form-group file">
-                                        <label for="inputAdjunto">Adjunto</label>
+                                        <label for="inputAdjunto">Cálculo de estado de pago</label>
                                         <label class="file-input__label" for="file-input"><span>Seleccione</span><span class="fa fa-chevron-down"></span></label>
                                         <input type="file" name="file-input" id="file-input" class="file-input__input" />
-                                </div>
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="inputSolicita">Correo Alertas</label>
+                                    <input type="text" class="form-control" id="inputSolicita" placeholder="">
+                                    </div>
+                                    
                                 </div>
                                 
-                                <div class="form-group">
-                                    <label for="exampleFormControlDetalles">Detalles</label>
-                                    <textarea class="form-control" id="exampleFormControlDetalles" rows="3" placeholder=""></textarea>
-                                    </div>
-
-
-                                <input class="btn btn-primary cancelar hBack" type="reset" value="Cancelar">
-                                <input class="btn btn-primary enviar" type="submit" value="Continuar">
                                 </form>
+                        </div>
+                        <div class="container-fluid_m pegado-derecha">
+                            <div class="row">
+                                <div class="table">
+                                    <div class="titulo sin-margen"><h6>Orden de compra N° 7000023769</h6></div>
+                                    <div class="container-fluid table-responsive row">
+                                        <table class="table" border="0">
+                                            <tbody class="tbody">
+                                                <tr class="sin-borde">
+                                                    <td>Actividad</td>
+                                                    <td>Subcontrato</td>
+                                                </tr>
+                                                <tr class="sin-borde">
+                                                    <td>PEP</td>
+                                                    <td>S-0570-02</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Obra</td>
+                                                    <td>NAVE ETAPA III BV</td>
+                                                    
+                                                </tr>
+                                                <tr class="sin-borde">
+                                                    <td>Fecha </td>
+                                                    <td>21/10/21</td>
+                                                </tr>
+                                                <tr class="sin-borde">
+                                                    <td>Fecha</td>
+                                                    <td>Henriquez</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Contacto</td>
+                                                    <td>MANUEL VERA HERRERA</td>
+                                                </tr>
+                                                <tr class="sin-borde">
+                                                    <td>Monto Total </td>
+                                                    <td>$27.350.246</td>
+                                                </tr>
+                                                <tr class="sin-borde">
+                                                    <td>Entregado</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table> <!--tabla modal 1-->
+                                      </div> <!--container fluid-->
+                                    </div> <!--tabla ebco-->
+                                </div><!--row tabla-->
+                                <div class="modal-footer orden_compra">
+                                    <button type="button" class="btn btn-danger volver" href="#">Continuar</button>
+                                </div>
                         </div>
                     
             </div>
 
-
-            <p class="mas_info">Si necesitas más información escribe a <a class="rojo" href="mailto:rodrigo@ebco.cl"> rodrigo@ebco.cl</a></p>
+            
+            
             <div class="botones_flotantes">
                 <div class="boton pronto_pago col-md-1">
                     <i class="fa fa-usd" aria-hidden="true"></i>
