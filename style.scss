@@ -979,6 +979,9 @@ form {
   transition: all 0.55s ease-out;
   padding-right: 1em;
   padding-left: 1em;
+  &.backend {
+    margin-left: 2em;
+  }
   &.main-slide {
     -moz-transition: all 0.6s ease-out;
     -o-transition: all 0.6s ease-out;
