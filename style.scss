@@ -855,8 +855,8 @@ form {
     .fa-chevron-left::before {
       font-size: 13px;
       content: "\f053";
-      
-      
+
+
     }
   }
   .nav-sidebar {
@@ -2193,6 +2193,80 @@ input:checked + .switch:active::before {
     display: none;
     }
   }
+}
+
+
+/*modal ebco*/
+
+
+#EbcoProveedoresLoginModal {
+  z-index: 9999999999;
+  position:relative;
+}
+.modal-ebco .btn-close {
+  color: white;
+  font-size: 35px;
+  text-decoration: none;
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+.modal-ebco .btn-close:hover {
+  color: #919191;
+}
+.modal-ebco:target:before {
+  display: none;
+}
+.modal-ebco:before {
+  content:"";
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.modal-ebco .modal-dialog {
+  background: transparent;
+  border: #333333 solid 0px;
+  border-radius: 5px;
+  margin-left: -200px;
+  position: fixed;
+  left: 50%;
+  z-index: 11;
+  width: 31em;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  top: 14%;
+}
+.modal-ebco:target .modal-dialog {
+  top: -100%;
+  -webkit-transform: translate(0, -500%);
+  -ms-transform: translate(0, -500%);
+  transform: translate(0, -500%);
+}
+.modal-ebco .modal-body {
+  padding: 0px;
+  max-height: unset !important;
+  border-radius: 24px;
+}
+.modal-ebco .modal-header{
+  padding-top: 1.2em;
+  border-bottom:0px solid black;
+  background-color:transparent;
+  padding-bottom: 0.5em;
+}
+
+.modal-ebco .encuesta {
+height:100%;
+width:100%;
 }
 
 
