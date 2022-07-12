@@ -849,8 +849,8 @@ form {
       border-radius: 100%;
       width: 1.5rem;
       padding-left: 0;
-      position: fixed;
-      left: 19.1rem;
+      /*position: fixed;
+      left: 19.1rem;*/
     }
     .fa-chevron-left::before {
       font-size: 13px;
@@ -1592,6 +1592,7 @@ padding: 1em;
 .container {
   &.mesa_ayuda {
     padding: 1rem 3rem;
+    margin-bottom: 14rem;
     .titulo {
       margin-bottom:5rem;
       h5 {
@@ -1857,7 +1858,7 @@ p.mas_info {
     position: absolute;
     right: 0;
     right: 0.8rem;
-    top: 1.2rem;
+    top: 1.1rem;
     &.fa-chevron-down {
       color: #C4C4C4;
       &::before {
@@ -2169,7 +2170,14 @@ input:checked + .switch:active::before {
       margin: 0;
     }
   }
+  .pegado-derecha {
+    position: relative;
+    top: unset;
+    right: unset;
+    width: 100%;
+  }
 }
+
 
 
 
