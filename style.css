@@ -798,8 +798,7 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   z-index: 1000;
   padding: 20px;
   overflow-x: hidden;
-  overflow-y: auto;
-  /* Scrollable contents if viewport is shorter than content. */
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
   background-color: #5B5B5B;
   width: 20em;
   max-width: 20em;
@@ -1808,17 +1807,14 @@ input:checked + .switch:active::before {
 /*tooltips*/
 /* START TOOLTIP STYLES */
 [tooltip] {
-  position: relative;
-  /* opinion 1 */
+  position: relative; /* opinion 1 */
 }
 
 /* Applies to all tooltips */
 [tooltip]::before,
 [tooltip]::after {
-  text-transform: none;
-  /* opinion 2 */
-  font-size: 0.9em;
-  /* opinion 3 */
+  text-transform: none; /* opinion 2 */
+  font-size: 0.9em; /* opinion 3 */
   line-height: 1;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1832,15 +1828,12 @@ input:checked + .switch:active::before {
 
 [tooltip]::before {
   content: "";
-  border: 5px solid transparent;
-  /* opinion 4 */
-  z-index: 1001;
-  /* absurdity 1 */
+  border: 5px solid transparent; /* opinion 4 */
+  z-index: 1001; /* absurdity 1 */
 }
 
 [tooltip]::after {
-  content: attr(tooltip);
-  /* magic! */
+  content: attr(tooltip); /* magic! */
   /* most of the rest of this is opinion */
   text-align: center;
   /*
@@ -1857,8 +1850,7 @@ input:checked + .switch:active::before {
   /*box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);*/
   background: rgb(255, 255, 255);
   color: #484848;
-  z-index: 1000;
-  /* absurdity 2 */
+  z-index: 1000; /* absurdity 2 */
   border-radius: 12px;
 }
 
@@ -1995,19 +1987,15 @@ input:checked + .switch:active::before {
   .border-right::after {
     display: none;
   }
-
   .right-content {
     padding-right: 3em !important;
   }
-
   .container_novedades {
     padding: 0 1rem 15rem 1rem;
   }
-
   .container_novedad {
     padding: 0rem 3rem 15rem 3rem !important;
   }
-
   .tabla_ebco {
     margin-right: 2em;
   }
@@ -2033,7 +2021,6 @@ input:checked + .switch:active::before {
   .tabla_ebco .estados_factura {
     margin: 0;
   }
-
   .pegado-derecha {
     position: relative;
     top: unset;
@@ -2045,18 +2032,15 @@ input:checked + .switch:active::before {
   .modal-dialog {
     max-width: 99vw;
   }
-
   .container_novedades {
     padding: 0 1rem 15rem 1rem;
   }
-
   .container_novedad {
     padding: 0rem 3rem 15rem 3rem !important;
   }
   .container_novedad .novedad .novedad_imagen {
     height: unset;
   }
-
   .border-right::after {
     display: none;
   }
@@ -2072,8 +2056,9 @@ input:checked + .switch:active::before {
   font-size: 35px;
   text-decoration: none;
   position: absolute;
-  right: 5px;
-  top: 0;
+  right: -8px;
+  top: -21px;
+  background: unset !important;
 }
 
 .modal-ebco .btn-close:hover {
@@ -2100,9 +2085,8 @@ input:checked + .switch:active::before {
   background: transparent;
   border: #333333 solid 0px;
   border-radius: 5px;
-  margin-left: -200px;
   position: fixed;
-  left: 50%;
+  left: 28%;
   z-index: 11;
   width: 31em;
   transform: translate(0, 0);
@@ -2148,7 +2132,6 @@ input:checked + .switch:active::before {
   .header .navbar-collapse {
     padding-right: 0 !important;
   }
-
   .sidebar {
     display: flex;
     flex-direction: row !important;
@@ -2173,36 +2156,29 @@ input:checked + .switch:active::before {
     flex-wrap: unset;
     display: none;
   }
-
   .main {
     margin-left: unset;
     padding-right: unset;
     padding-left: unset;
   }
-
   .right-content {
     padding-right: 3em !important;
   }
-
   .container.mesa_ayuda {
     padding: 0rem 1rem;
   }
   .container.mesa_ayuda .form-mesa-ayuda {
     max-width: 32em;
   }
-
   .card-secundaria {
     padding: 2rem 0;
   }
-
   p.mas_info {
     margin-left: 1rem;
   }
-
   .tipo_ayuda .card-secundaria {
     padding: 2rem 0;
   }
-
   .botones_flotantes {
     position: unset !important;
     margin: 0 auto;
@@ -2222,7 +2198,6 @@ input:checked + .switch:active::before {
   .botones_flotantes .mesa_ayuda {
     margin: unset;
   }
-
   form .form-group {
     flex: 1 0 22.5rem;
   }
@@ -2232,7 +2207,6 @@ input:checked + .switch:active::before {
   .header .iso {
     display: none !important;
   }
-
   form .form-group {
     flex: 1 0 18rem;
   }

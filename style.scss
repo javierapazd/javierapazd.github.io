@@ -2217,8 +2217,9 @@ input:checked + .switch:active::before {
   font-size: 35px;
   text-decoration: none;
   position: absolute;
-  right: 5px;
-  top: 0;
+  right: -8px;
+  top: -21px;
+  background: unset !important;
 }
 .modal-ebco .btn-close:hover {
   color: #919191;
@@ -2241,9 +2242,8 @@ input:checked + .switch:active::before {
   background: transparent;
   border: #333333 solid 0px;
   border-radius: 5px;
-  margin-left: -200px;
   position: fixed;
-  left: 50%;
+  left: 28%;
   z-index: 11;
   width: 31em;
   -webkit-transform: translate(0, 0);
