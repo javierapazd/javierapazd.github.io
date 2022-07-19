@@ -131,9 +131,20 @@ a {
 }
 .button-lg .content i {
   background-color: #FAB2BC;
-  padding: 1em;
+  padding: 0.2rem;
   border-radius: 50%;
   color: #E81F3C;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-lg .content i img {
+  width: 3rem;
+}
+.button-lg .content i::before {
+  font-size: 1.5rem;
 }
 .button-lg .content a {
   text-decoration: none;
@@ -207,15 +218,27 @@ a {
   width: 7rem;
   height: 7rem;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .accesos-rapidos .item .button-sll.gr {
   background-color: #02CE99;
 }
+.accesos-rapidos .item .button-sll.gr img {
+  width: 4.5rem;
+}
 .accesos-rapidos .item .button-sll.bl {
   background-color: #336CFB;
 }
+.accesos-rapidos .item .button-sll.bl img {
+  width: 4.5rem;
+}
 .accesos-rapidos .item .button-sll.cy {
   background-color: #02CECE;
+}
+.accesos-rapidos .item .button-sll.cy img {
+  width: 4.5rem;
 }
 .accesos-rapidos .item .button-sll i {
   font-size: 2.6rem;
@@ -1371,37 +1394,34 @@ form div.checkbox.switcher label input:checked + span small, form div.radio.swit
   justify-content: center;
 }
 .botones_flotantes .boton {
-  margin: 0 2.2rem;
-}
-.botones_flotantes .boton .fa {
+  margin: 0 1.5rem;
   border-radius: 100%;
-  color: white;
-  height: 4.6rem;
-  width: 4.6rem;
+  width: 6rem;
+  height: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
-.botones_flotantes .boton.pronto_pago .fa {
+.botones_flotantes .boton.pronto_pago {
   background-color: #02CE99;
-  font-size: 2.3rem;
 }
-.botones_flotantes .boton.mesa_ayuda .fa {
+.botones_flotantes .boton.pronto_pago .fa-usd {
+  width: auto;
+  height: 3.5rem;
+}
+.botones_flotantes .boton.mesa_ayuda {
   background-color: #336CFB;
-  font-size: 3rem;
 }
-.botones_flotantes .boton.mesa_ayuda .fa .signo_pregunta .fa.fa-question {
-  position: absolute;
-  font-size: 1rem;
-  background-color: transparent;
-  right: 0.4rem;
-  top: -0.3rem;
+.botones_flotantes .boton.mesa_ayuda .fa-comments-o {
+  width: 4.5rem;
+  height: auto;
 }
-.botones_flotantes .boton.manuales_guias .fa {
+.botones_flotantes .boton.manuales_guias {
   background-color: #02CECE;
-  font-size: 2.5rem;
-  position: relative;
+}
+.botones_flotantes .boton.manuales_guias .fa-files-o {
+  width: 3.5rem;
+  height: auto;
 }
 
 .container_novedad {
@@ -1697,6 +1717,7 @@ form .form-row select {
   padding-bottom: 12px;
   padding-left: 14px;
   transition: all 0.2s ease-in;
+  max-width: 637px;
 }
 form .form-row select option.placeholder {
   opacity: 0.85;
