@@ -448,6 +448,7 @@ form select {
   padding-bottom: 12px;
   padding-left: 14px;
   transition: all 0.2s ease-in;
+  max-width: 637px;
 }
 form select option.placeholder {
   opacity: 0.85;
@@ -2066,6 +2067,71 @@ input:checked + .switch:active::before {
   }
 }
 /*modal ebco*/
+.bts-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.1s 0s, visibility 0s 0.1s;
+}
+
+.bts-popup.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.1s 0s, visibility 0s 0s;
+}
+
+.bts-popup-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 4em auto;
+  background: #ffffff;
+  border-radius: none;
+  text-align: center;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  transform: translateY(-40px);
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-backface-visibility: hidden;
+  transition-property: transform;
+  transition-duration: 0s;
+}
+
+.bts-popup-container img {
+  padding: 20px 0 0 0;
+}
+
+.bts-popup-container p {
+  color: white;
+  padding: 10px 40px;
+}
+
+.bts-popup-container .bts-popup-button {
+  padding: 5px 25px;
+  border: 2px solid black;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.bts-popup-container a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.is-visible .bts-popup-container {
+  transform: translateY(0);
+}
+
+@media only screen and (min-width: 1170px) {
+  .bts-popup-container {
+    margin: 8em auto;
+  }
+}
 #EbcoProveedoresLoginModal {
   z-index: 9999999999;
   position: relative;
@@ -2106,7 +2172,7 @@ input:checked + .switch:active::before {
   border: #333333 solid 0px;
   border-radius: 5px;
   position: fixed;
-  left: 28%;
+  left: 0;
   z-index: 11;
   width: 31em;
   transform: translate(0, 0);
