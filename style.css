@@ -35,6 +35,72 @@ a {
   text-decoration: none !important;
 }
 
+.container.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container.login form {
+  padding-right: unset !important;
+}
+.container.login form input {
+  border-radius: 12px;
+}
+.container.login .form-login {
+  background: #fff;
+  padding: 30px 50px;
+  border-radius: 10px;
+}
+.container.login .form-login .form-logo {
+  text-align: center;
+}
+.container.login .form-login .form-logo img {
+  height: 4rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+.container.login .form-login .form-logo .iso {
+  vertical-align: middle;
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.container.login .form-login .form-logo .iso h5 {
+  color: #414C69;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.105em;
+}
+.container.login .form-login .form-logo .iso h6 {
+  color: #C4C4C4;
+  margin-top: 5px;
+  letter-spacing: 0.225em;
+  font-size: 0.8rem;
+  line-height: 1.3em;
+  font-weight: 400;
+}
+.container.login .form-login .usuario {
+  font-family: "Source Sans Pro", sans-serif;
+}
+.container.login .form-login .usuario.enviar {
+  margin-top: 1em;
+}
+.container.login .form-login .usuario.enviar input {
+  padding-left: unset;
+  vertical-align: middle;
+  padding-top: unset;
+  padding-bottom: unset;
+  font-weight: 600;
+}
+.container.login .form-login .usuario.enviar input:hover {
+  color: white;
+  background-color: #414C69;
+}
+
 .border-right::after {
   border: 1px solid #EAEEF9;
   content: "";
