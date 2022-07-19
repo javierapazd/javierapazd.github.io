@@ -127,9 +127,20 @@ a {
     word-wrap: break-word;
     i {
       background-color: #FAB2BC;
-      padding: 1em;
+      padding: .2rem;
       border-radius: 50%;
       color: #E81F3C;
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 3rem;
+      }
+      &::before {
+        font-size: 1.5rem;
+      }
     }
     a {
       text-decoration: none;
@@ -204,14 +215,26 @@ a {
       width: 7rem;
       height: 7rem;
       margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       &.gr {
         background-color: #02CE99;
+        img {
+          width: 4.5rem;
+        }
       }
       &.bl {
         background-color: #336CFB;
+        img {
+          width: 4.5rem;
+        }
       }
       &.cy {
         background-color: #02CECE;
+        img {
+          width: 4.5rem;
+        }
       }
       i {
         font-size: 2.6rem;
@@ -1497,45 +1520,32 @@ padding: 1em;
     display: flex;
     justify-content: center;
     .boton {
-      margin: 0 2.2rem;
-      .fa {
-        border-radius: 100%;
-        color: white;
-        height: 4.6rem;
-        width: 4.6rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-      }
+      margin: 0 1.5rem;
+      border-radius: 100%;
+      width: 6rem;
+      height: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       &.pronto_pago {
-        .fa {
-          background-color: #02CE99;
-          font-size: 2.3rem;
+        background-color: #02CE99;
+        .fa-usd {
+          width: auto;
+          height: 3.5rem;
         }
        }
       &.mesa_ayuda {
-        .fa {
-          background-color:  #336CFB;
-          font-size: 3rem;
-          .signo_pregunta {
-            .fa {
-              &.fa-question {
-                position: absolute;
-                font-size: 1rem;
-                background-color: transparent;
-                right: 0.4rem;
-                top: -.3rem;
-              }
-            }
-          }
+        background-color:  #336CFB;
+        .fa-comments-o {
+          width: 4.5rem;
+          height: auto;
         }
        }
      &.manuales_guias {
-      .fa {
-        background-color: #02CECE;
-        font-size: 2.5rem;
-        position: relative;
+      background-color: #02CECE;
+      .fa-files-o {
+        width: 3.5rem;
+        height: auto;
       }
      }
     }
@@ -1849,6 +1859,7 @@ p.mas_info {
     padding-bottom: 12px;
     padding-left: 14px;
     transition: all 0.2s ease-in;
+    max-width: 637px;
     option {
       &.placeholder {
         opacity: .85;
