@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mesa de ayuda - Portal Proveedores Ebco</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="sidebar" class="sidebar side-navbar active-nav">
+        <div class="logo mx-auto">
+            <a href="index.html"><img src="images/logo-ebco.svg" alt=""></a>
+        </div>
+        <div class="collapse-sidebar-button">
+            <span id="toggle-icon" class="fa fa-chevron-left"></span>
+        </div>
+
+        <ul class="nav nav-sidebar flex-column text-white w-100 mx-auto">
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class=""><img src="images/noun-dashboard.png" alt="" style="width:1.5rem;"></span>
+                    <span class="menu-item">Inicio</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class=""><img src="images/noun-contract.png" alt="" style="width:1.5rem;"></span>
+                    <span class="menu-item">OC/Contratos</span>
+                </a>
+                <ul class="submenu flex-wrap">
+                    <li><a class="sub-nav" href="#">OC/Contratos activos</a></li>
+                    <li><a class="sub-nav" href="#">Historial OC Completo</a></li>
+                </ul>
+            </li>
+    
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="fa"><img src="images/noun-progress.png" alt="" style="width:1.5rem;"></span>
+                    <span class="menu-item">Estados de pago</span>
+                </a>
+                <ul class="submenu">
+                    <li><a class="sub-nav" href="#">Nuevo estado de pago</a></li>
+                    <li><a class="sub-nav" href="#">Pagos en proceso</a></li>
+                    <li><a class="sub-nav" href="#">Historial</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class=""><img src="images/noun-receive.png" alt="" style="width:1.8rem;"></span>
+                    <span class="menu-item">Migos/Hes</span>
+                </a>
+                <ul class="submenu">
+                    <li><a class="sub-nav" href="#">Migos/Hes en curso</a></li>
+                    <li><a class="sub-nav" href="#">Historial de entregas</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class=""><img src="images/noun-receipt.png" alt="" style="width:1.8rem;"></span>
+                    <span class="menu-item">Facturas</span>
+                </a>
+                <ul class="submenu">
+                    <li><a class="sub-nav" href="#">Pendientes de pago</a></li>
+                    <li><a class="sub-nav" href="#">Facturas emitidas</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class=""><img src="images/noun-payment.png" alt="" style="width:1.8rem;"></span>
+                    <span class="menu-item">Pagos</span>
+                </a>
+                <ul class="submenu">
+                    <li><a class="sub-nav" href="#">Últimos pagos realizados</a></li>
+                    <li><a class="sub-nav" href="#">Historial de pagos</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class=""><img src="images/noun-user-profile.png" alt="" style="width:1.5rem;"></span>
+                    <span class="menu-item">Mi espacio</span>
+                </a>
+                <ul class="submenu">
+                    <li><a class="sub-nav" href="#">Perfil</a></li>
+                    <li><a class="sub-nav" href="#">Mi evaluación</a></li>
+                    <li><a class="sub-nav" href="#">Catálogo de productos</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="main" class="main">
+        <div class="container-fluid">
+            <div class="wrapper">
+                <div class="header">
+                    <nav class="navbar navbar-light navbar-expand-sm">
+                        <div class="container-fluid logo">
+                            <!-- breadcrumb -->
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Mesa de Ayuda</li>
+                                </ol>
+                            </nav>
+                        <!-- fin breadcrumb -->
+                              <div id="navbarCollapse" class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item dropdown">
+                                        <a class="user" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          MS
+                                          </a>
+                                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                              <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
+                                              <li><a class="dropdown-item" href="#">Configuración</a></li>
+                                              <li><hr class="dropdown-divider"></li>
+                                              <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                                          </ul>
+                                    </li>
+                                </ul>
+                              </div> <!-- menu colapsable-->
+                        </div>
+                    </nav>
+                  </div>
+                <div class="container mesa_ayuda">
+                    <div class="titulo"><h5>Mesa de Ayuda</h5></div>
+
+                        <div class="row">
+                                <div class="col-sm-6">
+                                <!--Selector ayuda-->
+                                <p>Tipo de consulta</p>
+                                <select class="form-select select-field-trigger form-mesa-ayuda" name="ayuda" id="ayuda_select">
+                                    <option value="0" onclick="myFunction()" class="show-1-yes">Seleccione</option>
+                                    <option value="1" onclick="myFunction()" class="show-1-yes">Rechazo del documento - Sin HES</option>
+                                    <option value="2" onclick="myFunction()" class="show-1-yes">Rechazo del documento - Sin OC</option>
+                                    <option value="3" onclick="myFunction()" class="show-1-yes">Rechazo del documento - HES sin saldo</option>
+                                    <option value="4" onclick="myFunction()" class="show-1-yes">Rechazo del documento - OC sin saldo</option>
+
+                                    </select>
+                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card-secundaria esconder" id="target-1">
+                                    <div class="form-group col-sm-6">
+                                        <p>Antes de consultar, tenga en cuenta lo siguiente:</p>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1"></textarea>
+                                    </div>
+                                </div><!--div card-->
+                            </div><!--div col-->
+                        </div>
+                        <div id="0" class="tipo_ayuda">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card-secundaria">
+                                        <div class="form-group col-sm-6">
+                                            <p>Antes de consultar, tenga en cuenta lo siguiente:</p>
+                                            <textarea class="form-control" id="exampleFormControlTextarea0" placeholder="">
+                                            </textarea>
+                                        </div>
+                                    </div><!--div card-->
+                                </div><!--div col-->
+                            </div> <!--div row-->
+                        </div>
+            
+                        <div id="1" class="tipo_ayuda">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card-secundaria">
+                                        <div class="form-group col-sm-6">
+                                            <p>Antes de consultar, tenga en cuenta lo siguiente:</p>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Favor tomar contacto con la obra solicitando el número de HES y refacturar.">Favor tomar contacto con la obra solicitando el número de HES y refacturar.</textarea>
+                                        </div>
+            
+            
+                                        <input class="btn btn-primary cancelar hBack" type="reset" value="Cancelar">
+                                        <input class="btn btn-primary enviar"  type="submit" value="Continuar">
+                                    </div><!--div card-->
+                                </div><!--div col-->
+                            </div> <!--div row-->
+                        </div>
+            
+                        <div id="2" class="tipo_ayuda">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card-secundaria">
+                                        <div class="form-group col-sm-6">
+                                            <p>Antes de consultar, tenga en cuenta lo siguiente:</p>
+                                            <textarea class="form-control" id="exampleFormControlTextarea2" placeholder="Favor tomar contacto con la obra solicitando el número de HES y refacturar.">Favor tomar contacto con la obra solicitando el número de HES y refacturar.</textarea>
+                                        </div>
+            
+            
+                                        <input class="btn btn-primary cancelar hBack" type="reset" value="Cancelar">
+                                        <input class="btn btn-primary enviar"  type="submit" value="Continuar">
+                                    </div><!--div card-->
+                                </div><!--div col-->
+                            </div> <!--div row-->
+                        </div>
+        
+                        <p class="mas_info">Si necesitas más información escribe a <a class="rojo" href="mailto:rodrigo@ebco.cl"> rodrigo@ebco.cl</a></p>
+                </div>
+                
+                <div class="botones_flotantes">
+                    <div class="boton pronto_pago col-md-1">
+                        <img class="fa-usd" src="images/noun-fast-payment.png"/>
+                    </div>
+                    <div class="boton mesa_ayuda col-md-1">
+                        <img class="fa-comments-o" src="images/noun-chat-question-mark.png"/>
+                    </div>
+                    <div class="boton manuales_guias col-md-1">
+                        <img class="fa-files-o" src="images/noun-docs.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+</html>

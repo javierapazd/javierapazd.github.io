@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Portal Proveedores Ebco</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Últimos pagos realizados - Portal Proveedores Ebco</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css'>
+    </head>
 <body>
 
     <div id="sidebar" class="sidebar side-navbar active-nav">
@@ -94,8 +91,8 @@
             </li>
         </ul>
     </div>
-<div id="main"class="main">
-    <div class="container-fluid">
+<div id="main" class="main">
+    <div class="container-fluid facturas">
         <div class="wrapper">
             <div class="header">
                 <nav class="navbar navbar-light navbar-expand-sm">
@@ -104,8 +101,8 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="index.html">Estados de pago</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Nuevo estado de pago</li>
+                            <li class="breadcrumb-item"><a href="facturas.html">Pagos</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Últimos pagos realizados</li>
                             </ol>
                         </nav>
                     <!-- fin breadcrumb -->
@@ -127,47 +124,113 @@
                     </div>
                 </nav>
               </div>
-              <div class="container mesa_ayuda estado-pago">
-                <div class="titulo"><h5>Nuevo estado de pago</h5></div>
-                   
-                    <div class="row col-md-6">
-                            <form class="ne-pago">
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="inputObra">Tipo de Pago</label>
-                                        <select id="inputObra" class="form-control form-select select-field-trigger">
-                                            <option selected>Selecciona</option>
-                                            <option>Anticipo</option>
-                                            <option>Primero</option>
-                                            <option>Avance de Obra</option>
-                                            <option>Final</option>
-                                            <option>Único</option>
-                                            <option>Canje de Retenciones</option>
-                                        </select>
-                                        <span class="fa fa-chevron-down"></span>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlDetalles">Descripción</label>
-                                        <textarea class="form-control" id="exampleFormControlDetalles" rows="3" placeholder=""></textarea>
-                                    </div>
-                                    <div class="form-group file">
-                                        <label for="inputAdjunto">Cálculo de estado de pago</label>
-                                        <label class="file-input__label" for="file-input"><span>Seleccione</span><span class="fa fa-chevron-down"></span></label>
-                                        <input type="file" name="file-input" id="file-input" class="file-input__input" />
-                                    </div>
-                                    <div class="form-group">
-                                    <label for="inputSolicita">Correo Alertas</label>
-                                    <input type="text" class="form-control" id="inputSolicita" placeholder="">
-                                    </div>
-                                    
-                                </div>
+            <div class="tabla_ebco">
+                <div class="container-fluid table-responsive row">
+                    <div class="titulo"><h5>Últimos pagos realizados</h5></div>
+                    <div class="buscador">
+                        <input type="text" id="filtro" placeholder="Búsqueda" class="buscador"></input>
+                    </div>
+                    <table class="table">
+                        <thead class="thead">
+                            <tr>
+                                <th scope="col">Número OC</th>
+                                <th scope="col">Obra</th>
+                                <th scope="col">Descripción Proyecto</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <td>13/12/22</td>
+                                <td>Banco Santander (todo medio de pago)</td>
+                                <td>$101.546.403</td>
                                 
-                                </form>
-                        </div>
-                        <div class="container-fluid_m pegado-derecha">
+                                <td class="iconos">
+                                <div class="td-iconos">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <input type="checkbox" hidden="hidden" id="username">
+                                    <label class="switch" for="username" data-toggle="modal" data-target="#exampleModal"></label>
+                                </div></td>
+                            </tr>
+                            <tr>
+                                <td>13/12/22</td>
+                                <td>Banco Santander (todo medio de pago)</td>
+                                <td>$101.546.403</td>
+                                
+                                <td class="iconos">
+                                <div class="td-iconos">
+                                    <i class="fa fa-eye" aria-hidden="true" data-toggle="modal" data-target="#exampleModal"></i>
+                                    <input type="checkbox" hidden="hidden" id="username0">
+                                    <label class="switch" for="username0"></label>
+                                </div></td>
+                            </tr>
+                            <tr>
+                                <td>13/12/22</td>
+                                <td>Banco Santander (todo medio de pago)</td>
+                                <td>$101.546.403</td>
+                                
+                                <td class="iconos">
+                                <div class="td-iconos">
+                                    <i class="fa fa-eye" aria-hidden="true" data-toggle="modal" data-target="#exampleModal"></i>
+                                    <input type="checkbox" hidden="hidden" id="username1">
+                                    <label class="switch" for="username1"></label>
+                                </div></td>
+                            </tr>
+                            <tr>
+                                <td>13/12/22</td>
+                                <td>Banco Santander (todo medio de pago)</td>
+                                <td>$101.546.403</td>
+                                
+                                <td class="iconos">
+                                <div class="td-iconos">
+                                    <i class="fa fa-eye" aria-hidden="true" data-toggle="modal" data-target="#exampleModal"></i>
+                                    <input type="checkbox" hidden="hidden" id="username2">
+                                    <label class="switch" for="username2"></label>
+                                </div></td>
+                            </tr>
+                            <tr>
+                                <td>13/12/22</td>
+                                <td>Banco Santander (todo medio de pago)</td>
+                                <td>$101.546.403</td>
+                                
+                                <td class="iconos">
+                                <div class="td-iconos">
+                                    <i class="fa fa-eye" aria-hidden="true" data-toggle="modal" data-target="#exampleModal"></i>
+                                    <input type="checkbox" hidden="hidden" id="username3">
+                                    <label class="switch" for="username3"></label>
+                                </div></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true"> < </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item" aria-current="page">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#"> > </a>
+                        </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel">Orden de compra N° 7000023769</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid_m">
                             <div class="row">
                                 <div class="table">
-                                    <div class="titulo sin-margen"><h6>Orden de compra N° 7000023769</h6></div>
                                     <div class="container-fluid table-responsive row">
                                         <table class="table" border="0">
                                             <tbody class="tbody">
@@ -209,32 +272,24 @@
                                       </div> <!--container fluid-->
                                     </div> <!--tabla ebco-->
                                 </div><!--row tabla-->
-                                <div class="modal-footer orden_compra">
-                                    <button type="button" class="btn btn-danger volver" href="#">Continuar</button>
-                                </div>
+                            
+                        </div> <!--container fluid-->
+                    </div><!--modal body-->
+                        <div class="modal-footer orden_compra">
+                            <button type="button" class="btn btn-danger volver" href="#">Iniciar Proceso</button>
                         </div>
-                    
-            </div>
-
-            
-            
-            <div class="botones_flotantes">
-                <div class="boton pronto_pago col-md-1">
-                    <img class="fa-usd" src="images/noun-fast-payment.png"/>
-                </div>
-                <div class="boton mesa_ayuda col-md-1">
-                    <img class="fa-comments-o" src="images/noun-chat-question-mark.png"/>
-                </div>
-                <div class="boton manuales_guias col-md-1">
-                    <img class="fa-files-o" src="images/noun-docs.png"/>
-                </div>
-            </div>
+                    </div> <!--modal content-->
+                </div> <!--modal dialog-->
+            </div> <!--modal fade-->
         </div>
-    </div>
-  </div>
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+        </div> <!-- cierre wrapper -->
+    </div> <!-- cierre container -->
+</div> <!-- cierre main -->
+
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Portal Proveedores Ebco</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div id="sidebar" class="sidebar side-navbar active-nav">
+        <div class="logo mx-auto">
+            <a href="index.html"><img src="images/logo-ebco.svg" alt=""></a>
+        </div>
+        <div class="collapse-sidebar-button">
+            <span id="toggle-icon" class="fa fa-chevron-left"></span>
+        </div>
+
+        <ul class="nav nav-sidebar flex-column text-white w-100 mx-auto">
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class=""><img src="images/noun-dashboard.png" alt="" style="width:1.5rem;"></span>
+                    <span class="menu-item">Inicio</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class=""><img src="images/noun-contract.png" alt="" style="width:1.5rem;"></span>
+                    <span class="menu-item">OC/Contratos</span>
+                </a>
+                <ul class="submenu flex-wrap">
+                    <li><a class="sub-nav" href="#">OC/Contratos activos</a></li>
+                    <li><a class="sub-nav" href="#">Historial OC Completo</a></li>
+                </ul>
+            </li>
+    
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="fa"><img src="images/noun-progress.png" alt="" style="width:1.5rem;"></span>
+                    <span class="menu-item">Estados de pago</span>
+                </a>
+                <ul class="submenu">
+                    <li><a class="sub-nav" href="#">Nuevo estado de pago</a></li>
+                    <li><a class="sub-nav" href="#">Pagos en proceso</a></li>
+                    <li><a class="sub-nav" href="#">Historial</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class=""><img src="images/noun-receive.png" alt="" style="width:1.8rem;"></span>
+                    <span class="menu-item">Migos/Hes</span>
+                </a>
+                <ul class="submenu">
+                    <li><a class="sub-nav" href="#">Migos/Hes en curso</a></li>
+                    <li><a class="sub-nav" href="#">Historial de entregas</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class=""><img src="images/noun-receipt.png" alt="" style="width:1.8rem;"></span>
+                    <span class="menu-item">Facturas</span>
+                </a>
+                <ul class="submenu">
+                    <li><a class="sub-nav" href="#">Pendientes de pago</a></li>
+                    <li><a class="sub-nav" href="#">Facturas emitidas</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class=""><img src="images/noun-payment.png" alt="" style="width:1.8rem;"></span>
+                    <span class="menu-item">Pagos</span>
+                </a>
+                <ul class="submenu">
+                    <li><a class="sub-nav" href="#">Últimos pagos realizados</a></li>
+                    <li><a class="sub-nav" href="#">Historial de pagos</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class=""><img src="images/noun-user-profile.png" alt="" style="width:1.5rem;"></span>
+                    <span class="menu-item">Mi espacio</span>
+                </a>
+                <ul class="submenu">
+                    <li><a class="sub-nav" href="#">Perfil</a></li>
+                    <li><a class="sub-nav" href="#">Mi evaluación</a></li>
+                    <li><a class="sub-nav" href="#">Catálogo de productos</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+<div id="main"class="main">
+    <div class="container-fluid">
+        <div class="wrapper">
+            <div class="header">
+                <nav class="navbar navbar-light navbar-expand-sm">
+                    <div class="container-fluid logo">
+                        <!-- breadcrumb -->
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                            <li class="breadcrumb-item"><a href="index.html">Estados de pago</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Nuevo estado de pago</li>
+                            </ol>
+                        </nav>
+                    <!-- fin breadcrumb -->
+                          <div id="navbarCollapse" class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item dropdown">
+                                    <a class="user" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      MS
+                                      </a>
+                                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                          <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
+                                          <li><a class="dropdown-item" href="#">Configuración</a></li>
+                                          <li><hr class="dropdown-divider"></li>
+                                          <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                                      </ul>
+                                </li>
+                            </ul>
+                          </div> <!-- menu colapsable-->
+                    </div>
+                </nav>
+              </div>
+
+              <div class="titulo m3"><h5>Estados de pago en proceso</h5></div>
+
+              <section class="contenedor-cards">
+                <container class="cards-estado-pago-container">
+                  <div id="pricing-heading">
+              
+                  </div>
+                  <div id="cards-estado-pago">
+              
+                    <div class="card-sola">
+                      <div class="header">
+                        <p class="negrita grande">Edificio El Tranque</p>
+                      </div>
+              
+                      <hr class="slim">
+                      <div class="body">
+                        <div class="br">
+                          <span class="body-md">Actividad</span>
+                          <span class="data right">-</span>
+                        </div>
+              
+                        <div class="br">
+                          <span class="body-md">N° Orden de compra</span>
+                          <span class="data right">8000038597342343</span>
+                        </div>
+              
+                        <div class="br">
+                          <span class="body-md">N° estado de pago</span>
+                          <span class="data right">8000038597342343</span>
+                        </div>
+              
+                        <div class="br">
+                          <span class="body-md">Estado de avance</span>
+                          <span class="data right">aprobada</span>
+                        </div>
+              
+                        <div class="br">
+                          <span class="body-md">Fecha de inicio</span>
+                          <span class="data right">23/05/2022</span>
+                        </div>
+              
+                        <hr class="slim">
+              
+                        <p class="body-sm">Total documentos <span class="right">0</span></p>
+                        <p class="body-sm">Documentos aprobados <span class="right">0</span></p>
+                        <p class="body-sm">Documentos observados <span class="right">0</span></p>
+                        <hr class="slim">
+
+                             <div class="tabla_ebco smll">
+                                <table class="table">
+                                    <thead class="thead">
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                            <th scope="col"><i class="fa fa-check-circle" aria-hidden="true"></i></th>
+                                            <th scope="col"><i class="fa fa-times-circle" aria-hidden="true"></i></th>
+                                            <th scope="col"><i class="fa fa-question-circle" aria-hidden="true"></i></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody">
+                                        <tr>
+                                            <th scope="row">
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                            <td>Bodega</td>
+                                            <td>9</td>
+                                            <td>0</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                <td>Administrativo obra</td>
+                                                <td>0</td>
+                                                <td>2</td>
+                                                <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                <td>Administrativo obra</td>
+                                                <td>0</td>
+                                                <td>2</td>
+                                                <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                <td>Administrativo obra</td>
+                                                <td>0</td>
+                                                <td>2</td>
+                                                <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                <td>Prevención</td>
+                                                <td>0</td>
+                                                <td>2</td>
+                                                <td>0</td>
+                                        </tr>
+            
+                                    </tbody>
+                                </table>
+                            </div>  <!--div tabla ebco small-->
+                            <center> <input class="btn btn-primary enviar filled" type="submit" value="Ver detalle"> </center>
+
+                    </div> <!--div body-->
+                </div> <!--div card sola-->
+              
+                    <div class="card-sola">
+                      <div class="header">
+                        <p class="negrita grande">Edificio El Tranque</p>
+                      </div>
+              
+                      <hr class="slim">
+                      <div class="body">
+                        <div class="br">
+                          <span class="body-md">Actividad</span>
+                          <span class="data right">-</span>
+                        </div>
+              
+                        <div class="br">
+                          <span class="body-md">N° Orden de compra</span>
+                          <span class="data right">8000038597342343</span>
+                        </div>
+              
+                        <div class="br">
+                          <span class="body-md">N° estado de pago</span>
+                          <span class="data right">8000038597342343</span>
+                        </div>
+              
+                        <div class="br">
+                          <span class="body-md">Estado de avance</span>
+                          <span class="data right">aprobada</span>
+                        </div>
+              
+                        <div class="br">
+                          <span class="body-md">Fecha de inicio</span>
+                          <span class="data right">23/05/2022</span>
+                        </div>
+              
+                        <hr class="slim">
+              
+                        <p class="body-sm">Total documentos <span class="right">0</span></p>
+                        <p class="body-sm">Documentos aprobados <span class="right">0</span></p>
+                        <p class="body-sm">Documentos observados <span class="right">0</span></p>
+                        <hr class="slim">
+              
+                      </div>
+                    </div>
+              
+                    <div class="card-sola">
+                      <div class="header">
+                        <p class="negrita grande">Edificio El Tranque</p>
+                      </div>
+              
+                      <hr class="slim">
+                      <div class="body">
+                        <div class="br">
+                          <span class="body-md">Actividad</span>
+                          <span class="data right">-</span>
+                        </div>
+              
+                        <div class="br">
+                          <span class="body-md">N° Orden de compra</span>
+                          <span class="data right">8000038597342343</span>
+                        </div>
+              
+                        <div class="br">
+                          <span class="body-md">N° estado de pago</span>
+                          <span class="data right">8000038597342343</span>
+                        </div>
+              
+                        <div class="br">
+                          <span class="body-md">Estado de avance</span>
+                          <span class="data right">aprobada</span>
+                        </div>
+              
+                        <div class="br">
+                          <span class="body-md">Fecha de inicio</span>
+                          <span class="data right">23/05/2022</span>
+                        </div>
+              
+                        <hr class="slim">
+              
+                        <p class="body-sm">Total documentos <span class="right">0</span></p>
+                        <p class="body-sm">Documentos aprobados <span class="right">0</span></p>
+                        <p class="body-sm">Documentos observados <span class="right">0</span></p>
+                        <hr class="slim">
+              
+                      </div>
+                    </div>
+              
+                  </div>
+              
+                </container>
+
+              </section>
+
+
+              <nav aria-label="..." class="m3">
+                <ul class="pagination">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true"> < </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item" aria-current="page">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#"> > </a>
+                </li>
+                </ul>
+            </nav>   
+
+
+            
+            
+            <div class="botones_flotantes">
+                <div class="boton pronto_pago col-md-1">
+                    <img class="fa-usd" src="images/noun-fast-payment.png"/>
+                </div>
+                <div class="boton mesa_ayuda col-md-1">
+                    <img class="fa-comments-o" src="images/noun-chat-question-mark.png"/>
+                </div>
+                <div class="boton manuales_guias col-md-1">
+                    <img class="fa-files-o" src="images/noun-docs.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+</html>
